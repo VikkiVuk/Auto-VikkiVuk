@@ -8,7 +8,7 @@ const Functions = require("../DiscordFunctions");
 var guild;
 var breakFailure = true;
 const fs = require("fs");
-
+const Papa = require("papaparse");
 const path = require("path");
 vars = {};
 var DBS;
@@ -499,6 +499,41 @@ function contains(arr, key, val) {
     return false;
 }
 
+function GetRow_Handle(client, action) {
+    var guild = action.guild;
+
+    var objectToAdd = {};
+    const csvFile = fs.readFileSync(path.resolve(__dirname, "../BotData/sheets/" + action.selectedsheet));
+    const csvData = csvFile.toString();
+    Papa.parse(csvData, {
+        header: true,
+        complete: function (results, file) {
+            var foundValue = results.data.filter(obj => obj[action.colheader] === action.colval);
+            if (foundValue.length > 0) {
+                objectToAdd[action.rowvariable] = foundValue[0];
+                if (!cache[guild.id]) cache[guild.id] = {};
+                let vars = cache[guild.id];
+                if (!vars.variables) vars.variables = [];
+                let vararray = vars.variables;
+                if (contains(vararray, "name", action.rowvariable)) {
+                    var existingvar = vararray.find(vari => vari.name == action.rowvariable);
+                    existingvar.value = foundValue[0];
+                    existingvar.type = "row";
+                } else {
+                    vararray.push({
+                        name: action.rowvariable,
+                        value: foundValue[0],
+                        type: "row"
+                    });
+                }
+                vars.variables = vararray;
+                cache[guild.id] = vars;
+            } else {
+                breakFailure = false;
+            }
+        }
+    });
+}
 
 function EditVariable_Handle(client, action) {
     var guild = action.guild;

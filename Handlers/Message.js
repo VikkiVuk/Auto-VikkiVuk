@@ -4,6 +4,7 @@ cache = require("../BotData/varcache");
 usercache = require("../BotData/usercache");
 var userCache = usercache.memoryCache.users;
 const Functions = require("../DiscordFunctions");
+const Papa = require("papaparse");
 const path = require("path");
 const flatted = require("flatted");
 var breakFailure = true;
@@ -374,7 +375,7 @@ module.exports.SendEmbed_Handle = async function (msg, client, action) {
         } else if (action.channelname == "" && msg != "") {
             var sent = await msg.channel.send(Embed);
             saveTypeDef(msg.guild, action.savetovariabletype, sent, action.savetovariable);
-        }
+        } 
     }
 };
 
@@ -765,6 +766,45 @@ function EditUserData(msg, client, action) {
     }
 }
 
+module.exports.GetRow_Handle = async function (msg, client, action) {
+    var guild = msg.guild;
+    var parentContext = this;
+    var passActions = {};
+    var objectToAdd = {};
+    const csvFile = fs.readFileSync(path.resolve(__dirname, "../BotData/sheets/" + action.selectedsheet));
+    const csvData = csvFile.toString();
+    Papa.parse(csvData, {
+        header: true,
+        complete: function (results, file) {
+            //console.log(results.data);
+            var foundValue = results.data.filter(obj => obj[action.colheader] === action.colval);
+            if (foundValue.length > 0) {
+                console.log("found");
+                console.log(foundValue);
+
+                if (!action.savevartype) action.savevartype = "temp";
+                var variableObject;
+        if (action.savevartype === "server") {
+            variableObject = serverVars[guild.id];
+        } else if (action.savevartype === "global") {
+            variableObject = globalVars;
+        } else {
+            variableObject = cache[guild.id].variables;
+        }
+
+                variableObject[action.rowvariable] = foundValue[0];
+                console.log(variableObject);
+                
+                passActions.actions = action.trueActions;
+                DBS.callNextAction(passActions, msg, msg.args, 0);
+            } else {
+                //breakFailure = false;
+                passActions.actions = action.falseActions;
+                DBS.callNextAction(passActions, msg, msg.args, 0);
+            }
+        }
+    });
+};
 
 module.exports.EditVariable_Handle = function (msg, client, action) {
     var guild = msg.guild;
