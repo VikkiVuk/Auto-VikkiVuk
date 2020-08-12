@@ -1,0 +1,1196 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "v.help",
+              "value": "Pokaze vam ovaj menu.",
+              "inline": "false"
+            },
+            {
+              "name": "v.verifikuj-me",
+              "value": "Verifikuje vas!",
+              "inline": "false"
+            },
+            {
+              "name": "v.zdravo",
+              "value": "Kaze vam zdravo nazad!",
+              "inline": "false"
+            },
+            {
+              "name": "v.glup-si",
+              "value": "Kaze da ste vi glupi!",
+              "inline": "false"
+            },
+            {
+              "name": "v.imod-update",
+              "value": "Posalje poruku u #imod-novosti da se iMod Updatovao",
+              "inline": "false"
+            },
+            {
+              "name": "v.roblox-nalozi",
+              "value": "Kaze vam koji su nasi roblox nalozi!",
+              "inline": "false"
+            },
+            {
+              "name": "v.zagrli-me",
+              "value": "Zagrli vas!",
+              "inline": "false"
+            },
+            {
+              "name": "daj-mi-ideju",
+              "value": "Da vam ideju!",
+              "inline": "false"
+            },
+            {
+              "name": "v.server-info",
+              "value": "Da vam informacije servera!",
+              "inline": "false"
+            },
+            {
+              "name": "v.spoilerbomb",
+              "value": "Da vam bombu spoilera, nacice te iznenadjenje ako otvorite sve spoilere! Ova komanda je samo za one koji su subani na vikkivuk-a",
+              "inline": "false"
+            },
+            {
+              "name": "v.dnd",
+              "value": "Stavi botov status na \"Do Not Disturb\"",
+              "inline": "false"
+            },
+            {
+              "name": "v.play-choose",
+              "value": "Stavi botov status na ono sto vi ukucate!",
+              "inline": "false"
+            },
+            {
+              "name": "v.online",
+              "value": "Stavi botov status na \"Online\"",
+              "inline": "false"
+            },
+            {
+              "name": "v.addrole",
+              "value": "Ova komanda je samo za admine. Ona dodaje \"roles\". primer kako trebate koristitu komandu : \"v.addrole test(Ime) 20(pozcicija)\"",
+              "inline": "false"
+            },
+            {
+              "name": "v.tvojbroj",
+              "value": "Da vam potpuno random broj koj morate da sacuvate!",
+              "inline": "false"
+            },
+            {
+              "name": "v.poke",
+              "value": "Ovo vam daje informacije pokemona! Koristi se tako sto ukucate : \"v.poke Grookey\" (Grookey oznacava ime pokemona(ime je case-sensitive(mora biti pocetno slovo veliko!))). Ova komanda je dostupna samo za pokemon igrace! link spreadsheeta : https://bit.ly/2XFZqfk ",
+              "inline": "false"
+            },
+            {
+              "name": "v.play-auto",
+              "value": "Stavi botov status na \"Automating VikkiVuk | v.help\"",
+              "inline": "false"
+            },
+            {
+              "name": "v.clear",
+              "value": "Obrise 11 poruka u trenutnom kanalu *nece izbrisati poruke starije od 2 nedelje*",
+              "inline": "false"
+            },
+            {
+              "name": "v.kick",
+              "value": "Izbaci korisnika! Komanda se koristi ovako : \"v.kick @VikkiVuk test\" (@VikkiVuk oznacava osobu koju zelite da izbacite, a test oznacava razlog za izbacivanje!).",
+              "inline": "false"
+            },
+            {
+              "name": "v.ban",
+              "value": "Zabrani pristup nekom korisniku serveru! Ova komanda se koristi ovako : \"v.ban @VikkiVuk 1 test\" (@VikkiVuk oznacava osobu koju zelite da banujete, 1 oznacava koliko dana zelite da banujete osobu, test oznacava razlog zasto zelite da banujete osobu!)",
+              "inline": "false"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "POMOC",
+          "url": "",
+          "authorname": "Auto VikkiVuk",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Ovo je OG Bot napravljen od strane VikkiVuk-a! Dole su vam sve komande koje ja imam!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "pomoc-meni",
+          "savetovariabletype": "server"
+        },
+        {
+          "name": "help menu ekonomija",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "v.potrazi-novac",
+              "value": "Potrazite novac, mozete dobiti novac u iznosu od **$1** do **$999**!. Ova komanda je samo za one koji prate VikkiVuk-a na youtube.",
+              "inline": "false"
+            },
+            {
+              "name": "v.moj-novac",
+              "value": "Kaze vam koliko novca imate na vasem racunu!",
+              "inline": "false"
+            },
+            {
+              "name": "v.moli-se",
+              "value": "Ovako se molite i dobijate novac, ne uzimate stvarno od nekog novac, samo dobijate, mozete dobiti novac u iznosu od **$1** do **$50**.",
+              "inline": "false"
+            },
+            {
+              "name": "v.stavi",
+              "value": "Ova komanda sluzi da prebacite zeljenu kolicinu novca u banku, komanda se koristi ovako : \"v.stavi 1\" (1 predstavlja iznos novca koji zelite da stavite!).",
+              "inline": "false"
+            },
+            {
+              "name": "v.uzmi",
+              "value": "Ovako uzimate novac iz banke! Komanda se koristi ovako : \"v.uzmi 1\" (1 predtalja kolicinu novca koliko zelite da uzmete).",
+              "inline": "false"
+            },
+            {
+              "name": "v.daj",
+              "value": "Ovako dajete drugim ljudima novac! Komanda se koristi ovako : \"v.daj @VikkiVuk 1\" (@VikkiVuk oznacava kojoj osobi zelite da date novac, a 1 oznacava iznos novca koj zelite da date toj osobi!)",
+              "inline": "false"
+            }
+          ],
+          "channelname": "$$CommandChannel$$",
+          "color": "08FF4E",
+          "title": "EKONOMIJA",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Ovde ispod su vam sve komande pod kategorijom **\"EKONOMIJA\"**.",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "verifikuj-me",
+      "actions": [
+        {
+          "name": "verify the user",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "rolename": "Verifikovan"
+        },
+        {
+          "name": "kazi korisniku da se verifikovao",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Zdravo <@${dbsVars.CommandAuthor.id}> vidim da si se verifikovao. Pa samo bih da ti kazem, da ako vec nisi procitao pravila, procitaj ih. Ako pricas srpski ili hrvatski ili bilo sta slicno srpskom, idi u #pravila-srpski\n\nIf you speak english and didn't understand this text then go read the text down\n\nHello <@${dbsVars.CommandAuthor.id}> i see that you verified yourself. So i just wanted to tell you that, if you didnt already read the rules, read them. If you speak english then go in #pravila-engleski",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "zdravo",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "posalji zdravo",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Zdravo <@${dbsVars.CommandAuthor.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "glup-si",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "ne ti si glup",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "ne ti si glup <@${dbsVars.CommandAuthor.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "imod-update",
+      "perms": [
+        "vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "posalje da se imod updateovao",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "imod-novosti",
+          "color": "0FABFF",
+          "title": "iMOD UPDATE!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "JEJ!!! KONACNO!!! iMOD SE UPDATEOVAO!!!! https://www.curseforge.com/minecraft/mc-mods/imod",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "roblox-nalozi",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "odogovri sa nasim roblox nalozima",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "1FA5FF",
+          "title": "ROBLOX NALOZI",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "VikkiVuk Roblox Ime : VikkiVuk\nUrke NFF Roblox Ime : majmunarija091\nMarko (Kancerator6000) : MaRkO132131",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "zagrli-me",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "*zagrli vas**",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Awwwww, evo. ***zagrli <@${dbsVars.CommandAuthor.id}>***",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "daj-mi-ideju",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "kaze nesto lol",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Evo ti ideje <@${dbsVars.CommandAuthor.id}>, daj ti meni ideju!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "server-info",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "da vam informacije servera",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF0000",
+          "title": "INFORMACIJE SERVERA",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Ime servera je : ${dbsVars.guild.name}\nId servera je : ${dbsVars.guild.id}\nRegion servera je : ${dbsVars.guild.region}\nVlasnik servera je : ${dbsVars.guild.owner}\nId vlasnika servera je : ${dbsVars.guild.ownerID}\nBroj clanova servera je : ${dbsVars.guild.memberCount}",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "spoilerbomb",
+      "perms": [
+        "suban na vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "da vam bombu spoilera",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||hvala sto si suban na vikkivuk||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "dnd",
+      "perms": [
+        "vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "KBEB",
+          "category": "Bot Action",
+          "type": "Set Status",
+          "status": "DnD"
+        }
+      ]
+    },
+    {
+      "name": "play-choose",
+      "perms": [
+        "vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "get play game",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "playgametxt",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "0"
+        },
+        {
+          "name": "kbep",
+          "category": "Bot Action",
+          "type": "Set Bot Game",
+          "game": "%%playgametxt%%"
+        },
+        {
+          "name": "successd",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "$$CommandChannel$$",
+          "color": "14FF30",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Uspesno si stavio igru koju ja igram na **%%playgametxt%%!**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "online",
+      "perms": [
+        "vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "idk",
+          "category": "Bot Action",
+          "type": "Set Status",
+          "status": "Online"
+        }
+      ]
+    },
+    {
+      "name": "addrole",
+      "perms": [
+        "admin"
+      ],
+      "actions": [
+        {
+          "name": "role name",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "addrolename",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "rolenumber",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "rolenumber",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "addrole add",
+          "category": "Server Action",
+          "type": "Add Role to Server",
+          "rolename": "${tempVars.addrolename}",
+          "color": "00FFEA",
+          "position": "${tempVars.rolenumber}",
+          "hoist": "BOOL_TRUE@@",
+          "mentionable": "BOOL_TRUE@@",
+          "savetovariable": "rolename1",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "role added",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Uspesno sam dodao **${tempVars.rolename1.name}** koja je na poziciji **${tempVars.rolename1.position}**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "potrazi-novac",
+      "perms": [
+        "suban na vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "generate vcoins",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "varname": "generisani novac",
+          "min": "1",
+          "max": "999",
+          "savevartype": "temp"
+        },
+        {
+          "name": "add generated vcoins",
+          "category": "User Data",
+          "type": "Edit User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "novac",
+          "oper": "+",
+          "value": "${tempVars.generisani novac}"
+        },
+        {
+          "name": "confirmed vcoin tresaure",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "2FFF0F",
+          "title": "NOVAC",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": ":dollar: | Pronasao si **${tempVars.generisani novac} novca!** svaka ti cast!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "moj-novac",
+      "actions": [
+        {
+          "name": "get user money",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "novac",
+          "varname": "mojnovac",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "get user bank money",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "novacbanka",
+          "varname": "novac iz banke",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "kaze vam novac",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "22FF00",
+          "title": "MOJ NOVAC",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": ":dollar: | Vas novac u novcaniku je **$%%mojnovac%%**\n:dollar: | Vas novac u banci je **$%%novac iz banke%%**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "tvojbroj",
+      "actions": [
+        {
+          "name": "generisi broj",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "varname": "tvojbroj",
+          "min": "1",
+          "max": "999999",
+          "savevartype": "temp"
+        },
+        {
+          "name": "tvojbroj confirmation",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "$$CommandChannel$$",
+          "color": "009DFF",
+          "title": "TVOJ BROJ",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Zdravo <@$$CommandAuthor$$>, vidim da si pokrenuo ovu komandu. Pa evo tvog broja **%%tvojbroj%%** . Taj broj nemoj nikom da dajes. Ukoliko si rekao nekom taj broj, samo pokreni ponovo komandu, i moci ces da promenis tvoj broj!\n\nTaj broj sluzi za verifikaciju sebe. Ako te moderator ili admin pita, daj mu slobodno, ali ako je neko ispod moderatora ili admina i nije vlasnik, onda mu nemoj dati. Ovaj broj je **jako vazan**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "moli-se",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "random money",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "varname": "begrandommoney",
+          "min": "1",
+          "max": "10",
+          "savevartype": "temp"
+        },
+        {
+          "name": "beg-add-money",
+          "category": "User Data",
+          "type": "Edit User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "money",
+          "oper": "+",
+          "value": "${tempVars.begrandommoney}"
+        },
+        {
+          "name": "you found beg",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "$$CommandChannel$$",
+          "color": "8CFF00",
+          "title": "MOLJENJE",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": ":dollar: | Neko vam je dao **$%%begrandommoney%% novca!**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "stavi",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "deposit money number",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "depositnumber",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "get user money 2",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "novac",
+          "varname": "korisnickov novac",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "check if great 1",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "bank money deposit",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novacbanka",
+              "oper": "+",
+              "value": "%%depositnumber%%"
+            },
+            {
+              "name": "success",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "$$CommandChannel$$",
+              "color": "15FF00",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}> uspesno si prebacio ${tempVars.depositnumber} u svoju banku!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "first error",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "$$CommandChannel$$",
+              "color": "FF0000",
+              "title": "GRESKA",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}> izvini ali nemas toliko novca na racunu!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "varname": "depositnumber",
+          "savevartype": "temp",
+          "compare": "less than",
+          "value": "%%korisnickov novac%%"
+        }
+      ]
+    },
+    {
+      "name": "uzmi",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "withdraw money number",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "withdrawnumber",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "bank money get",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "novacbanka",
+          "varname": "novac iz banke",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "check if great",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "second error",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "$$CommandChannel$$",
+              "color": "FF0000",
+              "title": "GRESKA!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}> izvini, ali nemas toliko novca u banci!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "give the money to user",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novac",
+              "oper": "+",
+              "value": "${tempVars.withdrawnumber}"
+            },
+            {
+              "name": "whitdraw from bank",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novacbanka",
+              "oper": "-",
+              "value": "${tempVars.withdrawnumber}"
+            },
+            {
+              "name": "success 1",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "$$CommandChannel$$",
+              "color": "1AFF00",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "Uspesno ste prebacili **${tempVars.withdrawnumber} novca** u vas novcanik! ",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "varname": "withdrawnumber",
+          "savevartype": "temp",
+          "compare": "greater than",
+          "value": "%%novac iz banke%%"
+        }
+      ]
+    },
+    {
+      "name": "daj",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "get mentioned user",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "give mentioned user",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "variables",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "givemoneynumber",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "get ujser data money",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "novac",
+          "varname": "korisnickovnovac",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "check if greats",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "give the money yo user",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${tempVars.give mentioned user.id}",
+              "field": "novac",
+              "oper": "+",
+              "value": "${tempVars.givemoneynumber}"
+            },
+            {
+              "name": "succes 3",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "$$CommandChannel$$",
+              "color": "00FF15",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "Uspesno si dao **$%%givemoneynumber%%** korisniku **<@${tempVars.give mentioned user.id}>**  ",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "third error",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "$$CommandChannel$$",
+              "color": "FF0000",
+              "title": "GRESKA!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}> izvini, ali nemas dovoljno novca u novcaniku",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "varname": "givemoneynumber",
+          "savevartype": "temp",
+          "compare": "greater than",
+          "value": "korisnickovnovac"
+        }
+      ]
+    },
+    {
+      "name": "poke",
+      "perms": [
+        "pokemon igrac"
+      ],
+      "actions": [
+        {
+          "name": "get poke value",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "pokemon",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "get row spreedsheet poke",
+          "category": "Spreadsheet",
+          "type": "Get Row",
+          "trueActions": [
+            {
+              "name": "succes trial",
+              "category": "Message",
+              "type": "Send Embed",
+              "fields": [
+                {
+                  "name": "Location",
+                  "value": "${tempVars.pokerow.Location}",
+                  "inline": "false"
+                },
+                {
+                  "name": "Attack",
+                  "value": "${tempVars.pokerow.Attack}",
+                  "inline": "false"
+                },
+                {
+                  "name": "Defense",
+                  "value": "${tempVars.pokerow.Defense}",
+                  "inline": "false"
+                },
+                {
+                  "name": "HP",
+                  "value": "${tempVars.pokerow.HP}",
+                  "inline": "false"
+                }
+              ],
+              "channelname": "$$CommandChannel$$",
+              "color": "00C8FF",
+              "title": "${tempVars.pokerow.Name}",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "**${tempVars.pokerow.Name}** is a **${tempVars.pokerow.Primary Type}** pokemon.",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "error trial",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "$$CommandChannel$$",
+              "color": "FF0000",
+              "title": "GRESKA!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}>, izvini ali ne znam tog pokemon-a!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "selectedsheet": "Pokemon Sword_Shield Filter - Whole List.csv",
+          "colheader": "Name",
+          "colval": "%%pokemon%%",
+          "rowvariable": "pokerow",
+          "savevartype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "clear",
+      "perms": [
+        "admin",
+        "moderator"
+      ],
+      "actions": [
+        {
+          "name": "del all messages channle",
+          "category": "Channel Action",
+          "type": "Delete All Messages",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "msgcount": "11"
+        },
+        {
+          "name": "uspehj",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "00FF04",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Uspesno je obrisano 11 poruka!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "kick",
+      "actions": [
+        {
+          "name": "gjet usrr mentioned",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "kickuser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "reasonkick",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "reasonkick",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "kick user",
+          "category": "User Action",
+          "type": "Kick User",
+          "user": "${tempVars.kickuser.id}",
+          "reason": "${tempVars.reasonkick}"
+        },
+        {
+          "name": "kick success",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "0FFF4B",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Korisnik **<@${tempVars.kickuser.id}>**, je uspesno izbacen zbog **%%reasonkick%%!**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "ban",
+      "actions": [
+        {
+          "name": "gjet mentiuns usert",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "banuser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "reasonban",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "reasonban",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "3"
+        },
+        {
+          "name": "bantime",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "bantime",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "ban user",
+          "category": "User Action",
+          "type": "Ban User",
+          "user": "${tempVars.banuser.id}",
+          "reason": "${tempVars.reasonban}",
+          "days": "${tempVars.bantime}"
+        },
+        {
+          "name": "ban success",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "00FF44",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Korisnik **<@${tempVars.banuser.id}>** je banovan na **%%bantime%% dana!** zbog **%%reasonban%%!**.",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "botstatus-auto",
+      "actions": [
+        {
+          "name": "TESGTT",
+          "category": "Bot Action",
+          "type": "More Status",
+          "statusoption": "PLAYING",
+          "statustext": "Automating VikkiVuk | v.help"
+        },
+        {
+          "name": "asafgsgbdhb",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "$$CommandChannel$$",
+          "color": "00FF1E",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Uspesno je moj status igranja stavljen na **\"Automating VikkiVuk | v.help\"!**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}
