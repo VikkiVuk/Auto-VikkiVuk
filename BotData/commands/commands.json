@@ -161,6 +161,11 @@
               "name": "v.daj",
               "value": "Ovako dajete drugim ljudima novac! Komanda se koristi ovako : \"v.daj @VikkiVuk 1\" (@VikkiVuk oznacava kojoj osobi zelite da date novac, a 1 oznacava iznos novca koj zelite da date toj osobi!)",
               "inline": "false"
+            },
+            {
+              "name": "v.kolikoimanovca",
+              "value": "Ovako mozete videti ko koliko ima novca! Komanda se koristi ovako \"v.kolikoimanovca @VikkiVuk\" (@VikkiVuk oznacava korisnika od kog ocete da vidite koliko ima novca!) ",
+              "inline": "false"
             }
           ],
           "channelname": "${dbsVars.CommandChannel.id}",
@@ -1195,6 +1200,48 @@
           "authorimageurl": "",
           "authorlink": "",
           "description": "Uspesno je moj status igranja stavljen na **\"Automating VikkiVuk | v.help\"!**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "kolikoimanovca",
+      "actions": [
+        {
+          "name": "mentioend userstty",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "kolikoimanovcauser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "get money from mentioned user",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${tempVars.kolikoimanovcauser.id}",
+          "field": "novac",
+          "varname": "korisnickovnovac1",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "succsda",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "22FF00",
+          "title": "NOVAC",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": ":dollar: | Korisnik <@${tempVars.kolikoimanovcauser.id}> ima **%%korisnickovnovac1%% novca!**",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",

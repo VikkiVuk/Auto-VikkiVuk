@@ -1461,8 +1461,15 @@
           "name": "v.daj",
           "value": "Ovako dajete drugim ljudima novac! Komanda se koristi ovako : \"v.daj @VikkiVuk 1\" (@VikkiVuk oznacava kojoj osobi zelite da date novac, a 1 oznacava iznos novca koj zelite da date toj osobi!)",
           "inline": "false"
+        },
+        {
+          "name": "v.kolikoimanovca",
+          "value": "Ovako mozete videti ko koliko ima novca! Komanda se koristi ovako \"v.kolikoimanovca @VikkiVuk\" (@VikkiVuk oznacava korisnika od kog ocete da vidite koliko ima novca!) ",
+          "inline": "false"
         }
       ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -3579,6 +3586,150 @@
         "field",
         "oper",
         "value"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "kolikoimanovca",
+      "guid": "7e212bf7-9eed-4184-996e-c27c3e1fd9d8",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "646a93ab-1a75-438a-b8ab-5f206ac0bfc8"
+          ]
+        }
+      ],
+      "x": 798,
+      "y": 1528
+    },
+    {
+      "type": "response",
+      "name": "mentioend userstty",
+      "guid": "646a93ab-1a75-438a-b8ab-5f206ac0bfc8",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1d27cf58-eb6e-4da4-aec3-a385d9d1a39c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7e212bf7-9eed-4184-996e-c27c3e1fd9d8"
+        }
+      ],
+      "x": 1017,
+      "y": 1481,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "kolikoimanovcauser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get money from mentioned user",
+      "guid": "1d27cf58-eb6e-4da4-aec3-a385d9d1a39c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1b57b705-1366-4e93-9d85-6d76dc85e50d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "646a93ab-1a75-438a-b8ab-5f206ac0bfc8"
+        }
+      ],
+      "x": 1216,
+      "y": 1470,
+      "rtype": "User Data",
+      "rsubtype": "Get User Data",
+      "formdata": [
+        "${tempVars.kolikoimanovcauser.id}",
+        "novac",
+        "korisnickovnovac1",
+        "temp",
+        "User"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "varname",
+        "saveVarType",
+        "vartype"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "succsda",
+      "guid": "1b57b705-1366-4e93-9d85-6d76dc85e50d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1d27cf58-eb6e-4da4-aec3-a385d9d1a39c"
+        }
+      ],
+      "x": 1398,
+      "y": 1474,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "22FF00",
+        "NOVAC",
+        "",
+        "",
+        "",
+        "",
+        ":dollar: | Korisnik <@${tempVars.kolikoimanovcauser.id}> ima **%%korisnickovnovac1%% novca!**",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
       ]
     }
   ]
