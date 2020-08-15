@@ -1209,7 +1209,7 @@
     },
     {
       "type": "command",
-      "name": "moj-novac",
+      "name": "novcanik",
       "guid": "433e06fb-9c70-40aa-9736-a6b12cee1ac7",
       "outputs": [
         {
@@ -1287,7 +1287,7 @@
       "formdata": [
         "${dbsVars.CommandChannel.id}",
         "22FF00",
-        "MOJ NOVAC",
+        "NOVCANIK",
         "",
         "",
         "",
@@ -1436,7 +1436,7 @@
           "inline": "false"
         },
         {
-          "name": "v.moj-novac",
+          "name": "v.novcanik",
           "value": "Kaze vam koliko novca imate na vasem racunu!",
           "inline": "false"
         },
@@ -1461,8 +1461,6 @@
           "inline": "false"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",

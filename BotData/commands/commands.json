@@ -138,7 +138,7 @@
               "inline": "false"
             },
             {
-              "name": "v.moj-novac",
+              "name": "v.novcanik",
               "value": "Kaze vam koliko novca imate na vasem racunu!",
               "inline": "false"
             },
@@ -530,7 +530,7 @@
       ]
     },
     {
-      "name": "moj-novac",
+      "name": "novcanik",
       "perms": [],
       "actions": [
         {
@@ -559,7 +559,7 @@
           "type": "Send Embed",
           "channelname": "${dbsVars.CommandChannel.id}",
           "color": "22FF00",
-          "title": "MOJ NOVAC",
+          "title": "NOVCANIK",
           "url": "",
           "authorname": "",
           "authorimageurl": "",
