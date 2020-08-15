@@ -105,7 +105,7 @@
           "inline": "false"
         },
         {
-          "name": "v.play-auto",
+          "name": "v.botstatus-auto",
           "value": "Stavi botov status na \"Automating VikkiVuk | v.help\"",
           "inline": "false"
         },
@@ -1062,7 +1062,7 @@
     },
     {
       "type": "command",
-      "name": "potrazi-novac",
+      "name": "trazi",
       "guid": "e7a56f0a-a243-4a8a-8da4-557445fd1d38",
       "outputs": [
         {
@@ -1220,7 +1220,8 @@
         }
       ],
       "x": 46,
-      "y": 1335
+      "y": 1335,
+      "perms": []
     },
     {
       "type": "response",
@@ -1391,7 +1392,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "009DFF",
         "TVOJ BROJ",
         "",
@@ -1430,7 +1431,7 @@
       "reactionFields": [],
       "embedfields": [
         {
-          "name": "v.potrazi-novac",
+          "name": "v.trazi",
           "value": "Potrazite novac, mozete dobiti novac u iznosu od **$1** do **$999**!. Ova komanda je samo za one koji prate VikkiVuk-a na youtube.",
           "inline": "false"
         },
@@ -1440,7 +1441,7 @@
           "inline": "false"
         },
         {
-          "name": "v.moli-se",
+          "name": "v.moli",
           "value": "Ovako se molite i dobijate novac, ne uzimate stvarno od nekog novac, samo dobijate, mozete dobiti novac u iznosu od **$1** do **$50**.",
           "inline": "false"
         },
@@ -1460,6 +1461,8 @@
           "inline": "false"
         }
       ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1473,11 +1476,11 @@
         }
       ],
       "x": 390,
-      "y": 74,
+      "y": 73,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "08FF4E",
         "EKONOMIJA",
         "",
@@ -1511,7 +1514,7 @@
     },
     {
       "type": "command",
-      "name": "moli-se",
+      "name": "moli",
       "guid": "2ecebecf-b744-4031-8383-01e7cb0d3966",
       "outputs": [
         {
@@ -1624,7 +1627,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "8CFF00",
         "MOLJENJE",
         "",
@@ -1852,7 +1855,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "FF0000",
         "GRESKA",
         "",
@@ -1894,7 +1897,7 @@
         {
           "label": "next response",
           "connections": [
-            "81bff568-fb4c-4a0d-b277-12e91fe18f03"
+            "b439a21f-2b3b-4830-8385-575c83510fd2"
           ]
         }
       ],
@@ -1936,22 +1939,22 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "1b272ccb-7cd0-4c9e-b69e-297a4e0ed3ed"
+          "id": "b439a21f-2b3b-4830-8385-575c83510fd2"
         }
       ],
-      "x": 1214,
-      "y": 1661,
+      "x": 1398,
+      "y": 1657,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "15FF00",
         "USPEH!",
         "",
         "",
         "",
         "",
-        "<@${dbsVars.CommandAuthor.id}> uspesno si prebacio ${tempVars.depositnumber} u svoju banku!",
+        "<@${dbsVars.CommandAuthor.id}> uspesno si prebacio **${tempVars.depositnumber}** u svoju banku!",
         "",
         "",
         "Auto VikkiVuk",
@@ -2157,7 +2160,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "FF0000",
         "GRESKA!",
         "",
@@ -2249,7 +2252,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "1AFF00",
         "USPEH!",
         "",
@@ -2458,7 +2461,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "FF0000",
         "GRESKA!",
         "",
@@ -2550,7 +2553,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "00FF15",
         "USPEH!",
         "",
@@ -2742,7 +2745,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "FF0000",
         "GRESKA!",
         "",
@@ -2818,7 +2821,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "00C8FF",
         "${tempVars.pokerow.Name}",
         "",
@@ -2910,7 +2913,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "14FF30",
         "USPEH!",
         "",
@@ -2948,8 +2951,6 @@
       "guid": "2d7b4325-fea0-4f1c-9099-f1584615e640",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -2967,7 +2968,7 @@
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
-        "$$CommandChannel$$",
+        "${dbsVars.CommandChannel.id}",
         "00FF1E",
         "USPEH!",
         "",
@@ -3501,8 +3502,6 @@
       "guid": "9effb7f0-cca1-4122-9c51-0f8c878ecd47",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -3544,6 +3543,43 @@
       ],
       "x": 811,
       "y": 519
+    },
+    {
+      "type": "response",
+      "name": "user money delete",
+      "guid": "b439a21f-2b3b-4830-8385-575c83510fd2",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "81bff568-fb4c-4a0d-b277-12e91fe18f03"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1b272ccb-7cd0-4c9e-b69e-297a4e0ed3ed"
+        }
+      ],
+      "x": 1215,
+      "y": 1642,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "novac",
+        "-",
+        "%%depositnumber%%"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
     }
   ]
 }

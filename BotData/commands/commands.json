@@ -92,7 +92,7 @@
               "inline": "false"
             },
             {
-              "name": "v.play-auto",
+              "name": "v.botstatus-auto",
               "value": "Stavi botov status na \"Automating VikkiVuk | v.help\"",
               "inline": "false"
             },
@@ -133,7 +133,7 @@
           "type": "Send Embed",
           "fields": [
             {
-              "name": "v.potrazi-novac",
+              "name": "v.trazi",
               "value": "Potrazite novac, mozete dobiti novac u iznosu od **$1** do **$999**!. Ova komanda je samo za one koji prate VikkiVuk-a na youtube.",
               "inline": "false"
             },
@@ -143,7 +143,7 @@
               "inline": "false"
             },
             {
-              "name": "v.moli-se",
+              "name": "v.moli",
               "value": "Ovako se molite i dobijate novac, ne uzimate stvarno od nekog novac, samo dobijate, mozete dobiti novac u iznosu od **$1** do **$50**.",
               "inline": "false"
             },
@@ -163,7 +163,7 @@
               "inline": "false"
             }
           ],
-          "channelname": "$$CommandChannel$$",
+          "channelname": "${dbsVars.CommandChannel.id}",
           "color": "08FF4E",
           "title": "EKONOMIJA",
           "url": "",
@@ -406,7 +406,7 @@
           "name": "successd",
           "category": "Message",
           "type": "Send Embed",
-          "channelname": "$$CommandChannel$$",
+          "channelname": "${dbsVars.CommandChannel.id}",
           "color": "14FF30",
           "title": "USPEH!",
           "url": "",
@@ -485,7 +485,7 @@
       ]
     },
     {
-      "name": "potrazi-novac",
+      "name": "trazi",
       "perms": [
         "suban na vikkivuk"
       ],
@@ -531,6 +531,7 @@
     },
     {
       "name": "moj-novac",
+      "perms": [],
       "actions": [
         {
           "name": "get user money",
@@ -589,7 +590,7 @@
           "name": "tvojbroj confirmation",
           "category": "Message",
           "type": "Send Embed",
-          "channelname": "$$CommandChannel$$",
+          "channelname": "${dbsVars.CommandChannel.id}",
           "color": "009DFF",
           "title": "TVOJ BROJ",
           "url": "",
@@ -607,7 +608,7 @@
       ]
     },
     {
-      "name": "moli-se",
+      "name": "moli",
       "perms": [
         "verifikovan"
       ],
@@ -634,7 +635,7 @@
           "name": "you found beg",
           "category": "Message",
           "type": "Send Embed",
-          "channelname": "$$CommandChannel$$",
+          "channelname": "${dbsVars.CommandChannel.id}",
           "color": "8CFF00",
           "title": "MOLJENJE",
           "url": "",
@@ -691,17 +692,26 @@
               "value": "%%depositnumber%%"
             },
             {
+              "name": "user money delete",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novac",
+              "oper": "-",
+              "value": "%%depositnumber%%"
+            },
+            {
               "name": "success",
               "category": "Message",
               "type": "Send Embed",
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "15FF00",
               "title": "USPEH!",
               "url": "",
               "authorname": "",
               "authorimageurl": "",
               "authorlink": "",
-              "description": "<@${dbsVars.CommandAuthor.id}> uspesno si prebacio ${tempVars.depositnumber} u svoju banku!",
+              "description": "<@${dbsVars.CommandAuthor.id}> uspesno si prebacio **${tempVars.depositnumber}** u svoju banku!",
               "thumbnail": "",
               "image": "",
               "footer": "Auto VikkiVuk",
@@ -715,7 +725,7 @@
               "name": "first error",
               "category": "Message",
               "type": "Send Embed",
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "FF0000",
               "title": "GRESKA",
               "url": "",
@@ -772,7 +782,7 @@
               "name": "second error",
               "category": "Message",
               "type": "Send Embed",
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "FF0000",
               "title": "GRESKA!",
               "url": "",
@@ -811,7 +821,7 @@
               "name": "success 1",
               "category": "Message",
               "type": "Send Embed",
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "1AFF00",
               "title": "USPEH!",
               "url": "",
@@ -885,7 +895,7 @@
               "name": "succes 3",
               "category": "Message",
               "type": "Send Embed",
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "00FF15",
               "title": "USPEH!",
               "url": "",
@@ -906,7 +916,7 @@
               "name": "third error",
               "category": "Message",
               "type": "Send Embed",
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "FF0000",
               "title": "GRESKA!",
               "url": "",
@@ -975,7 +985,7 @@
                   "inline": "false"
                 }
               ],
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "00C8FF",
               "title": "${tempVars.pokerow.Name}",
               "url": "",
@@ -996,7 +1006,7 @@
               "name": "error trial",
               "category": "Message",
               "type": "Send Embed",
-              "channelname": "$$CommandChannel$$",
+              "channelname": "${dbsVars.CommandChannel.id}",
               "color": "FF0000",
               "title": "GRESKA!",
               "url": "",
@@ -1175,7 +1185,7 @@
           "name": "asafgsgbdhb",
           "category": "Message",
           "type": "Send Embed",
-          "channelname": "$$CommandChannel$$",
+          "channelname": "${dbsVars.CommandChannel.id}",
           "color": "00FF1E",
           "title": "USPEH!",
           "url": "",
