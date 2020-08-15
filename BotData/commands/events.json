@@ -11,7 +11,17 @@
     {
       "name": "Any Message",
       "perms": [],
-      "actions": [],
+      "actions": [
+        {
+          "name": "get user some money",
+          "category": "User Data",
+          "type": "Edit User Data",
+          "user": "${tempVars.msguser.id}",
+          "field": "novac",
+          "oper": "+",
+          "value": "1"
+        }
+      ],
       "var": {
         "user": "msguser"
       }

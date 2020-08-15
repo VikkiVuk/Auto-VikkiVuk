@@ -67,7 +67,7 @@
               "inline": "false"
             },
             {
-              "name": "v.play-choose",
+              "name": "v.botstatus",
               "value": "Stavi botov status na ono sto vi ukucate!",
               "inline": "false"
             },
@@ -138,13 +138,13 @@
               "inline": "false"
             },
             {
-              "name": "v.novcanik",
+              "name": "v.novac",
               "value": "Kaze vam koliko novca imate na vasem racunu!",
               "inline": "false"
             },
             {
               "name": "v.moli",
-              "value": "Ovako se molite i dobijate novac, ne uzimate stvarno od nekog novac, samo dobijate, mozete dobiti novac u iznosu od **$1** do **$50**.",
+              "value": "Ovako se molite i dobijate novac, ne uzimate stvarno od nekog novac, samo dobijate, mozete dobiti novac u iznosu od **$1** do **$10**.",
               "inline": "false"
             },
             {
@@ -173,8 +173,8 @@
           "description": "Ovde ispod su vam sve komande pod kategorijom **\"EKONOMIJA\"**.",
           "thumbnail": "",
           "image": "",
-          "footer": "",
-          "timestamp": "false",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
@@ -382,7 +382,7 @@
       ]
     },
     {
-      "name": "play-choose",
+      "name": "botstatus",
       "perms": [
         "vikkivuk"
       ],
@@ -530,8 +530,10 @@
       ]
     },
     {
-      "name": "novcanik",
-      "perms": [],
+      "name": "novac",
+      "perms": [
+        "verifikovan"
+      ],
       "actions": [
         {
           "name": "get user money",
@@ -559,7 +561,7 @@
           "type": "Send Embed",
           "channelname": "${dbsVars.CommandChannel.id}",
           "color": "22FF00",
-          "title": "NOVCANIK",
+          "title": "NOVAC",
           "url": "",
           "authorname": "",
           "authorimageurl": "",

@@ -27,7 +27,9 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": []
+          "connections": [
+            "31d1e942-16ed-4ffa-97fe-067a013ea288"
+          ]
         }
       ],
       "x": 101,
@@ -82,6 +84,41 @@
       "x": 100,
       "y": 625,
       "perms": []
+    },
+    {
+      "type": "response",
+      "name": "get user some money",
+      "guid": "31d1e942-16ed-4ffa-97fe-067a013ea288",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "49ebbc23-2903-4f05-ab69-bc9ecb4f8888"
+        }
+      ],
+      "x": 282,
+      "y": 471,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${tempVars.msguser.id}",
+        "novac",
+        "+",
+        "1"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
     }
   ]
 }
