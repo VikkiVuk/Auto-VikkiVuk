@@ -1464,12 +1464,15 @@
         },
         {
           "name": "v.kolikoimanovca",
-          "value": "Ovako mozete videti ko koliko ima novca! Komanda se koristi ovako \"v.kolikoimanovca @VikkiVuk\" (@VikkiVuk oznacava korisnika od kog ocete da vidite koliko ima novca!) ",
+          "value": "Ovako mozete videti ko koliko ima novca! Komanda se koristi ovako \"v.kolikoimanovca @VikkiVuk\" (@VikkiVuk oznacava korisnika od kog ocete da vidite koliko ima novca!). Ovu komandu mogu samo da koriste oni koji su subani na vikkivuk.",
+          "inline": "false"
+        },
+        {
+          "name": "v.uzmikorisniku",
+          "value": "Ovako mozete nekome da uzmete neku sumu novca *ali ne mozete da mu uzmete ako nema dovoljno novca*. Ova komanda je samo   za VikkiVuk-a. Komanda se koristi ovako! \"v.uzmikorisniku @VikkiVuk 1\" (@VikkiVuk oznacava od koga zelite da uzmete novac, 1 oznacava koliko novca ocete da uzmete!)",
           "inline": "false"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -2375,13 +2378,13 @@
         {
           "label": "true",
           "connections": [
-            "ba6901c0-75ba-4440-af87-7943f1f7b5d2"
+            "3b61d321-c4f6-4709-8a9f-9ab171fbe543"
           ]
         },
         {
           "label": "false",
           "connections": [
-            "3b61d321-c4f6-4709-8a9f-9ab171fbe543"
+            "d6e40424-0900-4959-8dfa-90825feb0fa3"
           ]
         }
       ],
@@ -2399,7 +2402,7 @@
         "givemoneynumber",
         "temp",
         "greater than",
-        "korisnickovnovac"
+        "${tempVars.korisnickovnovac}"
       ],
       "formnames": [
         "varname",
@@ -2463,8 +2466,8 @@
           "id": "49a2fa75-d21e-44db-89db-854fdacfaaa7"
         }
       ],
-      "x": 1014,
-      "y": 1980,
+      "x": 982,
+      "y": 1972,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -2517,11 +2520,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "49a2fa75-d21e-44db-89db-854fdacfaaa7"
+          "id": "d6e40424-0900-4959-8dfa-90825feb0fa3"
         }
       ],
-      "x": 1225,
-      "y": 1970,
+      "x": 1357,
+      "y": 1971,
       "rtype": "User Data",
       "rsubtype": "Edit User Data",
       "formdata": [
@@ -2555,8 +2558,8 @@
           "id": "ba6901c0-75ba-4440-af87-7943f1f7b5d2"
         }
       ],
-      "x": 1420,
-      "y": 1997,
+      "x": 1537,
+      "y": 1968,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -3509,6 +3512,8 @@
       "guid": "9effb7f0-cca1-4122-9c51-0f8c878ecd47",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -3601,7 +3606,10 @@
         }
       ],
       "x": 798,
-      "y": 1528
+      "y": 1528,
+      "perms": [
+        "suban na vikkivuk"
+      ]
     },
     {
       "type": "response",
@@ -3708,6 +3716,399 @@
         "",
         "",
         ":dollar: | Korisnik <@${tempVars.kolikoimanovcauser.id}> ima **%%korisnickovnovac1%% novca!**",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "remove money from the author",
+      "guid": "d6e40424-0900-4959-8dfa-90825feb0fa3",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "ba6901c0-75ba-4440-af87-7943f1f7b5d2"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "49a2fa75-d21e-44db-89db-854fdacfaaa7"
+        }
+      ],
+      "x": 1167,
+      "y": 1975,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "novac",
+        "-",
+        "${tempVars.givemoneynumber}"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "uzmikorisniku",
+      "guid": "5d53e81f-ff44-4531-866a-6823c4d2bdfa",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "2c7e7af1-5ee3-42a0-9cf8-cd15ff6ef7e1"
+          ]
+        }
+      ],
+      "x": 789,
+      "y": 1373,
+      "perms": [
+        "vikkivuk"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "jiodsgjhregng",
+      "guid": "2c7e7af1-5ee3-42a0-9cf8-cd15ff6ef7e1",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f79bd4c0-7633-4447-9612-0ada352e9aa5"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5d53e81f-ff44-4531-866a-6823c4d2bdfa"
+        }
+      ],
+      "x": 1006,
+      "y": 1348,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "komedauzme",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "hahahahahah",
+      "guid": "f79bd4c0-7633-4447-9612-0ada352e9aa5",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cff37371-e9cd-461f-9df2-66672c84b650"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2c7e7af1-5ee3-42a0-9cf8-cd15ff6ef7e1"
+        }
+      ],
+      "x": 1201,
+      "y": 1337,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "kolikonovcadauzme",
+        "Number",
+        "temp",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "hmmmmmmmmmmmmmm",
+      "guid": "534bfabb-5d47-4025-bba0-b7f3c155e769",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "d3d0e7ac-e203-40a5-9d05-b0b2f7af7389"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "e0932340-c7eb-41e0-ab22-70a5ae95027b"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "cff37371-e9cd-461f-9df2-66672c84b650"
+        }
+      ],
+      "x": 1580,
+      "y": 1279,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "kolikonovcadauzme",
+        "temp",
+        "greater than",
+        "${tempVars.korisnickovnovac2}"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get mentioned users money",
+      "guid": "cff37371-e9cd-461f-9df2-66672c84b650",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "534bfabb-5d47-4025-bba0-b7f3c155e769"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f79bd4c0-7633-4447-9612-0ada352e9aa5"
+        }
+      ],
+      "x": 1393,
+      "y": 1306,
+      "rtype": "User Data",
+      "rsubtype": "Get User Data",
+      "formdata": [
+        "${tempVars.komedauzme.id}",
+        "novac",
+        "korisnickovnovac2",
+        "temp",
+        "User"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "varname",
+        "saveVarType",
+        "vartype"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "remove money from user 2",
+      "guid": "e0932340-c7eb-41e0-ab22-70a5ae95027b",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "6ec028ea-86b7-46f6-9b4a-6421d6030cec"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "534bfabb-5d47-4025-bba0-b7f3c155e769"
+        }
+      ],
+      "x": 1580,
+      "y": 1469,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${tempVars.komedauzme.id}",
+        "novac",
+        "-",
+        "${tempVars.kolikonovcadauzme}"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "give the money to user 1",
+      "guid": "6ec028ea-86b7-46f6-9b4a-6421d6030cec",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b7a1a024-6d18-411a-97c7-35f868e7db64"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e0932340-c7eb-41e0-ab22-70a5ae95027b"
+        }
+      ],
+      "x": 1579,
+      "y": 1628,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "novac",
+        "+",
+        "${tempVars.kolikonovcadauzme}"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "success22222",
+      "guid": "b7a1a024-6d18-411a-97c7-35f868e7db64",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6ec028ea-86b7-46f6-9b4a-6421d6030cec"
+        }
+      ],
+      "x": 1583,
+      "y": 1797,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "22FF00",
+        "USPEH!",
+        "",
+        "",
+        "",
+        "",
+        ":dollar: | Uspesno si uzeo **${tempVars.kolikonovcadauzme} novca** od korisnika <@${tempVars.komedauzme.id}>!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "failed 111",
+      "guid": "d3d0e7ac-e203-40a5-9d05-b0b2f7af7389",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "534bfabb-5d47-4025-bba0-b7f3c155e769"
+        }
+      ],
+      "x": 1705,
+      "y": 1938,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "GRESKA!",
+        "",
+        "",
+        "",
+        "",
+        "<@${dbsVars.CommandAuthor.id}>, izvini ali korisnik <@${tempVars.komedauzme.id}> nema toliko novca na racunu!",
         "",
         "",
         "Auto VikkiVuk",

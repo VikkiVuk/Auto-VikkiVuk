@@ -164,7 +164,12 @@
             },
             {
               "name": "v.kolikoimanovca",
-              "value": "Ovako mozete videti ko koliko ima novca! Komanda se koristi ovako \"v.kolikoimanovca @VikkiVuk\" (@VikkiVuk oznacava korisnika od kog ocete da vidite koliko ima novca!) ",
+              "value": "Ovako mozete videti ko koliko ima novca! Komanda se koristi ovako \"v.kolikoimanovca @VikkiVuk\" (@VikkiVuk oznacava korisnika od kog ocete da vidite koliko ima novca!). Ovu komandu mogu samo da koriste oni koji su subani na vikkivuk.",
+              "inline": "false"
+            },
+            {
+              "name": "v.uzmikorisniku",
+              "value": "Ovako mozete nekome da uzmete neku sumu novca *ali ne mozete da mu uzmete ako nema dovoljno novca*. Ova komanda je samo   za VikkiVuk-a. Komanda se koristi ovako! \"v.uzmikorisniku @VikkiVuk 1\" (@VikkiVuk oznacava od koga zelite da uzmete novac, 1 oznacava koliko novca ocete da uzmete!)",
               "inline": "false"
             }
           ],
@@ -890,6 +895,36 @@
           "type": "Check Variable Value",
           "trueActions": [
             {
+              "name": "third error",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "FF0000",
+              "title": "GRESKA!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}> izvini, ali nemas dovoljno novca u novcaniku",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "remove money from the author",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novac",
+              "oper": "-",
+              "value": "${tempVars.givemoneynumber}"
+            },
+            {
               "name": "give the money yo user",
               "category": "User Data",
               "type": "Edit User Data",
@@ -918,31 +953,10 @@
               "savetovariabletype": "temp"
             }
           ],
-          "falseActions": [
-            {
-              "name": "third error",
-              "category": "Message",
-              "type": "Send Embed",
-              "channelname": "${dbsVars.CommandChannel.id}",
-              "color": "FF0000",
-              "title": "GRESKA!",
-              "url": "",
-              "authorname": "",
-              "authorimageurl": "",
-              "authorlink": "",
-              "description": "<@${dbsVars.CommandAuthor.id}> izvini, ali nemas dovoljno novca u novcaniku",
-              "thumbnail": "",
-              "image": "",
-              "footer": "Auto VikkiVuk",
-              "timestamp": "BOOL_TRUE@@",
-              "savetovariable": "",
-              "savetovariabletype": "temp"
-            }
-          ],
           "varname": "givemoneynumber",
           "savevartype": "temp",
           "compare": "greater than",
-          "value": "korisnickovnovac"
+          "value": "${tempVars.korisnickovnovac}"
         }
       ]
     },
@@ -1211,6 +1225,9 @@
     },
     {
       "name": "kolikoimanovca",
+      "perms": [
+        "suban na vikkivuk"
+      ],
       "actions": [
         {
           "name": "mentioend userstty",
@@ -1248,6 +1265,110 @@
           "timestamp": "BOOL_TRUE@@",
           "savetovariable": "",
           "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "uzmikorisniku",
+      "perms": [
+        "vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "jiodsgjhregng",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "komedauzme",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "hahahahahah",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "kolikonovcadauzme",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "get mentioned users money",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${tempVars.komedauzme.id}",
+          "field": "novac",
+          "varname": "korisnickovnovac2",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "hmmmmmmmmmmmmmm",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "failed 111",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "FF0000",
+              "title": "GRESKA!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}>, izvini ali korisnik <@${tempVars.komedauzme.id}> nema toliko novca na racunu!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "remove money from user 2",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${tempVars.komedauzme.id}",
+              "field": "novac",
+              "oper": "-",
+              "value": "${tempVars.kolikonovcadauzme}"
+            },
+            {
+              "name": "give the money to user 1",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novac",
+              "oper": "+",
+              "value": "${tempVars.kolikonovcadauzme}"
+            },
+            {
+              "name": "success22222",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "22FF00",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": ":dollar: | Uspesno si uzeo **${tempVars.kolikonovcadauzme} novca** od korisnika <@${tempVars.komedauzme.id}>!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "varname": "kolikonovcadauzme",
+          "savevartype": "temp",
+          "compare": "greater than",
+          "value": "${tempVars.korisnickovnovac2}"
         }
       ]
     }
