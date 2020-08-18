@@ -46,7 +46,9 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": []
+          "connections": [
+            "7b30dda7-c592-4acb-99d1-85c2fef767a8"
+          ]
         }
       ],
       "x": 99,
@@ -63,7 +65,9 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": []
+          "connections": [
+            "fdc8e621-26ac-44e0-bbc7-9df379444ecd"
+          ]
         }
       ],
       "x": 100,
@@ -78,7 +82,9 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": []
+          "connections": [
+            "7de0b1a3-863b-4236-b670-b0f9904ab590"
+          ]
         }
       ],
       "x": 100,
@@ -109,7 +115,7 @@
       "rsubtype": "Edit User Data",
       "formdata": [
         "${tempVars.msguser.id}",
-        "novac",
+        "xp",
         "+",
         "1"
       ],
@@ -118,6 +124,115 @@
         "field",
         "oper",
         "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "send owner the direct message",
+      "guid": "7de0b1a3-863b-4236-b670-b0f9904ab590",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0101bc23-2003-4f05-ab69-bc9ecb4f067e"
+        }
+      ],
+      "x": 284,
+      "y": 612,
+      "rtype": "Message",
+      "rsubtype": "Send Direct Message",
+      "formdata": [
+        "${dbsVars.guild.ownerID}",
+        "Super! Ucitao sam se! Hvala na pokretanju!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "user",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "sdgsfgdg",
+      "guid": "fdc8e621-26ac-44e0-bbc7-9df379444ecd",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e"
+        }
+      ],
+      "x": 283,
+      "y": 344,
+      "rtype": "Message",
+      "rsubtype": "Send Direct Message",
+      "formdata": [
+        "${tempVars.banuser.id}",
+        "Izvini, ali neko te je banovao iz servera **Vukovi**!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "user",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "seghrgd",
+      "guid": "7b30dda7-c592-4acb-99d1-85c2fef767a8",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "69ebbc23-2903-4f05-ab69-bc9ecb4f067e"
+        }
+      ],
+      "x": 278,
+      "y": 215,
+      "rtype": "Message",
+      "rsubtype": "Send Direct Message",
+      "formdata": [
+        "${tempVars.kickuser.id}",
+        "Izvini, ali neko te je izbacio iz servera **Vukovi**!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "user",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
       ]
     }
   ]

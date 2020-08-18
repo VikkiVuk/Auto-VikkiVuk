@@ -17,7 +17,7 @@
           "category": "User Data",
           "type": "Edit User Data",
           "user": "${tempVars.msguser.id}",
-          "field": "novac",
+          "field": "xp",
           "oper": "+",
           "value": "1"
         }
@@ -29,7 +29,17 @@
     {
       "name": "User Kicked",
       "perms": [],
-      "actions": [],
+      "actions": [
+        {
+          "name": "seghrgd",
+          "category": "Message",
+          "type": "Send Direct Message",
+          "user": "${tempVars.kickuser.id}",
+          "messagetext": "Izvini, ali neko te je izbacio iz servera **Vukovi**!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ],
       "var": {
         "user": "kickuser"
       }
@@ -37,7 +47,17 @@
     {
       "name": "User Banned",
       "perms": [],
-      "actions": [],
+      "actions": [
+        {
+          "name": "sdgsfgdg",
+          "category": "Message",
+          "type": "Send Direct Message",
+          "user": "${tempVars.banuser.id}",
+          "messagetext": "Izvini, ali neko te je banovao iz servera **Vukovi**!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ],
       "var": {
         "user": "banuser"
       }
@@ -45,7 +65,17 @@
     {
       "name": "Bot Initialization",
       "perms": [],
-      "actions": [],
+      "actions": [
+        {
+          "name": "send owner the direct message",
+          "category": "Message",
+          "type": "Send Direct Message",
+          "user": "${dbsVars.guild.ownerID}",
+          "messagetext": "Super! Ucitao sam se! Hvala na pokretanju!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ],
       "var": {}
     }
   ]

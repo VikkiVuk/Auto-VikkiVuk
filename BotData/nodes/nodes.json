@@ -123,6 +123,11 @@
           "name": "v.ban",
           "value": "Zabrani pristup nekom korisniku serveru! Ova komanda se koristi ovako : \"v.ban @VikkiVuk 1 test\" (@VikkiVuk oznacava osobu koju zelite da banujete, 1 oznacava koliko dana zelite da banujete osobu, test oznacava razlog zasto zelite da banujete osobu!)",
           "inline": "false"
+        },
+        {
+          "name": "v.xp",
+          "value": "Ovako proveravate vas xp!",
+          "inline": "false"
         }
       ],
       "saveToVariable": "pomoc-meni",
@@ -156,8 +161,8 @@
         "Ovo je OG Bot napravljen od strane VikkiVuk-a! Dole su vam sve komande koje ja imam!",
         "",
         "",
-        "",
-        "false",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
         "pomoc-meni",
         "server"
       ],
@@ -1470,6 +1475,11 @@
         {
           "name": "v.uzmikorisniku",
           "value": "Ovako mozete nekome da uzmete neku sumu novca *ali ne mozete da mu uzmete ako nema dovoljno novca*. Ova komanda je samo   za VikkiVuk-a. Komanda se koristi ovako! \"v.uzmikorisniku @VikkiVuk 1\" (@VikkiVuk oznacava od koga zelite da uzmete novac, 1 oznacava koliko novca ocete da uzmete!)",
+          "inline": "false"
+        },
+        {
+          "name": "v.unovci",
+          "value": "Ovako mozete da unovcite  **xp** u **novac**, **2 xp-a** vrede **$1**. Komanda se koristi tako sto samo ukucas **v.unovci**, i ono ceti automatski unovciti **2 xp** u **$1!**",
           "inline": "false"
         }
       ],
@@ -3512,8 +3522,6 @@
       "guid": "9effb7f0-cca1-4122-9c51-0f8c878ecd47",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -4109,6 +4117,399 @@
         "",
         "",
         "<@${dbsVars.CommandAuthor.id}>, izvini ali korisnik <@${tempVars.komedauzme.id}> nema toliko novca na racunu!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "xp",
+      "guid": "add6cc5a-e9a9-4f17-a7d0-e824d06bc04d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "31f69d2a-924f-42db-9efc-affb983ab5fe"
+          ]
+        }
+      ],
+      "x": 88,
+      "y": 2203,
+      "perms": [
+        "verifikovan"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get users xp",
+      "guid": "31f69d2a-924f-42db-9efc-affb983ab5fe",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b583abb9-f53a-41e2-af08-d4ea896b900c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "add6cc5a-e9a9-4f17-a7d0-e824d06bc04d"
+        }
+      ],
+      "x": 310,
+      "y": 2192,
+      "rtype": "User Data",
+      "rsubtype": "Get User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "xp",
+        "korisnickovxp",
+        "temp",
+        "User"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "varname",
+        "saveVarType",
+        "vartype"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "jfhegkefegtrg",
+      "guid": "b583abb9-f53a-41e2-af08-d4ea896b900c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "31f69d2a-924f-42db-9efc-affb983ab5fe"
+        }
+      ],
+      "x": 505,
+      "y": 2172,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FFE30D",
+        "XP",
+        "",
+        "",
+        "",
+        "",
+        "XP | <@${dbsVars.CommandAuthor.id}> imas **${tempVars.korisnickovxp} xp-a!**",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "unovci",
+      "guid": "3e0107a5-77fb-4953-b1e0-c727f4b48e16",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "7c25c602-ecc0-40d7-b75e-cc2078bbe905"
+          ]
+        }
+      ],
+      "x": 770,
+      "y": 1215
+    },
+    {
+      "type": "response",
+      "name": "get users xpppp",
+      "guid": "7c25c602-ecc0-40d7-b75e-cc2078bbe905",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "922146ae-78d3-4528-b490-1e6751da0a89"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3e0107a5-77fb-4953-b1e0-c727f4b48e16"
+        }
+      ],
+      "x": 964,
+      "y": 1188,
+      "rtype": "User Data",
+      "rsubtype": "Get User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "xp",
+        "korisnickovxpp",
+        "temp",
+        "User"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "varname",
+        "saveVarType",
+        "vartype"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "check if has 2 xp",
+      "guid": "922146ae-78d3-4528-b490-1e6751da0a89",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "b04b2c76-51f6-483c-bcc1-14408cabfefc"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "cf231e58-cf43-41f4-9310-bd77e680c959"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7c25c602-ecc0-40d7-b75e-cc2078bbe905"
+        }
+      ],
+      "x": 1161,
+      "y": 1137,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "korisnickovxpp",
+        "temp",
+        "greater than",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "remove user 2 xp",
+      "guid": "b04b2c76-51f6-483c-bcc1-14408cabfefc",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "aaa12c2d-081f-47a3-87ea-1523bce4eec9"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "922146ae-78d3-4528-b490-1e6751da0a89"
+        }
+      ],
+      "x": 1350,
+      "y": 1057,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "xp",
+        "-",
+        "2"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "add user money",
+      "guid": "aaa12c2d-081f-47a3-87ea-1523bce4eec9",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cb394985-cc5e-452e-ac48-1bb867065c7d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b04b2c76-51f6-483c-bcc1-14408cabfefc"
+        }
+      ],
+      "x": 1522,
+      "y": 1039,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "novac",
+        "+",
+        "1"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "uspeh!",
+      "guid": "cb394985-cc5e-452e-ac48-1bb867065c7d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "aaa12c2d-081f-47a3-87ea-1523bce4eec9"
+        }
+      ],
+      "x": 1698,
+      "y": 1049,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "26FF00",
+        "USPEH!",
+        "",
+        "",
+        "",
+        "",
+        ":dollar: | <@${dbsVars.CommandAuthor.id}>, uspesno si unovcio **2 xp-a** u **$1!**.",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "neuspeh!",
+      "guid": "cf231e58-cf43-41f4-9310-bd77e680c959",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "922146ae-78d3-4528-b490-1e6751da0a89"
+        }
+      ],
+      "x": 1356,
+      "y": 1182,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "GRESKA!",
+        "",
+        "",
+        "",
+        "",
+        "<@${dbsVars.CommandAuthor.id}>, izvini ali moras imati barem **2 xp-a**, ali ti nemas! Molim te pokusaj ponovo, nakon sto sakupis barem **2 xp-a**!",
         "",
         "",
         "Auto VikkiVuk",

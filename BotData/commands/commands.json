@@ -110,6 +110,11 @@
               "name": "v.ban",
               "value": "Zabrani pristup nekom korisniku serveru! Ova komanda se koristi ovako : \"v.ban @VikkiVuk 1 test\" (@VikkiVuk oznacava osobu koju zelite da banujete, 1 oznacava koliko dana zelite da banujete osobu, test oznacava razlog zasto zelite da banujete osobu!)",
               "inline": "false"
+            },
+            {
+              "name": "v.xp",
+              "value": "Ovako proveravate vas xp!",
+              "inline": "false"
             }
           ],
           "channelname": "${dbsVars.CommandChannel.id}",
@@ -122,8 +127,8 @@
           "description": "Ovo je OG Bot napravljen od strane VikkiVuk-a! Dole su vam sve komande koje ja imam!",
           "thumbnail": "",
           "image": "",
-          "footer": "",
-          "timestamp": "false",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
           "savetovariable": "pomoc-meni",
           "savetovariabletype": "server"
         },
@@ -170,6 +175,11 @@
             {
               "name": "v.uzmikorisniku",
               "value": "Ovako mozete nekome da uzmete neku sumu novca *ali ne mozete da mu uzmete ako nema dovoljno novca*. Ova komanda je samo   za VikkiVuk-a. Komanda se koristi ovako! \"v.uzmikorisniku @VikkiVuk 1\" (@VikkiVuk oznacava od koga zelite da uzmete novac, 1 oznacava koliko novca ocete da uzmete!)",
+              "inline": "false"
+            },
+            {
+              "name": "v.unovci",
+              "value": "Ovako mozete da unovcite  **xp** u **novac**, **2 xp-a** vrede **$1**. Komanda se koristi tako sto samo ukucas **v.unovci**, i ono ceti automatski unovciti **2 xp** u **$1!**",
               "inline": "false"
             }
           ],
@@ -1369,6 +1379,127 @@
           "savevartype": "temp",
           "compare": "greater than",
           "value": "${tempVars.korisnickovnovac2}"
+        }
+      ]
+    },
+    {
+      "name": "xp",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "get users xp",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "xp",
+          "varname": "korisnickovxp",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "jfhegkefegtrg",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FFE30D",
+          "title": "XP",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "XP | <@${dbsVars.CommandAuthor.id}> imas **${tempVars.korisnickovxp} xp-a!**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "unovci",
+      "actions": [
+        {
+          "name": "get users xpppp",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "xp",
+          "varname": "korisnickovxpp",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "check if has 2 xp",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "remove user 2 xp",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "xp",
+              "oper": "-",
+              "value": "2"
+            },
+            {
+              "name": "add user money",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novac",
+              "oper": "+",
+              "value": "1"
+            },
+            {
+              "name": "uspeh!",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "26FF00",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": ":dollar: | <@${dbsVars.CommandAuthor.id}>, uspesno si unovcio **2 xp-a** u **$1!**.",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "neuspeh!",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "FF0000",
+              "title": "GRESKA!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}>, izvini ali moras imati barem **2 xp-a**, ali ti nemas! Molim te pokusaj ponovo, nakon sto sakupis barem **2 xp-a**!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "varname": "korisnickovxpp",
+          "savevartype": "temp",
+          "compare": "greater than",
+          "value": "2"
         }
       ]
     }
