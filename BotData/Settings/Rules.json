@@ -1,20 +1,20 @@
 {
-  "enabled": false,
+  "enabled": true,
   "obj": {
     "warnEnabled": true,
-    "kickEnabled": false,
+    "kickEnabled": true,
     "banEnabled": false,
-    "maxInterval": 2000,
-    "maxDuplicatesInterval": 60000,
-    "warnMessage": "warning",
-    "kickMessage": "kicking",
-    "banMessage": "banning",
-    "warnThreshold": 3,
-    "kickThreshold": 5,
-    "banThreshold": 7,
-    "maxDuplicatesWarning": 4,
-    "maxDuplicatesKick": 7,
-    "maxDuplicatesBan": 12,
+    "maxInterval": 20000,
+    "maxDuplicatesInterval": 20000,
+    "warnMessage": "Hej! Dosta sa spamovanjem {@user}",
+    "kickMessage": "Hej! Moracu da te kickam {@user}",
+    "banMessage": "Hej! Moracu da te banujem {@user}",
+    "warnThreshold": 5,
+    "kickThreshold": 20,
+    "banThreshold": 35,
+    "maxDuplicatesWarning": 5,
+    "maxDuplicatesKick": 20,
+    "maxDuplicatesBan": 35,
     "debug": true
   }
 }
