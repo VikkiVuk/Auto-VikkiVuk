@@ -1488,10 +1488,14 @@
           "inline": "false"
         }
       ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
-          "connections": []
+          "connections": [
+            "320e37c3-efbc-4764-87dc-6f0c4ad82ef3"
+          ]
         }
       ],
       "inputs": [
@@ -4860,6 +4864,315 @@
         "field",
         "oper",
         "value"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "react-sub",
+      "guid": "36feef05-fe57-4010-9ae4-93c6c54b0f58",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
+          ]
+        }
+      ],
+      "x": 693,
+      "y": 2142,
+      "perms": [
+        "vikkivuk"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "hahahahahaha",
+      "guid": "d1fd9fd3-7647-4466-bf14-972658410686",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "subtestporuka",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
+        }
+      ],
+      "x": 1058,
+      "y": 2147,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "glasanje",
+        "FF0000",
+        "SUB TEST!",
+        "",
+        "",
+        "",
+        "",
+        "Da li ste subani na **VikkiVuk-a** na youtube-u???\n\n:white_check_mark: - Da\n:x: - Ne",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "subtestporuka",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "xbdgshvfsefs",
+      "guid": "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d",
+      "reactionFields": [
+        "✅",
+        "❌"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "✅",
+          "connections": [
+            "7c2f1374-8ab4-431b-aa69-45a116caa118"
+          ]
+        },
+        {
+          "label": "❌",
+          "connections": [
+            "5d60cd42-5bd3-4fad-bc65-3157e2ca06d2"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d1fd9fd3-7647-4466-bf14-972658410686"
+        }
+      ],
+      "x": 1254,
+      "y": 2153,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.subtestporuka.id}",
+        "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "subtestreactemoji",
+        "subtestreactuser",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "add role suban",
+      "guid": "7c2f1374-8ab4-431b-aa69-45a116caa118",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d"
+        }
+      ],
+      "x": 1462,
+      "y": 2093,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.subtestreactuser.id}",
+        "suban na vikkivuk"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "add role nije suban",
+      "guid": "5d60cd42-5bd3-4fad-bc65-3157e2ca06d2",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d"
+        }
+      ],
+      "x": 1463,
+      "y": 2215,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.subtestreactuser.id}",
+        "nije suban na vikkivuk"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "uspesno je poruka dodata",
+      "guid": "a3cb0b30-f16b-4cee-a2eb-771c2d35001b",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d1fd9fd3-7647-4466-bf14-972658410686"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "36feef05-fe57-4010-9ae4-93c6c54b0f58"
+        }
+      ],
+      "x": 874,
+      "y": 2150,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "43FF0A",
+        "USPEH!",
+        "",
+        "",
+        "",
+        "",
+        "Poruka je uspesno dodata, i sad mogu svi da glasaju, da li su subani ili ne!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "help menu react",
+      "guid": "320e37c3-efbc-4764-87dc-6f0c4ad82ef3",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "v.react-sub",
+          "value": "Ovako vikkivuk proverava ko je suban a ko nije!",
+          "inline": "false"
+        }
+      ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5f4dc058-258d-42d1-8e18-a0110c3986c2"
+        }
+      ],
+      "x": 62,
+      "y": 966,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FFFFFF",
+        "REAKCIJE",
+        "",
+        "",
+        "",
+        "",
+        "Ovde cete naci sve komande koje se koriste za glasanje! Uglavnom vecinu! Ne sve! Ali ovo ce samo VikkiVuk moci da koristi!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
       ]
     }
   ]

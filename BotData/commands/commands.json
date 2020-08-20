@@ -202,6 +202,32 @@
           "timestamp": "BOOL_TRUE@@",
           "savetovariable": "",
           "savetovariabletype": "temp"
+        },
+        {
+          "name": "help menu react",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "v.react-sub",
+              "value": "Ovako vikkivuk proverava ko je suban a ko nije!",
+              "inline": "false"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FFFFFF",
+          "title": "REAKCIJE",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Ovde cete naci sve komande koje se koriste za glasanje! Uglavnom vecinu! Ne sve! Ali ovo ce samo VikkiVuk moci da koristi!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
         }
       ]
     },
@@ -1602,6 +1628,82 @@
           "savevartype": "temp",
           "compare": "greater than",
           "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "react-sub",
+      "perms": [
+        "vikkivuk"
+      ],
+      "actions": [
+        {
+          "name": "uspesno je poruka dodata",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "43FF0A",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Poruka je uspesno dodata, i sad mogu svi da glasaju, da li su subani ili ne!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "hahahahahaha",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "glasanje",
+          "color": "FF0000",
+          "title": "SUB TEST!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Da li ste subani na **VikkiVuk-a** na youtube-u???\n\n:white_check_mark: - Da\n:x: - Ne",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "subtestporuka",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "xbdgshvfsefs",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "✅": [
+              {
+                "name": "add role suban",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.subtestreactuser.id}",
+                "rolename": "suban na vikkivuk"
+              }
+            ],
+            "❌": [
+              {
+                "name": "add role nije suban",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.subtestreactuser.id}",
+                "rolename": "nije suban na vikkivuk"
+              }
+            ]
+          },
+          "message": "${tempVars.subtestporuka.id}",
+          "duration": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+          "reactionemoji": "subtestreactemoji",
+          "reactionuser": "subtestreactuser",
+          "react": "BOOL_TRUE@@"
         }
       ]
     }
