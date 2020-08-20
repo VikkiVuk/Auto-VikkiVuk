@@ -1481,6 +1481,11 @@
           "name": "v.unovci",
           "value": "Ovako mozete da unovcite  **xp** u **novac**, **2 xp-a** vrede **$1**. Komanda se koristi tako sto samo ukucas **v.unovci**, i ono ceti automatski unovciti **2 xp** u **$1!**",
           "inline": "false"
+        },
+        {
+          "name": "v.pretvori",
+          "value": "Ovako mozete da pretvorite **$1** u **2 xp-a**! Komanda se koristi tako sto ukucate **v.pretvori**",
+          "inline": "false"
         }
       ],
       "outputs": [
@@ -4454,7 +4459,7 @@
         "",
         "",
         "",
-        ":dollar: | <@${dbsVars.CommandAuthor.id}>, uspesno si unovcio **2 xp-a** u **$1!**.",
+        ":dollar: | <@${dbsVars.CommandAuthor.id}>, uspesno si unovcio **2 xp-a** u **$1!**. Ukoliko zelis da vratis tih **2 xp-a** samo ukucaj **v.pretvori**!",
         "",
         "",
         "Auto VikkiVuk",
@@ -4532,6 +4537,329 @@
         "timestamp",
         "saveToVariable",
         "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "pretvori",
+      "guid": "16237cf2-3bb8-4a01-b3d3-3f9db77ec234",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "954919d6-94e8-4e0e-ab1c-4a470b568b7c"
+          ]
+        }
+      ],
+      "x": 88,
+      "y": 2306,
+      "perms": [
+        "verifikovan"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get users money 2",
+      "guid": "954919d6-94e8-4e0e-ab1c-4a470b568b7c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f9b24dec-f97d-45d7-a9fe-6c17ac044dee"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "16237cf2-3bb8-4a01-b3d3-3f9db77ec234"
+        }
+      ],
+      "x": 302,
+      "y": 2311,
+      "rtype": "User Data",
+      "rsubtype": "Get User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "novac",
+        "korisnickovnovaccc",
+        "temp",
+        "User"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "varname",
+        "saveVarType",
+        "vartype"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get user xp 2",
+      "guid": "f9b24dec-f97d-45d7-a9fe-6c17ac044dee",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "49f5cff5-1f32-4b49-976e-db4c7c4bf7c9"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "954919d6-94e8-4e0e-ab1c-4a470b568b7c"
+        }
+      ],
+      "x": 485,
+      "y": 2324,
+      "rtype": "User Data",
+      "rsubtype": "Get User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "xp",
+        "korisnickovxp",
+        "temp",
+        "User"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "varname",
+        "saveVarType",
+        "vartype"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "check if has 1 dollar",
+      "guid": "49f5cff5-1f32-4b49-976e-db4c7c4bf7c9",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "b177b89e-4fab-4843-a7fe-69ca710ac48d"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "6ddce20a-1ff0-4b5c-9698-f49dda32b4d5"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f9b24dec-f97d-45d7-a9fe-6c17ac044dee"
+        }
+      ],
+      "x": 689,
+      "y": 2278,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "korisnickovnovaccc",
+        "temp",
+        "greater than",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "remove money",
+      "guid": "b177b89e-4fab-4843-a7fe-69ca710ac48d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b02ac274-f325-46b7-aeff-f7da2dbdf9c8"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "49f5cff5-1f32-4b49-976e-db4c7c4bf7c9"
+        }
+      ],
+      "x": 865,
+      "y": 2320,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "novac",
+        "-",
+        "1"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "confirmation message",
+      "guid": "e9ce48f9-ca42-4773-a487-6f55deda6bf2",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b02ac274-f325-46b7-aeff-f7da2dbdf9c8"
+        }
+      ],
+      "x": 1230,
+      "y": 2320,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FFF203",
+        "USPEH!",
+        "",
+        "",
+        "",
+        "",
+        "<@${dbsVars.CommandAuthor.id}>, uspesno si pretvorio **$1** u **2 xp-a**! Ukoliko zelis da vratis taj **1$** samo ukucaj **v.unovci**! Uzivaj!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "faillllllllllll",
+      "guid": "6ddce20a-1ff0-4b5c-9698-f49dda32b4d5",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "49f5cff5-1f32-4b49-976e-db4c7c4bf7c9"
+        }
+      ],
+      "x": 875,
+      "y": 2441,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "GRESKA!",
+        "",
+        "",
+        "",
+        "",
+        "<@${dbsVars.CommandAuthor.id}>, izvini ali nemas dovoljno novca na racunu!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "add xp",
+      "guid": "b02ac274-f325-46b7-aeff-f7da2dbdf9c8",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "e9ce48f9-ca42-4773-a487-6f55deda6bf2"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b177b89e-4fab-4843-a7fe-69ca710ac48d"
+        }
+      ],
+      "x": 1048,
+      "y": 2325,
+      "rtype": "User Data",
+      "rsubtype": "Edit User Data",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        "xp",
+        "+",
+        "2"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "oper",
+        "value"
       ]
     }
   ]

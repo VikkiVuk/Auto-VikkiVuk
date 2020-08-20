@@ -181,6 +181,11 @@
               "name": "v.unovci",
               "value": "Ovako mozete da unovcite  **xp** u **novac**, **2 xp-a** vrede **$1**. Komanda se koristi tako sto samo ukucas **v.unovci**, i ono ceti automatski unovciti **2 xp** u **$1!**",
               "inline": "false"
+            },
+            {
+              "name": "v.pretvori",
+              "value": "Ovako mozete da pretvorite **$1** u **2 xp-a**! Komanda se koristi tako sto ukucate **v.pretvori**",
+              "inline": "false"
             }
           ],
           "channelname": "${dbsVars.CommandChannel.id}",
@@ -1466,7 +1471,7 @@
               "authorname": "",
               "authorimageurl": "",
               "authorlink": "",
-              "description": ":dollar: | <@${dbsVars.CommandAuthor.id}>, uspesno si unovcio **2 xp-a** u **$1!**.",
+              "description": ":dollar: | <@${dbsVars.CommandAuthor.id}>, uspesno si unovcio **2 xp-a** u **$1!**. Ukoliko zelis da vratis tih **2 xp-a** samo ukucaj **v.pretvori**!",
               "thumbnail": "",
               "image": "",
               "footer": "Auto VikkiVuk",
@@ -1500,6 +1505,103 @@
           "savevartype": "temp",
           "compare": "greater than",
           "value": "2"
+        }
+      ]
+    },
+    {
+      "name": "pretvori",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "get users money 2",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "novac",
+          "varname": "korisnickovnovaccc",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "get user xp 2",
+          "category": "User Data",
+          "type": "Get User Data",
+          "user": "${dbsVars.CommandAuthor.id}",
+          "field": "xp",
+          "varname": "korisnickovxp",
+          "savevartype": "temp",
+          "vartype": "User"
+        },
+        {
+          "name": "check if has 1 dollar",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "remove money",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "novac",
+              "oper": "-",
+              "value": "1"
+            },
+            {
+              "name": "add xp",
+              "category": "User Data",
+              "type": "Edit User Data",
+              "user": "${dbsVars.CommandAuthor.id}",
+              "field": "xp",
+              "oper": "+",
+              "value": "2"
+            },
+            {
+              "name": "confirmation message",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "FFF203",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}>, uspesno si pretvorio **$1** u **2 xp-a**! Ukoliko zelis da vratis taj **1$** samo ukucaj **v.unovci**! Uzivaj!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "faillllllllllll",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "FF0000",
+              "title": "GRESKA!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "<@${dbsVars.CommandAuthor.id}>, izvini ali nemas dovoljno novca na racunu!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "varname": "korisnickovnovaccc",
+          "savevartype": "temp",
+          "compare": "greater than",
+          "value": "1"
         }
       ]
     }
