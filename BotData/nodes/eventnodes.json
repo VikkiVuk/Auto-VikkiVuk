@@ -109,8 +109,8 @@
           "id": "49ebbc23-2903-4f05-ab69-bc9ecb4f8888"
         }
       ],
-      "x": 282,
-      "y": 471,
+      "x": 295,
+      "y": 472,
       "rtype": "User Data",
       "rsubtype": "Edit User Data",
       "formdata": [
@@ -132,6 +132,8 @@
       "guid": "7de0b1a3-863b-4236-b670-b0f9904ab590",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -144,13 +146,13 @@
           "id": "0101bc23-2003-4f05-ab69-bc9ecb4f067e"
         }
       ],
-      "x": 284,
-      "y": 612,
+      "x": 299,
+      "y": 614,
       "rtype": "Message",
       "rsubtype": "Send Direct Message",
       "formdata": [
         "${dbsVars.guild.ownerID}",
-        "Super! Ucitao sam se! Hvala na pokretanju!",
+        "Hvala na pokretanju!! ",
         "",
         "temp"
       ],
@@ -167,8 +169,6 @@
       "guid": "fdc8e621-26ac-44e0-bbc7-9df379444ecd",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -181,8 +181,8 @@
           "id": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e"
         }
       ],
-      "x": 283,
-      "y": 344,
+      "x": 293,
+      "y": 339,
       "rtype": "Message",
       "rsubtype": "Send Direct Message",
       "formdata": [
@@ -204,8 +204,6 @@
       "guid": "7b30dda7-c592-4acb-99d1-85c2fef767a8",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -218,8 +216,8 @@
           "id": "69ebbc23-2903-4f05-ab69-bc9ecb4f067e"
         }
       ],
-      "x": 278,
-      "y": 215,
+      "x": 291,
+      "y": 211,
       "rtype": "Message",
       "rsubtype": "Send Direct Message",
       "formdata": [

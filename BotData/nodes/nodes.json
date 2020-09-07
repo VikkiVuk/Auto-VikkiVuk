@@ -51,7 +51,7 @@
         },
         {
           "name": "v.roblox-nalozi",
-          "value": "Kaze vam koji su nasi roblox nalozi!",
+          "value": "Kaze vam koji su nasi roblox nalozi! Ovo samo mogu da koriste oni koji su se verifikovali pomocu robloxa!",
           "inline": "false"
         },
         {
@@ -128,6 +128,11 @@
           "name": "v.xp",
           "value": "Ovako proveravate vas xp!",
           "inline": "false"
+        },
+        {
+          "name": "v.channel-id",
+          "value": "Ovo vam da id od kanala u kom je poslata poruka!",
+          "inline": "false"
         }
       ],
       "saveToVariable": "pomoc-meni",
@@ -191,7 +196,7 @@
         {
           "label": "responses",
           "connections": [
-            "3b242e39-db0c-423c-967c-61e304d5778e"
+            "ae89acf5-45c2-4c92-b088-5c2d14d6f70d"
           ]
         }
       ],
@@ -215,11 +220,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "ff37ac86-0a85-470b-9da3-310da86fab21"
+          "id": "ae89acf5-45c2-4c92-b088-5c2d14d6f70d"
         }
       ],
-      "x": 216,
-      "y": 239,
+      "x": 410,
+      "y": 219,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -249,8 +254,8 @@
           "id": "3b242e39-db0c-423c-967c-61e304d5778e"
         }
       ],
-      "x": 395,
-      "y": 236,
+      "x": 579,
+      "y": 168,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -460,7 +465,7 @@
       "x": 54,
       "y": 801,
       "perms": [
-        "verifikovan"
+        "roblox verifikovan"
       ]
     },
     {
@@ -469,6 +474,8 @@
       "guid": "7c5dba56-e52b-448a-a6c3-3bb191c444c8",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -493,7 +500,7 @@
         "",
         "",
         "",
-        "VikkiVuk Roblox Ime : VikkiVuk\nUrke NFF Roblox Ime : majmunarija091\nMarko (Kancerator6000) : MaRkO132131",
+        "VikkiVuk Roblox Ime : **VikkiVuk**\nUrke NFF Roblox Ime : **majmunarija091**\nMarko (Kancerator6000) : **MaRkO132131**",
         "",
         "",
         "Auto VikkiVuk",
@@ -1488,8 +1495,6 @@
           "inline": "false"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -5059,8 +5064,6 @@
       "guid": "a3cb0b30-f16b-4cee-a2eb-771c2d35001b",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -5124,8 +5127,6 @@
           "inline": "false"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -5173,6 +5174,112 @@
         "timestamp",
         "saveToVariable",
         "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "channel-id",
+      "guid": "053683f3-b3ec-4cab-afd6-a45c98566ca3",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "cf751e09-53c7-4e2c-aef4-514b1f0b3cb7"
+          ]
+        }
+      ],
+      "x": 242,
+      "y": 1014,
+      "perms": [
+        "admin"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "send channel id",
+      "guid": "cf751e09-53c7-4e2c-aef4-514b1f0b3cb7",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "053683f3-b3ec-4cab-afd6-a45c98566ca3"
+        }
+      ],
+      "x": 440,
+      "y": 964,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "69C3FF",
+        "CHANNEL ID",
+        "",
+        "",
+        "",
+        "",
+        "The id of this channel is **${dbsVars.CommandChannel.id}**",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "check if verifikuj me hannel",
+      "guid": "ae89acf5-45c2-4c92-b088-5c2d14d6f70d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "3b242e39-db0c-423c-967c-61e304d5778e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ff37ac86-0a85-470b-9da3-310da86fab21"
+        }
+      ],
+      "x": 229,
+      "y": 202,
+      "rtype": "Channel Action",
+      "rsubtype": "Check Channel ID",
+      "formdata": [
+        "733210856573370519",
+        "Izvini! Ali ti si se vec verifikovao, ili ovo nije #verifikuj-me kanal!"
+      ],
+      "formnames": [
+        "channelid",
+        "nomatch"
       ]
     }
   ]

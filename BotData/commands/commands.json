@@ -38,7 +38,7 @@
             },
             {
               "name": "v.roblox-nalozi",
-              "value": "Kaze vam koji su nasi roblox nalozi!",
+              "value": "Kaze vam koji su nasi roblox nalozi! Ovo samo mogu da koriste oni koji su se verifikovali pomocu robloxa!",
               "inline": "false"
             },
             {
@@ -114,6 +114,11 @@
             {
               "name": "v.xp",
               "value": "Ovako proveravate vas xp!",
+              "inline": "false"
+            },
+            {
+              "name": "v.channel-id",
+              "value": "Ovo vam da id od kanala u kom je poslata poruka!",
               "inline": "false"
             }
           ],
@@ -235,6 +240,13 @@
       "name": "verifikuj-me",
       "actions": [
         {
+          "name": "check if verifikuj me hannel",
+          "category": "Channel Action",
+          "type": "Check Channel ID",
+          "channelid": "733210856573370519",
+          "nomatch": "Izvini! Ali ti si se vec verifikovao, ili ovo nije #verifikuj-me kanal!"
+        },
+        {
           "name": "verify the user",
           "category": "User Action",
           "type": "Add Role to User",
@@ -316,7 +328,7 @@
     {
       "name": "roblox-nalozi",
       "perms": [
-        "verifikovan"
+        "roblox verifikovan"
       ],
       "actions": [
         {
@@ -330,7 +342,7 @@
           "authorname": "",
           "authorimageurl": "",
           "authorlink": "",
-          "description": "VikkiVuk Roblox Ime : VikkiVuk\nUrke NFF Roblox Ime : majmunarija091\nMarko (Kancerator6000) : MaRkO132131",
+          "description": "VikkiVuk Roblox Ime : **VikkiVuk**\nUrke NFF Roblox Ime : **majmunarija091**\nMarko (Kancerator6000) : **MaRkO132131**",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",
@@ -1704,6 +1716,33 @@
           "reactionemoji": "subtestreactemoji",
           "reactionuser": "subtestreactuser",
           "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "channel-id",
+      "perms": [
+        "admin"
+      ],
+      "actions": [
+        {
+          "name": "send channel id",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "69C3FF",
+          "title": "CHANNEL ID",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "The id of this channel is **${dbsVars.CommandChannel.id}**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
         }
       ]
     }
