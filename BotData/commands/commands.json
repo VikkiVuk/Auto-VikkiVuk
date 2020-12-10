@@ -38,7 +38,7 @@
             },
             {
               "name": "v.roblox-nalozi",
-              "value": "Kaze vam koji su nasi roblox nalozi! Ovo samo mogu da koriste oni koji su se verifikovali pomocu robloxa!",
+              "value": "Kaze vam koji su nasi roblox nalozi!",
               "inline": "false"
             },
             {
@@ -240,13 +240,6 @@
       "name": "verifikuj-me",
       "actions": [
         {
-          "name": "check if verifikuj me hannel",
-          "category": "Channel Action",
-          "type": "Check Channel ID",
-          "channelid": "733210856573370519",
-          "nomatch": "Izvini! Ali ti si se vec verifikovao, ili ovo nije #verifikuj-me kanal!"
-        },
-        {
           "name": "verify the user",
           "category": "User Action",
           "type": "Add Role to User",
@@ -305,6 +298,33 @@
       ],
       "actions": [
         {
+          "name": "imod version",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "imodverzija",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "mc-version",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "mcverzija",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "description",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "imodopis",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "3"
+        },
+        {
           "name": "posalje da se imod updateovao",
           "category": "Message",
           "type": "Send Embed",
@@ -315,7 +335,7 @@
           "authorname": "",
           "authorimageurl": "",
           "authorlink": "",
-          "description": "JEJ!!! KONACNO!!! iMOD SE UPDATEOVAO!!!! https://www.curseforge.com/minecraft/mc-mods/imod",
+          "description": "Verzija: ${tempVars.imodverzija}\nMinecraft Verzija: ${tempVars.mcverzija}\nStvari koje su se promenile:\n${tempVars.imodopis}",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",
@@ -328,7 +348,7 @@
     {
       "name": "roblox-nalozi",
       "perms": [
-        "roblox verifikovan"
+        "verifikovan"
       ],
       "actions": [
         {
@@ -342,7 +362,7 @@
           "authorname": "",
           "authorimageurl": "",
           "authorlink": "",
-          "description": "VikkiVuk Roblox Ime : **VikkiVuk**\nUrke NFF Roblox Ime : **majmunarija091**\nMarko (Kancerator6000) : **MaRkO132131**",
+          "description": "VikkiVuk Roblox Ime : VikkiVuk\nUrke NFF Roblox Ime : majmunarija091\nMarko (Kancerator6000) : MaRkO132131",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",
@@ -550,7 +570,7 @@
     {
       "name": "trazi",
       "perms": [
-        "suban na vikkivuk"
+        "bruh-gang"
       ],
       "actions": [
         {
@@ -663,6 +683,32 @@
           "authorimageurl": "",
           "authorlink": "",
           "description": "Zdravo <@$$CommandAuthor$$>, vidim da si pokrenuo ovu komandu. Pa evo tvog broja **%%tvojbroj%%** . Taj broj nemoj nikom da dajes. Ukoliko si rekao nekom taj broj, samo pokreni ponovo komandu, i moci ces da promenis tvoj broj!\n\nTaj broj sluzi za verifikaciju sebe. Ako te moderator ili admin pita, daj mu slobodno, ali ako je neko ispod moderatora ili admina i nije vlasnik, onda mu nemoj dati. Ovaj broj je **jako vazan**",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "sendAdminNCAN",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "SLUZBA",
+              "value": "Ukoliko korisnik ne zna taj broj, morace te da ga kickate, zbog toga sto ne  moze da verifikuje da je to njegov nalog.",
+              "inline": "true"
+            }
+          ],
+          "channelname": "admin-caskanje",
+          "color": "00FFC8",
+          "title": "TVOJ BROJ",
+          "url": "",
+          "authorname": "${dbsVars.CommandAuthor.id}",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "**BROJ**| Broj korisnika <@${dbsVars.CommandAuthor.id}> je **${tempVars.tvojbroj}**",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",
@@ -1016,7 +1062,7 @@
     {
       "name": "poke",
       "perms": [
-        "pokemon igrac"
+        "pokemoner"
       ],
       "actions": [
         {
@@ -1323,93 +1369,123 @@
     },
     {
       "name": "uzmikorisniku",
-      "perms": [
-        "vikkivuk"
-      ],
+      "perms": [],
       "actions": [
         {
-          "name": "jiodsgjhregng",
-          "category": "Variable",
-          "type": "Get Mentioned User",
-          "varname": "komedauzme",
-          "vartype": "User",
-          "savevartype": "temp"
-        },
-        {
-          "name": "hahahahahah",
-          "category": "Variable",
-          "type": "Store Value in Variable",
-          "varname": "kolikonovcadauzme",
-          "vartype": "Number",
-          "savevartype": "temp",
-          "param": "2"
-        },
-        {
-          "name": "get mentioned users money",
-          "category": "User Data",
-          "type": "Get User Data",
-          "user": "${tempVars.komedauzme.id}",
-          "field": "novac",
-          "varname": "korisnickovnovac2",
-          "savevartype": "temp",
-          "vartype": "User"
-        },
-        {
-          "name": "hmmmmmmmmmmmmmm",
-          "category": "Variable",
-          "type": "Check Variable Value",
+          "name": "checkIFAdmin",
+          "category": "User Action",
+          "type": "Check User Permissions",
           "trueActions": [
             {
-              "name": "failed 111",
-              "category": "Message",
-              "type": "Send Embed",
-              "channelname": "${dbsVars.CommandChannel.id}",
-              "color": "FF0000",
-              "title": "GRESKA!",
-              "url": "",
-              "authorname": "",
-              "authorimageurl": "",
-              "authorlink": "",
-              "description": "<@${dbsVars.CommandAuthor.id}>, izvini ali korisnik <@${tempVars.komedauzme.id}> nema toliko novca na racunu!",
-              "thumbnail": "",
-              "image": "",
-              "footer": "Auto VikkiVuk",
-              "timestamp": "BOOL_TRUE@@",
-              "savetovariable": "",
-              "savetovariabletype": "temp"
+              "name": "jiodsgjhregng",
+              "category": "Variable",
+              "type": "Get Mentioned User",
+              "varname": "komedauzme",
+              "vartype": "User",
+              "savevartype": "temp"
+            },
+            {
+              "name": "hahahahahah",
+              "category": "Variable",
+              "type": "Store Value in Variable",
+              "varname": "kolikonovcadauzme",
+              "vartype": "Number",
+              "savevartype": "temp",
+              "param": "2"
+            },
+            {
+              "name": "get mentioned users money",
+              "category": "User Data",
+              "type": "Get User Data",
+              "user": "${tempVars.komedauzme.id}",
+              "field": "novac",
+              "varname": "korisnickovnovac2",
+              "savevartype": "temp",
+              "vartype": "User"
+            },
+            {
+              "name": "hmmmmmmmmmmmmmm",
+              "category": "Variable",
+              "type": "Check Variable Value",
+              "trueActions": [
+                {
+                  "name": "failed 111",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "color": "FF0000",
+                  "title": "GRESKA!",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": "<@${dbsVars.CommandAuthor.id}>, izvini ali korisnik <@${tempVars.komedauzme.id}> nema toliko novca na racunu!",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "Auto VikkiVuk",
+                  "timestamp": "BOOL_TRUE@@",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "falseActions": [
+                {
+                  "name": "remove money from user 2",
+                  "category": "User Data",
+                  "type": "Edit User Data",
+                  "user": "${tempVars.komedauzme.id}",
+                  "field": "novac",
+                  "oper": "-",
+                  "value": "${tempVars.kolikonovcadauzme}"
+                },
+                {
+                  "name": "give the money to user 1",
+                  "category": "User Data",
+                  "type": "Edit User Data",
+                  "user": "${dbsVars.CommandAuthor.id}",
+                  "field": "novac",
+                  "oper": "+",
+                  "value": "${tempVars.kolikonovcadauzme}"
+                },
+                {
+                  "name": "success22222",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "color": "22FF00",
+                  "title": "USPEH!",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": ":dollar: | Uspesno si uzeo **${tempVars.kolikonovcadauzme} novca** od korisnika <@${tempVars.komedauzme.id}>!",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "Auto VikkiVuk",
+                  "timestamp": "BOOL_TRUE@@",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "varname": "kolikonovcadauzme",
+              "savevartype": "temp",
+              "compare": "greater than",
+              "value": "${tempVars.korisnickovnovac2}"
             }
           ],
           "falseActions": [
             {
-              "name": "remove money from user 2",
-              "category": "User Data",
-              "type": "Edit User Data",
-              "user": "${tempVars.komedauzme.id}",
-              "field": "novac",
-              "oper": "-",
-              "value": "${tempVars.kolikonovcadauzme}"
-            },
-            {
-              "name": "give the money to user 1",
-              "category": "User Data",
-              "type": "Edit User Data",
-              "user": "${dbsVars.CommandAuthor.id}",
-              "field": "novac",
-              "oper": "+",
-              "value": "${tempVars.kolikonovcadauzme}"
-            },
-            {
-              "name": "success22222",
+              "name": "notAdmin",
               "category": "Message",
               "type": "Send Embed",
               "channelname": "${dbsVars.CommandChannel.id}",
-              "color": "22FF00",
-              "title": "USPEH!",
+              "color": "FF0000",
+              "title": "NISI ADMIN!",
               "url": "",
               "authorname": "",
               "authorimageurl": "",
               "authorlink": "",
-              "description": ":dollar: | Uspesno si uzeo **${tempVars.kolikonovcadauzme} novca** od korisnika <@${tempVars.komedauzme.id}>!",
+              "description": "Hahahaha dobar pokusaj <@${dbsVars.CommandAuthor.id}>",
               "thumbnail": "",
               "image": "",
               "footer": "Auto VikkiVuk",
@@ -1418,10 +1494,10 @@
               "savetovariabletype": "temp"
             }
           ],
-          "varname": "kolikonovcadauzme",
-          "savevartype": "temp",
-          "compare": "greater than",
-          "value": "${tempVars.korisnickovnovac2}"
+          "user": "${dbsVars.CommandAuthor.id}",
+          "permissions": [
+            "ADMINISTRATOR"
+          ]
         }
       ]
     },
@@ -1644,78 +1720,224 @@
       ]
     },
     {
-      "name": "react-sub",
+      "name": "react",
       "perms": [
-        "vikkivuk"
+        "admin"
       ],
       "actions": [
         {
-          "name": "uspesno je poruka dodata",
-          "category": "Message",
-          "type": "Send Embed",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "color": "43FF0A",
-          "title": "USPEH!",
-          "url": "",
-          "authorname": "",
-          "authorimageurl": "",
-          "authorlink": "",
-          "description": "Poruka je uspesno dodata, i sad mogu svi da glasaju, da li su subani ili ne!",
-          "thumbnail": "",
-          "image": "",
-          "footer": "Auto VikkiVuk",
-          "timestamp": "BOOL_TRUE@@",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
+          "name": "wfg",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "koj-react",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": ""
         },
         {
-          "name": "hahahahahaha",
-          "category": "Message",
-          "type": "Send Embed",
-          "channelname": "glasanje",
-          "color": "FF0000",
-          "title": "SUB TEST!",
-          "url": "",
-          "authorname": "",
-          "authorimageurl": "",
-          "authorlink": "",
-          "description": "Da li ste subani na **VikkiVuk-a** na youtube-u???\n\n:white_check_mark: - Da\n:x: - Ne",
-          "thumbnail": "",
-          "image": "",
-          "footer": "Auto VikkiVuk",
-          "timestamp": "BOOL_TRUE@@",
-          "savetovariable": "subtestporuka",
-          "savetovariabletype": "temp"
-        },
-        {
-          "name": "xbdgshvfsefs",
-          "category": "Reaction",
-          "type": "Add Reaction Listener",
-          "reactionActions": {
-            "✅": [
-              {
-                "name": "add role suban",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.subtestreactuser.id}",
-                "rolename": "suban na vikkivuk"
-              }
-            ],
-            "❌": [
-              {
-                "name": "add role nije suban",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.subtestreactuser.id}",
-                "rolename": "nije suban na vikkivuk"
-              }
-            ]
-          },
-          "message": "${tempVars.subtestporuka.id}",
-          "duration": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
-          "reactionemoji": "subtestreactemoji",
-          "reactionuser": "subtestreactuser",
-          "react": "BOOL_TRUE@@"
+          "name": "ako je sub",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "uspesno je poruka dodata",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "43FF0A",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "Poruka je uspesno dodata, i sad mogu svi da glasaju, da li su subani ili ne!",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            },
+            {
+              "name": "hahahahahaha",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "glasanje",
+              "color": "FF0000",
+              "title": "SUB TEST!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "Da li ste subani na **VikkiVuk-a** na youtube-u???\n\n:white_check_mark: - Da\n:x: - Ne",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Auto VikkiVuk",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "subtestporuka",
+              "savetovariabletype": "temp"
+            },
+            {
+              "name": "xbdgshvfsefs",
+              "category": "Reaction",
+              "type": "Add Reaction Listener",
+              "reactionActions": [],
+              "message": "${tempVars.subtestporuka.id}",
+              "duration": "9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+              "reactionemoji": "subtestreactemoji",
+              "reactionuser": "subtestreactuser",
+              "react": "BOOL_TRUE@@"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "ako je pokemon",
+              "category": "Variable",
+              "type": "Check Variable Value",
+              "trueActions": [
+                {
+                  "name": "alouz",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "color": "4AFF26",
+                  "title": "USPEH!",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": "USPEH | Sada ljudi mogu da glasaju da li igraju pokemon ili ne!",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "Auto VikkiVuk",
+                  "timestamp": "BOOL_TRUE@@",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                },
+                {
+                  "name": "dad ad",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "glasanje",
+                  "color": "FF0000",
+                  "title": "ANKETA!",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": "Da li igrate **POKEMON**?\n\n:white_check_mark: - Da\n:x: - Ne",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "Auto VikkiVuk",
+                  "timestamp": "BOOL_TRUE@@",
+                  "savetovariable": "malomalopali",
+                  "savetovariabletype": "temp"
+                },
+                {
+                  "name": "erh45h4h",
+                  "category": "Reaction",
+                  "type": "Add Reaction Listener",
+                  "reactionActions": [],
+                  "message": "${tempVars.malomalopali.id}",
+                  "duration": "999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+                  "reactionemoji": "rjnrjhnrthbrthrthrt",
+                  "reactionuser": "pokemoner",
+                  "react": "BOOL_TRUE@@"
+                }
+              ],
+              "falseActions": [
+                {
+                  "name": "ako je mc",
+                  "category": "Variable",
+                  "type": "Check Variable Value",
+                  "trueActions": [
+                    {
+                      "name": "alou",
+                      "category": "Message",
+                      "type": "Send Embed",
+                      "channelname": "${dbsVars.CommandChannel.id}",
+                      "color": "0AFF2B",
+                      "title": "USPEH!",
+                      "url": "",
+                      "authorname": "",
+                      "authorimageurl": "",
+                      "authorlink": "",
+                      "description": "USPEH | Uspesno je postavljena anketa, ko igra mc!",
+                      "thumbnail": "",
+                      "image": "",
+                      "footer": "Auto VikkiVuk",
+                      "timestamp": "BOOL_TRUE@@",
+                      "savetovariable": "",
+                      "savetovariabletype": "temp"
+                    },
+                    {
+                      "name": "poasdajipfc",
+                      "category": "Message",
+                      "type": "Send Embed",
+                      "channelname": "glasanje",
+                      "color": "FF0000",
+                      "title": "ANKETA!",
+                      "url": "",
+                      "authorname": "",
+                      "authorimageurl": "",
+                      "authorlink": "",
+                      "description": "Da li igrate **MINECRAFT**?\n\n:white_check_mark: - Da\n:x: - Ne",
+                      "thumbnail": "",
+                      "image": "",
+                      "footer": "Auto VikkiVuk",
+                      "timestamp": "BOOL_TRUE@@",
+                      "savetovariable": "kalialipoal",
+                      "savetovariabletype": "temp"
+                    },
+                    {
+                      "name": "sdgvsbg",
+                      "category": "Reaction",
+                      "type": "Add Reaction Listener",
+                      "reactionActions": [],
+                      "message": "${tempVars.kalialipoal.id}",
+                      "duration": "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+                      "reactionemoji": "sajfvnnesjvnesasv",
+                      "reactionuser": "minecrafter",
+                      "react": "BOOL_TRUE@@"
+                    }
+                  ],
+                  "falseActions": [
+                    {
+                      "name": "greska",
+                      "category": "Message",
+                      "type": "Send Embed",
+                      "channelname": "${dbsVars.CommandChannel.id}",
+                      "color": "FF0000",
+                      "title": "GRESKA!",
+                      "url": "",
+                      "authorname": "",
+                      "authorimageurl": "",
+                      "authorlink": "",
+                      "description": "GRESKA | Izvini, ali izgleda da nisi ukucao koju anketu zelis da postavis! Ili ta anketa ne postoji!",
+                      "thumbnail": "",
+                      "image": "",
+                      "footer": "Auto VikkiVuk",
+                      "timestamp": "BOOL_TRUE@@",
+                      "savetovariable": "",
+                      "savetovariabletype": "temp"
+                    }
+                  ],
+                  "varname": "koj-react",
+                  "savevartype": "temp",
+                  "compare": "equal to",
+                  "value": "mc"
+                }
+              ],
+              "varname": "koj-react",
+              "savevartype": "temp",
+              "compare": "equal to",
+              "value": "pokemon"
+            }
+          ],
+          "varname": "koj-react",
+          "savevartype": "temp",
+          "compare": "equal to",
+          "value": "sub"
         }
       ]
     },

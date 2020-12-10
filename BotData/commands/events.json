@@ -71,7 +71,7 @@
           "category": "Message",
           "type": "Send Direct Message",
           "user": "${dbsVars.guild.ownerID}",
-          "messagetext": "Hvala na pokretanju!! ",
+          "messagetext": "Super! Ucitao sam se! Hvala na pokretanju!",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }

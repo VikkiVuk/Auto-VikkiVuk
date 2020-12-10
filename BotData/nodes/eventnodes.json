@@ -132,8 +132,6 @@
       "guid": "7de0b1a3-863b-4236-b670-b0f9904ab590",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -152,7 +150,7 @@
       "rsubtype": "Send Direct Message",
       "formdata": [
         "${dbsVars.guild.ownerID}",
-        "Hvala na pokretanju!! ",
+        "Super! Ucitao sam se! Hvala na pokretanju!",
         "",
         "temp"
       ],
@@ -169,6 +167,8 @@
       "guid": "fdc8e621-26ac-44e0-bbc7-9df379444ecd",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -204,6 +204,8 @@
       "guid": "7b30dda7-c592-4acb-99d1-85c2fef767a8",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",

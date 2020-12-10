@@ -51,7 +51,7 @@
         },
         {
           "name": "v.roblox-nalozi",
-          "value": "Kaze vam koji su nasi roblox nalozi! Ovo samo mogu da koriste oni koji su se verifikovali pomocu robloxa!",
+          "value": "Kaze vam koji su nasi roblox nalozi!",
           "inline": "false"
         },
         {
@@ -196,7 +196,7 @@
         {
           "label": "responses",
           "connections": [
-            "ae89acf5-45c2-4c92-b088-5c2d14d6f70d"
+            "3b242e39-db0c-423c-967c-61e304d5778e"
           ]
         }
       ],
@@ -220,11 +220,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "ae89acf5-45c2-4c92-b088-5c2d14d6f70d"
+          "id": "ff37ac86-0a85-470b-9da3-310da86fab21"
         }
       ],
-      "x": 410,
-      "y": 219,
+      "x": 227,
+      "y": 218,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -254,8 +254,8 @@
           "id": "3b242e39-db0c-423c-967c-61e304d5778e"
         }
       ],
-      "x": 579,
-      "y": 168,
+      "x": 410,
+      "y": 216,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -385,12 +385,12 @@
         {
           "label": "responses",
           "connections": [
-            "1f387789-9250-45a3-bd3c-7c2460a78184"
+            "f522449b-423f-4e36-9191-f43c58a6409d"
           ]
         }
       ],
-      "x": 45,
-      "y": 631,
+      "x": 102,
+      "y": 2547,
       "perms": [
         "vikkivuk"
       ]
@@ -410,11 +410,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "b8d1c9b4-a8e0-4095-8040-8554a2fcea18"
+          "id": "8dbf7e2f-f2f3-47ae-a72b-a6586872f84a"
         }
       ],
-      "x": 234,
-      "y": 634,
+      "x": 1063,
+      "y": 2492,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -425,7 +425,7 @@
         "",
         "",
         "",
-        "JEJ!!! KONACNO!!! iMOD SE UPDATEOVAO!!!! https://www.curseforge.com/minecraft/mc-mods/imod",
+        "Verzija: ${tempVars.imodverzija}\nMinecraft Verzija: ${tempVars.mcverzija}\nStvari koje su se promenile:\n${tempVars.imodopis}",
         "",
         "",
         "Auto VikkiVuk",
@@ -465,7 +465,7 @@
       "x": 54,
       "y": 801,
       "perms": [
-        "roblox verifikovan"
+        "verifikovan"
       ]
     },
     {
@@ -474,8 +474,6 @@
       "guid": "7c5dba56-e52b-448a-a6c3-3bb191c444c8",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -500,7 +498,7 @@
         "",
         "",
         "",
-        "VikkiVuk Roblox Ime : **VikkiVuk**\nUrke NFF Roblox Ime : **majmunarija091**\nMarko (Kancerator6000) : **MaRkO132131**",
+        "VikkiVuk Roblox Ime : VikkiVuk\nUrke NFF Roblox Ime : majmunarija091\nMarko (Kancerator6000) : MaRkO132131",
         "",
         "",
         "Auto VikkiVuk",
@@ -1087,7 +1085,7 @@
       "x": 43,
       "y": 1208,
       "perms": [
-        "suban na vikkivuk"
+        "bruh-gang"
       ]
     },
     {
@@ -1392,7 +1390,9 @@
       "outputs": [
         {
           "label": "next response",
-          "connections": []
+          "connections": [
+            "18fb4422-aa52-4eed-b0c0-397309df9a80"
+          ]
         }
       ],
       "inputs": [
@@ -1884,8 +1884,8 @@
           "id": "490d728f-189c-4868-929c-63416c1f2553"
         }
       ],
-      "x": 836,
-      "y": 1668,
+      "x": 822,
+      "y": 1628,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -2246,8 +2246,8 @@
           "id": "7ab215e6-2f6e-4ef9-9699-bed8e1ed90ef"
         }
       ],
-      "x": 1019,
-      "y": 1799,
+      "x": 1017,
+      "y": 1816,
       "rtype": "User Data",
       "rsubtype": "Edit User Data",
       "formdata": [
@@ -2671,7 +2671,7 @@
       "x": 952,
       "y": 261,
       "perms": [
-        "pokemon igrac"
+        "pokemoner"
       ]
     },
     {
@@ -3807,15 +3807,13 @@
         {
           "label": "responses",
           "connections": [
-            "2c7e7af1-5ee3-42a0-9cf8-cd15ff6ef7e1"
+            "5ea73280-76c7-4191-b470-8c8051ec60ea"
           ]
         }
       ],
       "x": 789,
       "y": 1373,
-      "perms": [
-        "vikkivuk"
-      ]
+      "perms": []
     },
     {
       "type": "response",
@@ -3834,11 +3832,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "5d53e81f-ff44-4531-866a-6823c4d2bdfa"
+          "id": "5ea73280-76c7-4191-b470-8c8051ec60ea"
         }
       ],
-      "x": 1006,
-      "y": 1348,
+      "x": 1142,
+      "y": 1318,
       "rtype": "Variable",
       "rsubtype": "Get Mentioned User",
       "formdata": [
@@ -3872,8 +3870,8 @@
           "id": "2c7e7af1-5ee3-42a0-9cf8-cd15ff6ef7e1"
         }
       ],
-      "x": 1201,
-      "y": 1337,
+      "x": 1327,
+      "y": 1321,
       "rtype": "Variable",
       "rsubtype": "Store Value in Variable",
       "formdata": [
@@ -3915,8 +3913,8 @@
           "id": "cff37371-e9cd-461f-9df2-66672c84b650"
         }
       ],
-      "x": 1580,
-      "y": 1279,
+      "x": 1721,
+      "y": 1210,
       "rtype": "Variable",
       "rsubtype": "Check Variable Value",
       "formdata": [
@@ -3952,8 +3950,8 @@
           "id": "f79bd4c0-7633-4447-9612-0ada352e9aa5"
         }
       ],
-      "x": 1393,
-      "y": 1306,
+      "x": 1541,
+      "y": 1229,
       "rtype": "User Data",
       "rsubtype": "Get User Data",
       "formdata": [
@@ -4512,7 +4510,7 @@
         }
       ],
       "x": 1356,
-      "y": 1182,
+      "y": 1184,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -4873,20 +4871,20 @@
     },
     {
       "type": "command",
-      "name": "react-sub",
+      "name": "react",
       "guid": "36feef05-fe57-4010-9ae4-93c6c54b0f58",
       "outputs": [
         {
           "label": "responses",
           "connections": [
-            "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
+            "04d2adbb-9e35-4cc1-96ae-30a59f203571"
           ]
         }
       ],
-      "x": 693,
-      "y": 2142,
+      "x": 90,
+      "y": 2760,
       "perms": [
-        "vikkivuk"
+        "admin"
       ]
     },
     {
@@ -4911,8 +4909,8 @@
           "id": "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
         }
       ],
-      "x": 1058,
-      "y": 2147,
+      "x": 1093,
+      "y": 2815,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -4977,8 +4975,8 @@
           "id": "d1fd9fd3-7647-4466-bf14-972658410686"
         }
       ],
-      "x": 1254,
-      "y": 2153,
+      "x": 1369,
+      "y": 2806,
       "rtype": "Reaction",
       "rsubtype": "Add Reaction Listener",
       "formdata": [
@@ -5014,13 +5012,13 @@
           "id": "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d"
         }
       ],
-      "x": 1462,
-      "y": 2093,
+      "x": 1644,
+      "y": 2737,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
         "${tempVars.subtestreactuser.id}",
-        "suban na vikkivuk"
+        "bruh-gang"
       ],
       "formnames": [
         "user",
@@ -5045,13 +5043,13 @@
           "id": "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d"
         }
       ],
-      "x": 1463,
-      "y": 2215,
+      "x": 1642,
+      "y": 2879,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
         "${tempVars.subtestreactuser.id}",
-        "nije suban na vikkivuk"
+        "raspala-zica"
       ],
       "formnames": [
         "user",
@@ -5075,11 +5073,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "36feef05-fe57-4010-9ae4-93c6c54b0f58"
+          "id": "946accfd-d63f-4e0b-9200-bbef3f1c9db0"
         }
       ],
-      "x": 874,
-      "y": 2150,
+      "x": 839,
+      "y": 2813,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5139,8 +5137,8 @@
           "id": "5f4dc058-258d-42d1-8e18-a0110c3986c2"
         }
       ],
-      "x": 62,
-      "y": 966,
+      "x": 208,
+      "y": 646,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5251,35 +5249,885 @@
     },
     {
       "type": "response",
-      "name": "check if verifikuj me hannel",
-      "guid": "ae89acf5-45c2-4c92-b088-5c2d14d6f70d",
+      "name": "mc-version",
+      "guid": "ccaf7b44-6df8-4b3c-9d65-f19f01370d5c",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "mcverzija",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
           "connections": [
-            "3b242e39-db0c-423c-967c-61e304d5778e"
+            "8dbf7e2f-f2f3-47ae-a72b-a6586872f84a"
           ]
         }
       ],
       "inputs": [
         {
           "label": "trigger",
-          "id": "ff37ac86-0a85-470b-9da3-310da86fab21"
+          "id": "f522449b-423f-4e36-9191-f43c58a6409d"
         }
       ],
-      "x": 229,
-      "y": 202,
-      "rtype": "Channel Action",
-      "rsubtype": "Check Channel ID",
+      "x": 576,
+      "y": 2541,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
       "formdata": [
-        "733210856573370519",
-        "Izvini! Ali ti si se vec verifikovao, ili ovo nije #verifikuj-me kanal!"
+        "mcverzija",
+        "Number",
+        "temp",
+        "2"
       ],
       "formnames": [
-        "channelid",
-        "nomatch"
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "imod version",
+      "guid": "f522449b-423f-4e36-9191-f43c58a6409d",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "imodverzija",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "ccaf7b44-6df8-4b3c-9d65-f19f01370d5c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b8d1c9b4-a8e0-4095-8040-8554a2fcea18"
+        }
+      ],
+      "x": 334,
+      "y": 2540,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "imodverzija",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "description",
+      "guid": "8dbf7e2f-f2f3-47ae-a72b-a6586872f84a",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "imodopis",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1f387789-9250-45a3-bd3c-7c2460a78184"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ccaf7b44-6df8-4b3c-9d65-f19f01370d5c"
+        }
+      ],
+      "x": 811,
+      "y": 2582,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "imodopis",
+        "Text",
+        "temp",
+        "3"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "sendAdminNCAN",
+      "guid": "18fb4422-aa52-4eed-b0c0-397309df9a80",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "SLUZBA",
+          "value": "Ukoliko korisnik ne zna taj broj, morace te da ga kickate, zbog toga sto ne  moze da verifikuje da je to njegov nalog.",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "bb05841f-508c-4dab-a46a-30d52c3fe5f6"
+        }
+      ],
+      "x": 1873,
+      "y": 76,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "admin-caskanje",
+        "00FFC8",
+        "TVOJ BROJ",
+        "",
+        "${dbsVars.CommandAuthor.id}",
+        "",
+        "",
+        "**BROJ**| Broj korisnika <@${dbsVars.CommandAuthor.id}> je **${tempVars.tvojbroj}**",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "checkIFAdmin",
+      "guid": "5ea73280-76c7-4191-b470-8c8051ec60ea",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "has perms",
+          "connections": [
+            "2c7e7af1-5ee3-42a0-9cf8-cd15ff6ef7e1"
+          ]
+        },
+        {
+          "label": "doesn't have perms",
+          "connections": [
+            "bb06237e-15ec-4a0f-b208-45dc1024fd2d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5d53e81f-ff44-4531-866a-6823c4d2bdfa"
+        }
+      ],
+      "x": 961,
+      "y": 1311,
+      "rtype": "User Action",
+      "rsubtype": "Check User Permissions",
+      "formdata": [
+        "${dbsVars.CommandAuthor.id}",
+        [
+          "ADMINISTRATOR"
+        ]
+      ],
+      "formnames": [
+        "user",
+        "permissions"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "notAdmin",
+      "guid": "bb06237e-15ec-4a0f-b208-45dc1024fd2d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5ea73280-76c7-4191-b470-8c8051ec60ea"
+        }
+      ],
+      "x": 1723,
+      "y": 1372,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "NISI ADMIN!",
+        "",
+        "",
+        "",
+        "",
+        "Hahahaha dobar pokusaj <@${dbsVars.CommandAuthor.id}>",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "wfg",
+      "guid": "04d2adbb-9e35-4cc1-96ae-30a59f203571",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "koj-react",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "946accfd-d63f-4e0b-9200-bbef3f1c9db0"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "36feef05-fe57-4010-9ae4-93c6c54b0f58"
+        }
+      ],
+      "x": 383,
+      "y": 2871,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "koj-react",
+        "Number",
+        "temp",
+        ""
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ako je sub",
+      "guid": "946accfd-d63f-4e0b-9200-bbef3f1c9db0",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "253c5ccd-2177-4ea5-a1ba-3a254349a6ea"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "04d2adbb-9e35-4cc1-96ae-30a59f203571"
+        }
+      ],
+      "x": 578,
+      "y": 2860,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "koj-react",
+        "temp",
+        "equal to",
+        "sub"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ako je pokemon",
+      "guid": "253c5ccd-2177-4ea5-a1ba-3a254349a6ea",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "2f4f4aed-7379-4ceb-820a-73a4769f385d"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "ad9c5fc9-662b-4645-8e13-4c7670790b88"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "946accfd-d63f-4e0b-9200-bbef3f1c9db0"
+        }
+      ],
+      "x": 584,
+      "y": 3050,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "koj-react",
+        "temp",
+        "equal to",
+        "pokemon"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "alouz",
+      "guid": "2f4f4aed-7379-4ceb-820a-73a4769f385d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "7e503842-3298-42aa-b9a6-24f5b023ea53"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "253c5ccd-2177-4ea5-a1ba-3a254349a6ea"
+        }
+      ],
+      "x": 835,
+      "y": 3029,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "4AFF26",
+        "USPEH!",
+        "",
+        "",
+        "",
+        "",
+        "USPEH | Sada ljudi mogu da glasaju da li igraju pokemon ili ne!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ako je mc",
+      "guid": "ad9c5fc9-662b-4645-8e13-4c7670790b88",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "ecabbed5-46f4-4237-a4c6-799a02fb500e"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "d69f00ba-c08b-4979-9294-1db5bab6d492"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "253c5ccd-2177-4ea5-a1ba-3a254349a6ea"
+        }
+      ],
+      "x": 586,
+      "y": 3273,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "koj-react",
+        "temp",
+        "equal to",
+        "mc"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "greska",
+      "guid": "d69f00ba-c08b-4979-9294-1db5bab6d492",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ad9c5fc9-662b-4645-8e13-4c7670790b88"
+        }
+      ],
+      "x": 813,
+      "y": 3382,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "GRESKA!",
+        "",
+        "",
+        "",
+        "",
+        "GRESKA | Izvini, ali izgleda da nisi ukucao koju anketu zelis da postavis! Ili ta anketa ne postoji!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "alou",
+      "guid": "ecabbed5-46f4-4237-a4c6-799a02fb500e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "a416c724-8e9b-47bf-bf36-da29799d6b3a"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ad9c5fc9-662b-4645-8e13-4c7670790b88"
+        }
+      ],
+      "x": 815,
+      "y": 3222,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "0AFF2B",
+        "USPEH!",
+        "",
+        "",
+        "",
+        "",
+        "USPEH | Uspesno je postavljena anketa, ko igra mc!",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "dad ad",
+      "guid": "7e503842-3298-42aa-b9a6-24f5b023ea53",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "malomalopali",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "717f74c1-442d-43a4-bd24-96e90b325ea2"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2f4f4aed-7379-4ceb-820a-73a4769f385d"
+        }
+      ],
+      "x": 1087,
+      "y": 3009,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "glasanje",
+        "FF0000",
+        "ANKETA!",
+        "",
+        "",
+        "",
+        "",
+        "Da li igrate **POKEMON**?\n\n:white_check_mark: - Da\n:x: - Ne",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "malomalopali",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "poasdajipfc",
+      "guid": "a416c724-8e9b-47bf-bf36-da29799d6b3a",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "kalialipoal",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "3a50e968-9da2-46de-b081-08ecf9259f0e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ecabbed5-46f4-4237-a4c6-799a02fb500e"
+        }
+      ],
+      "x": 1072,
+      "y": 3214,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "glasanje",
+        "FF0000",
+        "ANKETA!",
+        "",
+        "",
+        "",
+        "",
+        "Da li igrate **MINECRAFT**?\n\n:white_check_mark: - Da\n:x: - Ne",
+        "",
+        "",
+        "Auto VikkiVuk",
+        "BOOL_TRUE@@",
+        "kalialipoal",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "sdgvsbg",
+      "guid": "3a50e968-9da2-46de-b081-08ecf9259f0e",
+      "reactionFields": [
+        "✅",
+        "❌"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "✅",
+          "connections": [
+            "e60abd15-0461-4f6d-bfdc-e78eb02080da"
+          ]
+        },
+        {
+          "label": "❌",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a416c724-8e9b-47bf-bf36-da29799d6b3a"
+        }
+      ],
+      "x": 1359,
+      "y": 3221,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.kalialipoal.id}",
+        "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "sajfvnnesjvnesasv",
+        "minecrafter",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "erh45h4h",
+      "guid": "717f74c1-442d-43a4-bd24-96e90b325ea2",
+      "reactionFields": [
+        "✅",
+        "❌"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "✅",
+          "connections": [
+            "e6811cf4-f9a2-4fad-8ef7-214e9e476cb0"
+          ]
+        },
+        {
+          "label": "❌",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7e503842-3298-42aa-b9a6-24f5b023ea53"
+        }
+      ],
+      "x": 1370,
+      "y": 3013,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.malomalopali.id}",
+        "999999999999999999999999999999999999999999999999999999999999999999999999999999999999",
+        "rjnrjhnrthbrthrthrt",
+        "pokemoner",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "sdgwegerg",
+      "guid": "e6811cf4-f9a2-4fad-8ef7-214e9e476cb0",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "717f74c1-442d-43a4-bd24-96e90b325ea2"
+        }
+      ],
+      "x": 1619,
+      "y": 3053,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.pokemoner.id}",
+        "pokemoner"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "svwsbebv",
+      "guid": "e60abd15-0461-4f6d-bfdc-e78eb02080da",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3a50e968-9da2-46de-b081-08ecf9259f0e"
+        }
+      ],
+      "x": 1616,
+      "y": 3242,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.minecrafter.id}",
+        "Minecrafter"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
       ]
     }
   ]
