@@ -6129,6 +6129,440 @@
         "user",
         "roleName"
       ]
+    },
+    {
+      "type": "command",
+      "name": "hack",
+      "guid": "b9d8a39d-86d4-4dbc-892f-384859c1b20f",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "3b25f13a-4f1f-463a-8bfc-f3b300512648"
+          ]
+        }
+      ],
+      "x": 77,
+      "y": 3645
+    },
+    {
+      "type": "response",
+      "name": "tututututurutuu",
+      "guid": "3b25f13a-4f1f-463a-8bfc-f3b300512648",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "86545d97-444a-4564-a622-19aae055a4ed"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b9d8a39d-86d4-4dbc-892f-384859c1b20f"
+        }
+      ],
+      "x": 299,
+      "y": 3614,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "hackUser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Hacking...",
+      "guid": "86545d97-444a-4564-a622-19aae055a4ed",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1fcfef59-1bd6-4f8e-afe9-f22bef56e41f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3b25f13a-4f1f-463a-8bfc-f3b300512648"
+        }
+      ],
+      "x": 506,
+      "y": 3607,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "804AFF",
+        "HAKUJEM",
+        "",
+        "",
+        "",
+        "",
+        "Trenutno hakujem <@${tempVars.hackUser.id}>....\n\n_Ovo moze da potraje_",
+        "",
+        "",
+        "HackBot 9000",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "wait",
+      "guid": "1fcfef59-1bd6-4f8e-afe9-f22bef56e41f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "a0df20a3-c674-430d-bb88-7defe02a4871"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "86545d97-444a-4564-a622-19aae055a4ed"
+        }
+      ],
+      "x": 703,
+      "y": 3603,
+      "rtype": "Message",
+      "rsubtype": "Wait",
+      "formdata": [
+        "210"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "genen",
+      "guid": "a0df20a3-c674-430d-bb88-7defe02a4871",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "19af81e8-15ad-40ea-97c5-1eddf1b65c8d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1fcfef59-1bd6-4f8e-afe9-f22bef56e41f"
+        }
+      ],
+      "x": 906,
+      "y": 3611,
+      "rtype": "Variable",
+      "rsubtype": "Generate Random Number",
+      "formdata": [
+        "trialAndError",
+        "1",
+        "2",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "min",
+        "max",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "erorororro",
+      "guid": "847b9b03-b1ad-420c-9824-50e74887ec10",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6439f442-f3d0-4eb9-b02e-c1b0ca50614f"
+        }
+      ],
+      "x": 1313,
+      "y": 3729,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "TRIAL AND ERROR",
+        "",
+        "",
+        "",
+        "",
+        "ACCESS DENIED",
+        "",
+        "",
+        "1010010101010101101010101001010101010100101",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "u56uj",
+      "guid": "19af81e8-15ad-40ea-97c5-1eddf1b65c8d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "659c562a-deaf-4e6a-8690-a5de22a22fad"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "6439f442-f3d0-4eb9-b02e-c1b0ca50614f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a0df20a3-c674-430d-bb88-7defe02a4871"
+        }
+      ],
+      "x": 1124,
+      "y": 3509,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "trialAndError",
+        "temp",
+        "equal to",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "hffhn",
+      "guid": "6439f442-f3d0-4eb9-b02e-c1b0ca50614f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "847b9b03-b1ad-420c-9824-50e74887ec10"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "465bd3a5-fcc2-4d10-8698-4804b4443c9a"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "19af81e8-15ad-40ea-97c5-1eddf1b65c8d"
+        }
+      ],
+      "x": 1127,
+      "y": 3725,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "trialAndError",
+        "temp",
+        "equal to",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "erororororororo",
+      "guid": "465bd3a5-fcc2-4d10-8698-4804b4443c9a",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6439f442-f3d0-4eb9-b02e-c1b0ca50614f"
+        }
+      ],
+      "x": 1313,
+      "y": 3903,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FFFFFF",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "how did we get here?",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "SUCCUUCUC",
+      "guid": "659c562a-deaf-4e6a-8690-a5de22a22fad",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "19af81e8-15ad-40ea-97c5-1eddf1b65c8d"
+        }
+      ],
+      "x": 1313,
+      "y": 3517,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "0FFF0F",
+        "USPEH!",
+        "",
+        "",
+        "",
+        "",
+        "Uspesno sam hakovao <@${tempVars.hackUser.id}>! \n\n_Saljem njegove podatke VikkiVuk-u u DM...._",
+        "",
+        "",
+        "HackBot 9000",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
     }
   ]
 }

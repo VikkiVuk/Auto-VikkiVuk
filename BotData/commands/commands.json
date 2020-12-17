@@ -1967,6 +1967,136 @@
           "savetovariabletype": "temp"
         }
       ]
+    },
+    {
+      "name": "hack",
+      "actions": [
+        {
+          "name": "tututututurutuu",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "hackUser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "Hacking...",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "804AFF",
+          "title": "HAKUJEM",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Trenutno hakujem <@${tempVars.hackUser.id}>....\n\n_Ovo moze da potraje_",
+          "thumbnail": "",
+          "image": "",
+          "footer": "HackBot 9000",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "wait",
+          "category": "Message",
+          "type": "Wait",
+          "seconds": "210"
+        },
+        {
+          "name": "genen",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "varname": "trialAndError",
+          "min": "1",
+          "max": "2",
+          "savevartype": "temp"
+        },
+        {
+          "name": "u56uj",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "SUCCUUCUC",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "0FFF0F",
+              "title": "USPEH!",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "Uspesno sam hakovao <@${tempVars.hackUser.id}>! \n\n_Saljem njegove podatke VikkiVuk-u u DM...._",
+              "thumbnail": "",
+              "image": "",
+              "footer": "HackBot 9000",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "hffhn",
+              "category": "Variable",
+              "type": "Check Variable Value",
+              "trueActions": [
+                {
+                  "name": "erorororro",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "color": "FF0000",
+                  "title": "TRIAL AND ERROR",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": "ACCESS DENIED",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "1010010101010101101010101001010101010100101",
+                  "timestamp": "BOOL_TRUE@@",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "falseActions": [
+                {
+                  "name": "erororororororo",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "color": "FFFFFF",
+                  "title": "",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": "how did we get here?",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "",
+                  "timestamp": "false",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "varname": "trialAndError",
+              "savevartype": "temp",
+              "compare": "equal to",
+              "value": "2"
+            }
+          ],
+          "varname": "trialAndError",
+          "savevartype": "temp",
+          "compare": "equal to",
+          "value": "1"
+        }
+      ]
     }
   ]
 }
