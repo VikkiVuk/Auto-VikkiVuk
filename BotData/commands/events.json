@@ -65,17 +65,7 @@
     {
       "name": "Bot Initialization",
       "perms": [],
-      "actions": [
-        {
-          "name": "send owner the direct message",
-          "category": "Message",
-          "type": "Send Direct Message",
-          "user": "${dbsVars.guild.ownerID}",
-          "messagetext": "Super! Ucitao sam se! Hvala na pokretanju!",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        }
-      ],
+      "actions": [],
       "var": {}
     }
   ]

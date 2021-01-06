@@ -717,7 +717,7 @@
       "x": 421,
       "y": 543,
       "perms": [
-        "suban na vikkivuk"
+        "bruh-gang"
       ]
     },
     {
@@ -4955,6 +4955,8 @@
         "❌"
       ],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "✅",
@@ -5000,6 +5002,8 @@
       "guid": "7c2f1374-8ab4-431b-aa69-45a116caa118",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -5031,6 +5035,8 @@
       "guid": "5d60cd42-5bd3-4fad-bc65-3157e2ca06d2",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -6186,8 +6192,6 @@
       "guid": "86545d97-444a-4564-a622-19aae055a4ed",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -6313,8 +6317,6 @@
       "guid": "847b9b03-b1ad-420c-9824-50e74887ec10",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -6456,8 +6458,6 @@
       "guid": "465bd3a5-fcc2-4d10-8698-4804b4443c9a",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -6513,8 +6513,6 @@
       "guid": "659c562a-deaf-4e6a-8690-a5de22a22fad",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",

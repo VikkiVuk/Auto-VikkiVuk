@@ -82,9 +82,7 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": [
-            "7de0b1a3-863b-4236-b670-b0f9904ab590"
-          ]
+          "connections": []
         }
       ],
       "x": 100,
@@ -97,6 +95,8 @@
       "guid": "31d1e942-16ed-4ffa-97fe-067a013ea288",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -128,47 +128,10 @@
     },
     {
       "type": "response",
-      "name": "send owner the direct message",
-      "guid": "7de0b1a3-863b-4236-b670-b0f9904ab590",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "0101bc23-2003-4f05-ab69-bc9ecb4f067e"
-        }
-      ],
-      "x": 299,
-      "y": 614,
-      "rtype": "Message",
-      "rsubtype": "Send Direct Message",
-      "formdata": [
-        "${dbsVars.guild.ownerID}",
-        "Super! Ucitao sam se! Hvala na pokretanju!",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "user",
-        "messageText",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    },
-    {
-      "type": "response",
       "name": "sdgsfgdg",
       "guid": "fdc8e621-26ac-44e0-bbc7-9df379444ecd",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
