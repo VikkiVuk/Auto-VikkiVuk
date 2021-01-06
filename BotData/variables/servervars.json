@@ -37,7 +37,7 @@
   "system": false,
   "embeds": "20",
   "attachments": "21",
-  "createdTimestamp": 1599486897179,
+  "createdTimestamp": 1597743446401,
   "editedTimestamp": null,
   "reactions": "22",
   "mentions": "23",
@@ -108,7 +108,7 @@
   "deleted": false,
   "id": "49",
   "name": "50",
-  "position": 20,
+  "position": 18,
   "parentID": "28",
   "permissionOverwrites": "51",
   "topic": "52",
@@ -119,81 +119,82 @@
   "guild": "54",
   "messages": "55",
   "_typing": "56"
-},"752527331783999498",{
+},"745214769212031046",{
   "id": "33",
   "username": "34",
   "discriminator": "35",
   "avatar": "36",
   "bot": true,
-  "lastMessageID": "57",
-  "lastMessage": "58",
+  "lastMessageID": "53",
+  "lastMessage": "57",
   "verified": true,
   "email": null,
-  "localPresence": "59",
-  "_typing": "60",
-  "friends": "61",
-  "blocked": "62",
-  "notes": "63",
+  "localPresence": "58",
+  "_typing": "59",
+  "friends": "60",
+  "blocked": "61",
+  "notes": "62",
   "premium": null,
   "mfaEnabled": true,
   "mobile": null,
-  "settings": "64",
-  "guildSettings": "65"
+  "settings": "63",
+  "guildSettings": "64"
 },{
   "guild": "54",
   "user": "18",
   "joinedTimestamp": 1596739962904,
-  "_roles": "66",
+  "_roles": "65",
   "serverDeaf": false,
   "serverMute": false,
   "speaking": false,
   "nickname": null,
-  "lastMessageID": "57",
-  "lastMessage": "58",
+  "lastMessageID": "53",
+  "lastMessage": "57",
   "deleted": false
 },[
-  "67"
+  "66"
 ],{},{},{
   "everyone": false,
-  "users": "68",
-  "roles": "69",
+  "users": "67",
+  "roles": "68",
   "_content": "8",
-  "_client": "70",
+  "_client": "69",
   "_guild": "54",
   "_members": null,
   "_channels": null
 },[
-  "71"
+  "70"
 ],"text","739423678575542353","bot-testiranje","739518742291021864",{},{
-  "members": "72",
-  "channels": "73",
-  "roles": "74",
-  "presences": "75",
+  "members": "71",
+  "channels": "72",
+  "roles": "73",
+  "presences": "74",
   "deleted": false,
   "available": true,
-  "id": "76",
-  "name": "77",
-  "icon": "78",
+  "id": "75",
+  "name": "76",
+  "icon": "77",
   "splash": null,
-  "region": "79",
+  "region": "78",
   "memberCount": 13,
   "large": false,
-  "features": "80",
+  "features": "79",
   "applicationID": null,
   "afkTimeout": 900,
-  "afkChannelID": "81",
-  "systemChannelID": "82",
+  "afkChannelID": "80",
+  "systemChannelID": "81",
   "verificationLevel": 3,
   "explicitContentFilter": 2,
   "mfaLevel": 1,
   "joinedTimestamp": 1596739962904,
-  "defaultMessageNotifications": "83",
-  "ownerID": "84",
-  "_rawVoiceStates": "85",
-  "emojis": "86"
+  "defaultMessageNotifications": "82",
+  "ownerID": "83",
+  "_rawVoiceStates": "84",
+  "emojis": "85"
 },{},{},"741005462891397401","Auto VikkiVuk","3290","b0294f67ff014f4c3734eff6ddbe15b7",{},{},{},{},{},{
   "user": "9"
 },{},[
+  "86",
   "87",
   "88",
   "89",
@@ -208,76 +209,75 @@
   "98",
   "99",
   "100",
-  "101",
-  "102"
+  "101"
 ],{
   "message": "3",
-  "type": "103",
-  "title": "104",
-  "description": "105",
+  "type": "102",
+  "title": "103",
+  "description": "104",
   "color": 1021951,
-  "fields": "106",
-  "timestamp": "107",
+  "fields": "105",
+  "timestamp": "106",
   "thumbnail": null,
   "image": null,
   "video": null,
   "author": null,
   "provider": null,
-  "footer": "108"
+  "footer": "107"
 },{},{},{
-  "_events": "109",
+  "_events": "108",
   "_eventsCount": 9,
   "_maxListeners": 10,
-  "options": "110",
-  "rest": "111",
-  "dataManager": "112",
-  "manager": "113",
-  "ws": "114",
-  "resolver": "115",
-  "actions": "116",
-  "voice": "117",
-  "shard": "118",
-  "users": "119",
-  "guilds": "120",
-  "channels": "121",
-  "presences": "122",
+  "options": "109",
+  "rest": "110",
+  "dataManager": "111",
+  "manager": "112",
+  "ws": "113",
+  "resolver": "114",
+  "actions": "115",
+  "voice": "116",
+  "shard": "117",
+  "users": "118",
+  "guilds": "119",
+  "channels": "120",
+  "presences": "121",
   "user": "9",
-  "readyAt": "123",
-  "broadcasts": "124",
-  "pings": "125",
-  "_timeouts": "126",
-  "_intervals": "127"
-},"690855771826552832","admin",{},"Ovaj kanal je samo za administratore i moderatore.","752527441658118225",{
-  "members": "128",
-  "channels": "129",
-  "roles": "130",
-  "presences": "131",
+  "readyAt": "122",
+  "broadcasts": "123",
+  "pings": "124",
+  "_timeouts": "125",
+  "_intervals": "126"
+},"690855771826552832","admin",{},"Ovaj kanal je samo za administratore i moderatore.","745214779978678363",{
+  "members": "127",
+  "channels": "128",
+  "roles": "129",
+  "presences": "130",
   "deleted": false,
   "available": true,
-  "id": "76",
-  "name": "77",
-  "icon": "78",
+  "id": "75",
+  "name": "76",
+  "icon": "77",
   "splash": null,
-  "region": "79",
-  "memberCount": 14,
+  "region": "78",
+  "memberCount": 13,
   "large": false,
-  "features": "132",
+  "features": "131",
   "applicationID": null,
   "afkTimeout": 900,
-  "afkChannelID": "81",
-  "systemChannelID": "82",
+  "afkChannelID": "80",
+  "systemChannelID": "81",
   "verificationLevel": 3,
   "explicitContentFilter": 2,
   "mfaLevel": 1,
   "joinedTimestamp": 1596739962904,
-  "defaultMessageNotifications": "83",
-  "ownerID": "84",
-  "_rawVoiceStates": "133",
-  "emojis": "134"
-},{},{},"752527443247497260",{
-  "channel": "135",
+  "defaultMessageNotifications": "82",
+  "ownerID": "83",
+  "_rawVoiceStates": "132",
+  "emojis": "133"
+},{},{},{
+  "channel": "16",
   "deleted": false,
-  "id": "57",
+  "id": "53",
   "type": "7",
   "content": "8",
   "author": "18",
@@ -285,18 +285,19 @@
   "pinned": false,
   "tts": false,
   "system": false,
-  "embeds": "136",
-  "attachments": "137",
-  "createdTimestamp": 1599486923754,
+  "embeds": "134",
+  "attachments": "135",
+  "createdTimestamp": 1597743448968,
   "editedTimestamp": null,
-  "reactions": "138",
-  "mentions": "139",
+  "reactions": "136",
+  "mentions": "137",
   "webhookID": null,
   "hit": null,
-  "_edits": "140"
+  "_edits": "138"
 },{},{},{},{},{},{
   "user": "18"
 },{},[
+  "86",
   "87",
   "88",
   "89",
@@ -308,49 +309,48 @@
   "95",
   "96",
   "97",
-  "98",
-  "102",
-  "141",
-  "100",
   "101",
-  "99"
+  "139",
+  "99",
+  "100",
+  "98"
 ],{
   "message": "4",
-  "type": "103",
-  "title": "142",
-  "description": "143",
+  "type": "102",
+  "title": "140",
+  "description": "141",
   "color": 16711680,
-  "fields": "144",
-  "timestamp": "145",
+  "fields": "142",
+  "timestamp": "143",
   "thumbnail": null,
   "image": null,
   "video": null,
-  "author": "146",
+  "author": "144",
   "provider": null,
-  "footer": "147"
+  "footer": "145"
 },{},{},{
-  "_events": "148",
-  "_eventsCount": 10,
-  "_maxListeners": 11,
-  "options": "149",
-  "rest": "150",
-  "dataManager": "151",
-  "manager": "152",
-  "ws": "153",
-  "resolver": "154",
-  "actions": "155",
-  "voice": "156",
-  "shard": "157",
-  "users": "158",
-  "guilds": "159",
-  "channels": "160",
-  "presences": "161",
+  "_events": "146",
+  "_eventsCount": 9,
+  "_maxListeners": 10,
+  "options": "147",
+  "rest": "148",
+  "dataManager": "149",
+  "manager": "150",
+  "ws": "151",
+  "resolver": "152",
+  "actions": "153",
+  "voice": "154",
+  "shard": "155",
+  "users": "156",
+  "guilds": "157",
+  "channels": "158",
+  "presences": "159",
   "user": "18",
-  "readyAt": "162",
-  "broadcasts": "163",
-  "pings": "164",
-  "_timeouts": "165",
-  "_intervals": "166"
+  "readyAt": "160",
+  "broadcasts": "161",
+  "pings": "162",
+  "_timeouts": "163",
+  "_intervals": "164"
 },{
   "channel": "16",
   "deleted": false,
@@ -362,24 +362,24 @@
   "pinned": false,
   "tts": false,
   "system": false,
-  "embeds": "167",
-  "attachments": "168",
-  "createdTimestamp": 1599486897179,
+  "embeds": "165",
+  "attachments": "166",
+  "createdTimestamp": 1597743446401,
   "editedTimestamp": null,
   "reactions": "22",
-  "mentions": "169",
+  "mentions": "167",
   "webhookID": null,
   "hit": null,
   "_edits": "24"
 },{},{},{},{},"629728204780994590","Vukovi","33c8f4e9dc0fc443a19aca4837ab8eb0","europe",[
-  "170",
-  "171",
-  "172"
+  "168",
+  "169",
+  "170"
 ],"666224648371044352","629730544606773259","MENTIONS","533692905387196429",{},{},"740600864338739330","687600331206819845","687599618002911239","741005854295457865","739519811666575370","704301282969649163","739424844927729677","688407416723079215","708314562046197840","687599608217731089","708312826074103858","722411341930954772","690854855299825694","708313285375557724","740139933746069565","688381358179221566","rich","TVOJ BROj!","Zdravo <@533692905387196429>, vidim da si pokrenuo ovu komandu. Pa evo tvog broja **undefined**. Taj broj nemoj nikom da dajes. Ukoliko si rekao nekom taj broj, samo pokreni ponovo komandu, i moci ces da promenis tvoj broj!\n\nTaj broj sluzi za verifikaciju sebe. Ako te moderator ili admin pita, daj mu slobodno, ali ako je neko ispod moderatora ili admina i nije vlasnik, onda mu nemoj dati. Ovaj broj je jako vazan.",[],"2020-08-07T09:42:32.629000+00:00",{
   "embed": "45",
   "text": "34"
 },{},{
-  "apiRequestMethod": "173",
+  "apiRequestMethod": "171",
   "shardId": 0,
   "shardCount": 0,
   "messageCacheMaxSize": 200,
@@ -390,16 +390,16 @@
   "sync": false,
   "restWsBridgeTimeout": 5000,
   "retryLimit": null,
-  "disabledEvents": "174",
+  "disabledEvents": "172",
   "restTimeOffset": 500,
-  "ws": "175",
-  "http": "176"
+  "ws": "173",
+  "http": "174"
 },{
   "client": "48",
-  "handlers": "177",
-  "userAgentManager": "178",
-  "methods": "179",
-  "rateLimitedEndpoints": "180",
+  "handlers": "175",
+  "userAgentManager": "176",
+  "methods": "177",
+  "rateLimitedEndpoints": "178",
   "globallyRateLimited": false
 },{
   "client": "48"
@@ -407,82 +407,75 @@
   "client": "48",
   "heartbeatInterval": null
 },{
-  "_events": "181",
+  "_events": "179",
   "_eventsCount": 0,
   "client": "48",
-  "connection": "182",
+  "connection": "180",
   "lastHeartbeatAck": true
 },{
   "client": "48"
 },{
   "client": "48",
-  "MessageCreate": "183",
-  "MessageDelete": "184",
-  "MessageDeleteBulk": "185",
-  "MessageUpdate": "186",
-  "MessageReactionAdd": "187",
-  "MessageReactionRemove": "188",
-  "MessageReactionRemoveAll": "189",
-  "ChannelCreate": "190",
-  "ChannelDelete": "191",
-  "ChannelUpdate": "192",
-  "GuildDelete": "193",
-  "GuildUpdate": "194",
-  "GuildMemberGet": "195",
-  "GuildMemberRemove": "196",
-  "GuildBanRemove": "197",
-  "GuildRoleCreate": "198",
-  "GuildRoleDelete": "199",
-  "GuildRoleUpdate": "200",
-  "UserGet": "201",
-  "UserUpdate": "202",
-  "UserNoteUpdate": "203",
-  "GuildSync": "204",
-  "GuildEmojiCreate": "205",
-  "GuildEmojiDelete": "206",
-  "GuildEmojiUpdate": "207",
-  "GuildEmojisUpdate": "208",
-  "GuildRolesPositionUpdate": "209",
-  "GuildChannelsPositionUpdate": "210"
+  "MessageCreate": "181",
+  "MessageDelete": "182",
+  "MessageDeleteBulk": "183",
+  "MessageUpdate": "184",
+  "MessageReactionAdd": "185",
+  "MessageReactionRemove": "186",
+  "MessageReactionRemoveAll": "187",
+  "ChannelCreate": "188",
+  "ChannelDelete": "189",
+  "ChannelUpdate": "190",
+  "GuildDelete": "191",
+  "GuildUpdate": "192",
+  "GuildMemberGet": "193",
+  "GuildMemberRemove": "194",
+  "GuildBanRemove": "195",
+  "GuildRoleCreate": "196",
+  "GuildRoleDelete": "197",
+  "GuildRoleUpdate": "198",
+  "UserGet": "199",
+  "UserUpdate": "200",
+  "UserNoteUpdate": "201",
+  "GuildSync": "202",
+  "GuildEmojiCreate": "203",
+  "GuildEmojiDelete": "204",
+  "GuildEmojiUpdate": "205",
+  "GuildEmojisUpdate": "206",
+  "GuildRolesPositionUpdate": "207",
+  "GuildChannelsPositionUpdate": "208"
 },{
   "client": "48",
-  "connections": "211"
+  "connections": "209"
 },{
   "client": "48"
 },{},{},{},{},"2020-08-07T09:42:27.293Z",[],[
   129
 ],{},{},{},{},{},{},[
-  "170",
-  "171",
-  "172"
-],{},{},{
-  "type": "25",
-  "deleted": false,
-  "id": "212",
-  "name": "213",
-  "position": 25,
-  "parentID": "214",
-  "permissionOverwrites": "215",
-  "topic": "216",
-  "nsfw": false,
-  "lastMessageID": "57",
-  "lastPinTimestamp": null,
-  "rateLimitPerUser": 60,
-  "guild": "54",
-  "messages": "217",
-  "_typing": "218"
-},[
-  "219"
+  "168",
+  "169",
+  "170"
+],{},{},[
+  "210"
 ],{},{},{
   "everyone": false,
-  "users": "220",
-  "roles": "221",
+  "users": "211",
+  "roles": "212",
   "_content": "8",
-  "_client": "70",
+  "_client": "69",
   "_guild": "54",
   "_members": null,
   "_channels": null
 },[],"741645094540673114","POMOC","Ovo je OG Bot napravljen od strane VikkiVuk-a! Dole su vam sve komande koje ja imam!",[
+  "213",
+  "214",
+  "215",
+  "216",
+  "217",
+  "218",
+  "219",
+  "220",
+  "221",
   "222",
   "223",
   "224",
@@ -494,25 +487,15 @@
   "230",
   "231",
   "232",
-  "233",
-  "234",
-  "235",
-  "236",
-  "237",
-  "238",
-  "239",
-  "240",
-  "241",
-  "242",
-  "243"
-],"2020-09-07T13:54:53.356000+00:00",{
-  "embed": "67",
+  "233"
+],"2020-08-18T09:37:24.205000+00:00",{
+  "embed": "66",
   "name": "34"
 },{
-  "embed": "67",
+  "embed": "66",
   "text": "34"
 },{},{
-  "apiRequestMethod": "173",
+  "apiRequestMethod": "171",
   "shardId": 0,
   "shardCount": 0,
   "messageCacheMaxSize": 200,
@@ -523,119 +506,121 @@
   "sync": false,
   "restWsBridgeTimeout": 5000,
   "retryLimit": null,
-  "disabledEvents": "244",
+  "disabledEvents": "234",
   "restTimeOffset": 500,
-  "ws": "245",
-  "http": "246"
+  "ws": "235",
+  "http": "236"
 },{
-  "client": "70",
-  "handlers": "247",
-  "userAgentManager": "248",
-  "methods": "249",
-  "rateLimitedEndpoints": "250",
+  "client": "69",
+  "handlers": "237",
+  "userAgentManager": "238",
+  "methods": "239",
+  "rateLimitedEndpoints": "240",
   "globallyRateLimited": false
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70",
+  "client": "69",
   "heartbeatInterval": null
 },{
-  "_events": "251",
+  "_events": "241",
   "_eventsCount": 0,
-  "client": "70",
-  "connection": "252",
+  "client": "69",
+  "connection": "242",
   "lastHeartbeatAck": true
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70",
-  "MessageCreate": "253",
-  "MessageDelete": "254",
-  "MessageDeleteBulk": "255",
-  "MessageUpdate": "256",
-  "MessageReactionAdd": "257",
-  "MessageReactionRemove": "258",
-  "MessageReactionRemoveAll": "259",
-  "ChannelCreate": "260",
-  "ChannelDelete": "261",
-  "ChannelUpdate": "262",
-  "GuildDelete": "263",
-  "GuildUpdate": "264",
-  "GuildMemberGet": "265",
-  "GuildMemberRemove": "266",
-  "GuildBanRemove": "267",
-  "GuildRoleCreate": "268",
-  "GuildRoleDelete": "269",
-  "GuildRoleUpdate": "270",
-  "UserGet": "271",
-  "UserUpdate": "272",
-  "UserNoteUpdate": "273",
-  "GuildSync": "274",
-  "GuildEmojiCreate": "275",
-  "GuildEmojiDelete": "276",
-  "GuildEmojiUpdate": "277",
-  "GuildEmojisUpdate": "278",
-  "GuildRolesPositionUpdate": "279",
-  "GuildChannelsPositionUpdate": "280"
+  "client": "69",
+  "MessageCreate": "243",
+  "MessageDelete": "244",
+  "MessageDeleteBulk": "245",
+  "MessageUpdate": "246",
+  "MessageReactionAdd": "247",
+  "MessageReactionRemove": "248",
+  "MessageReactionRemoveAll": "249",
+  "ChannelCreate": "250",
+  "ChannelDelete": "251",
+  "ChannelUpdate": "252",
+  "GuildDelete": "253",
+  "GuildUpdate": "254",
+  "GuildMemberGet": "255",
+  "GuildMemberRemove": "256",
+  "GuildBanRemove": "257",
+  "GuildRoleCreate": "258",
+  "GuildRoleDelete": "259",
+  "GuildRoleUpdate": "260",
+  "UserGet": "261",
+  "UserUpdate": "262",
+  "UserNoteUpdate": "263",
+  "GuildSync": "264",
+  "GuildEmojiCreate": "265",
+  "GuildEmojiDelete": "266",
+  "GuildEmojiUpdate": "267",
+  "GuildEmojisUpdate": "268",
+  "GuildRolesPositionUpdate": "269",
+  "GuildChannelsPositionUpdate": "270"
 },{
-  "client": "70",
-  "connections": "281"
+  "client": "69",
+  "connections": "271"
 },{
-  "client": "70"
-},{},{},{},{},"2020-09-07T13:54:49.040Z",[],[
-  133
+  "client": "69"
+},{},{},{},{},"2020-08-18T09:35:42.163Z",[],[
+  444,
+  130,
+  135
 ],{},{},[
-  "282"
+  "272"
 ],{},{
   "everyone": false,
-  "users": "283",
-  "roles": "284",
+  "users": "273",
+  "roles": "274",
   "_content": "8",
-  "_client": "70",
+  "_client": "69",
   "_guild": "54",
   "_members": null,
   "_channels": null
 },"COMMUNITY","WELCOME_SCREEN_ENABLED","NEWS","sequential",[],{
   "large_threshold": 250,
   "compress": true,
-  "properties": "285",
+  "properties": "275",
   "version": 6
 },{
   "version": 7,
-  "host": "286",
-  "cdn": "287"
+  "host": "276",
+  "cdn": "277"
 },{
-  "/gateway": "288",
-  "/channels/739423678575542353/messages": "289"
+  "/gateway": "278",
+  "/channels/739423678575542353/messages": "279"
 },{
-  "userAgent": "290"
+  "userAgent": "280"
 },{
-  "rest": "111",
+  "rest": "110",
   "client": "48",
   "_ackToken": null
 },{},{},{
-  "_events": "291",
+  "_events": "281",
   "_eventsCount": 2,
-  "manager": "114",
+  "manager": "113",
   "client": "48",
-  "ws": "292",
+  "ws": "282",
   "sequence": 6,
   "status": 0,
-  "packetManager": "293",
+  "packetManager": "283",
   "lastPingTimestamp": 1596793347292,
-  "ratelimit": "294",
+  "ratelimit": "284",
   "expectingClose": false,
-  "gateway": "295",
-  "disabledEvents": "296",
+  "gateway": "285",
+  "disabledEvents": "286",
   "closeSequence": 0,
-  "heartbeatInterval": "297",
-  "sessionID": "298",
-  "_trace": "299"
+  "heartbeatInterval": "287",
+  "sessionID": "288",
+  "_trace": "289"
 },{
   "client": "48"
 },{
   "client": "48",
-  "deleted": "300"
+  "deleted": "290"
 },{
   "client": "48"
 },{
@@ -644,32 +629,32 @@
   "client": "48"
 },{
   "client": "48"
-},{
-  "client": "48"
-},{
-  "client": "48"
-},{
-  "client": "48",
-  "deleted": "301"
-},{
-  "client": "48"
-},{
-  "client": "48",
-  "deleted": "302"
 },{
   "client": "48"
 },{
   "client": "48"
 },{
   "client": "48",
-  "deleted": "303"
+  "deleted": "291"
+},{
+  "client": "48"
+},{
+  "client": "48",
+  "deleted": "292"
 },{
   "client": "48"
 },{
   "client": "48"
 },{
   "client": "48",
-  "deleted": "304"
+  "deleted": "293"
+},{
+  "client": "48"
+},{
+  "client": "48"
+},{
+  "client": "48",
+  "deleted": "294"
 },{
   "client": "48"
 },{
@@ -692,460 +677,427 @@
   "client": "48"
 },{
   "client": "48"
-},{},"719162341991645184","glasanje","739062294993960961",{},"Ovde mozete da glasate za dosta stvari.",{},{},{
-  "message": "58",
-  "type": "103",
-  "title": "305",
-  "description": "306",
-  "color": 16711680,
-  "fields": "307",
-  "timestamp": "308",
+},{},{
+  "message": "57",
+  "type": "102",
+  "title": "295",
+  "description": "296",
+  "color": 16769805,
+  "fields": "297",
+  "timestamp": "298",
   "thumbnail": null,
   "image": null,
   "video": null,
   "author": null,
   "provider": null,
-  "footer": "309"
+  "footer": "299"
 },{},{},{
-  "embed": "67",
+  "embed": "66",
+  "name": "300",
+  "value": "301",
+  "inline": false
+},{
+  "embed": "66",
+  "name": "302",
+  "value": "303",
+  "inline": false
+},{
+  "embed": "66",
+  "name": "304",
+  "value": "305",
+  "inline": false
+},{
+  "embed": "66",
+  "name": "306",
+  "value": "307",
+  "inline": false
+},{
+  "embed": "66",
+  "name": "308",
+  "value": "309",
+  "inline": false
+},{
+  "embed": "66",
   "name": "310",
   "value": "311",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "312",
   "value": "313",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "314",
   "value": "315",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "316",
   "value": "317",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "318",
   "value": "319",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "320",
   "value": "321",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "322",
   "value": "323",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "324",
   "value": "325",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "326",
   "value": "327",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "328",
   "value": "329",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "330",
   "value": "331",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "332",
   "value": "333",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "334",
   "value": "335",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "336",
   "value": "337",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "338",
   "value": "339",
   "inline": false
 },{
-  "embed": "67",
+  "embed": "66",
   "name": "340",
   "value": "341",
-  "inline": false
-},{
-  "embed": "67",
-  "name": "342",
-  "value": "343",
-  "inline": false
-},{
-  "embed": "67",
-  "name": "344",
-  "value": "345",
-  "inline": false
-},{
-  "embed": "67",
-  "name": "346",
-  "value": "347",
-  "inline": false
-},{
-  "embed": "67",
-  "name": "348",
-  "value": "349",
-  "inline": false
-},{
-  "embed": "67",
-  "name": "350",
-  "value": "351",
-  "inline": false
-},{
-  "embed": "67",
-  "name": "352",
-  "value": "353",
   "inline": false
 },[],{
   "large_threshold": 250,
   "compress": true,
-  "properties": "354",
+  "properties": "342",
   "version": 6
 },{
   "version": 7,
-  "host": "286",
-  "cdn": "287"
+  "host": "276",
+  "cdn": "277"
 },{
-  "/gateway": "355",
-  "/users/741005462891397401/channels": "356",
-  "/channels/741762039919280139/messages": "357",
-  "/channels/690855771826552832/messages": "358",
-  "/channels/719162341991645184/messages": "359",
-  "/channels/719162341991645184/messages/:id/reactions/%E2%9C%85/@me": "360",
-  "/channels/719162341991645184/messages/:id/reactions/%E2%9D%8C/@me": "361"
+  "/gateway": "343",
+  "/users/741005462891397401/channels": "344",
+  "/channels/741762039919280139/messages": "345",
+  "/channels/690855771826552832/messages": "346"
 },{
-  "userAgent": "290"
+  "userAgent": "280"
 },{
-  "rest": "150",
-  "client": "70",
+  "rest": "148",
+  "client": "69",
   "_ackToken": null
 },{},{},{
-  "_events": "362",
+  "_events": "347",
   "_eventsCount": 2,
-  "manager": "153",
-  "client": "70",
-  "ws": "363",
-  "sequence": 23,
+  "manager": "151",
+  "client": "69",
+  "ws": "348",
+  "sequence": 12,
   "status": 0,
-  "packetManager": "364",
-  "lastPingTimestamp": 1599486889040,
-  "ratelimit": "365",
+  "packetManager": "349",
+  "lastPingTimestamp": 1597743424476,
+  "ratelimit": "350",
   "expectingClose": false,
-  "gateway": "295",
-  "disabledEvents": "366",
+  "gateway": "285",
+  "disabledEvents": "351",
   "closeSequence": 0,
-  "heartbeatInterval": "367",
-  "sessionID": "368",
-  "_trace": "369"
+  "heartbeatInterval": "352",
+  "sessionID": "353",
+  "_trace": "354"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70",
-  "deleted": "370"
+  "client": "69",
+  "deleted": "355"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70",
-  "deleted": "371"
+  "client": "69",
+  "deleted": "356"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70",
-  "deleted": "372"
+  "client": "69",
+  "deleted": "357"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70",
-  "deleted": "373"
+  "client": "69",
+  "deleted": "358"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70",
-  "deleted": "374"
+  "client": "69",
+  "deleted": "359"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{
-  "client": "70"
+  "client": "69"
 },{},{
   "message": "4",
-  "type": "103",
-  "title": "142",
-  "description": "143",
+  "type": "102",
+  "title": "140",
+  "description": "141",
   "color": 16711680,
-  "fields": "375",
-  "timestamp": "145",
+  "fields": "360",
+  "timestamp": "143",
   "thumbnail": null,
   "image": null,
   "video": null,
-  "author": "376",
+  "author": "361",
   "provider": null,
-  "footer": "377"
+  "footer": "362"
 },{},{},{
-  "$os": "378",
-  "$browser": "379",
-  "$device": "379",
+  "$os": "363",
+  "$browser": "364",
+  "$device": "364",
   "$referrer": "8",
   "$referring_domain": "8"
 },"https://discordapp.com","https://cdn.discordapp.com",{
-  "restManager": "111",
-  "queue": "380",
+  "restManager": "110",
+  "queue": "365",
   "client": "48",
-  "endpoint": "381",
+  "endpoint": "366",
   "timeDifference": -1234,
   "busy": false,
   "requestLimit": null,
   "requestResetTime": null,
   "requestRemaining": null
 },{
-  "restManager": "111",
-  "queue": "382",
+  "restManager": "110",
+  "queue": "367",
   "client": "48",
-  "endpoint": "383",
+  "endpoint": "368",
   "timeDifference": -1134,
   "busy": false,
   "requestLimit": 5,
   "requestResetTime": 1596793360000,
   "requestRemaining": 4
 },"DiscordBot (https://github.com/discordjs/discord.js, 11.5.1) Node.js/v12.13.0",{},{
-  "_events": "384",
+  "_events": "369",
   "_eventsCount": 4,
   "readyState": 1,
   "protocol": "8",
-  "_binaryType": "385",
+  "_binaryType": "370",
   "_closeFrameReceived": false,
   "_closeFrameSent": false,
   "_closeMessage": "8",
   "_closeTimer": null,
   "_closeCode": 1006,
-  "_extensions": "386",
-  "_receiver": "387",
-  "_sender": "388",
-  "_socket": "389",
+  "_extensions": "371",
+  "_receiver": "372",
+  "_sender": "373",
+  "_socket": "374",
   "_isServer": false,
   "_redirects": 0,
-  "url": "295",
+  "url": "285",
   "_req": null
 },{
-  "ws": "182",
-  "handlers": "390",
-  "queue": "391"
+  "ws": "180",
+  "handlers": "375",
+  "queue": "376"
 },{
-  "queue": "392",
+  "queue": "377",
   "remaining": 118,
   "total": 120,
   "time": 60000,
-  "resetTimer": "393"
+  "resetTimer": "378"
 },"wss://gateway.discord.gg/?v=6&encoding=json",{},{
   "_idleTimeout": 41250,
-  "_idlePrev": "394",
-  "_idleNext": "394",
+  "_idlePrev": "379",
+  "_idleNext": "379",
   "_idleStart": 810,
   "_repeat": 41250,
   "_destroyed": false
 },"e4a7b364d58ac6435420672048421641",[
-  "395"
-],{},{},{},{},{},"SUB TEST!","Da li ste subani na **VikkiVuk-a** na youtube-u???\n\n:white_check_mark: - Da\n:x: - Ne",[],"2020-09-07T13:55:20.503000+00:00",{
-  "embed": "219",
+  "380"
+],{},{},{},{},{},"XP","XP | <@533692905387196429> imas **69 xp-a!**",[],"2020-08-18T09:37:27.114000+00:00",{
+  "embed": "210",
   "text": "34"
-},"v.help","Pokaze vam ovaj menu.","v.verifikuj-me","Verifikuje vas!","v.zdravo","Kaze vam zdravo nazad!","v.glup-si","Kaze da ste vi glupi!","v.imod-update","Posalje poruku u #imod-novosti da se iMod Updatovao","v.roblox-nalozi","Kaze vam koji su nasi roblox nalozi!","v.zagrli-me","Zagrli vas!","daj-mi-ideju","Da vam ideju!","v.server-info","Da vam informacije servera!","v.spoilerbomb","Da vam bombu spoilera, nacice te iznenadjenje ako otvorite sve spoilere! Ova komanda je samo za one koji su subani na vikkivuk-a","v.dnd","Stavi botov status na \"Do Not Disturb\"","v.botstatus","Stavi botov status na ono sto vi ukucate!","v.online","Stavi botov status na \"Online\"","v.addrole","Ova komanda je samo za admine. Ona dodaje \"roles\". primer kako trebate koristitu komandu : \"v.addrole test(Ime) 20(pozcicija)\"","v.tvojbroj","Da vam potpuno random broj koj morate da sacuvate!","v.poke","Ovo vam daje informacije pokemona! Koristi se tako sto ukucate : \"v.poke Grookey\" (Grookey oznacava ime pokemona(ime je case-sensitive(mora biti pocetno slovo veliko!))). Ova komanda je dostupna samo za pokemon igrace! link spreadsheeta : https://bit.ly/2XFZqfk","v.botstatus-auto","Stavi botov status na \"Automating VikkiVuk | v.help\"","v.clear","Obrise 11 poruka u trenutnom kanalu *nece izbrisati poruke starije od 2 nedelje*","v.kick","Izbaci korisnika! Komanda se koristi ovako : \"v.kick @VikkiVuk test\" (@VikkiVuk oznacava osobu koju zelite da izbacite, a test oznacava razlog za izbacivanje!).","v.ban","Zabrani pristup nekom korisniku serveru! Ova komanda se koristi ovako : \"v.ban @VikkiVuk 1 test\" (@VikkiVuk oznacava osobu koju zelite da banujete, 1 oznacava koliko dana zelite da banujete osobu, test oznacava razlog zasto zelite da banujete osobu!)","v.xp","Ovako proveravate vas xp!","v.channel-id","Ovo vam da id od kanala u kom je poslata poruka!",{
-  "$os": "378",
-  "$browser": "379",
-  "$device": "379",
+},"v.help","Pokaze vam ovaj menu.","v.verifikuj-me","Verifikuje vas!","v.zdravo","Kaze vam zdravo nazad!","v.glup-si","Kaze da ste vi glupi!","v.imod-update","Posalje poruku u #imod-novosti da se iMod Updatovao","v.roblox-nalozi","Kaze vam koji su nasi roblox nalozi!","v.zagrli-me","Zagrli vas!","daj-mi-ideju","Da vam ideju!","v.server-info","Da vam informacije servera!","v.spoilerbomb","Da vam bombu spoilera, nacice te iznenadjenje ako otvorite sve spoilere! Ova komanda je samo za one koji su subani na vikkivuk-a","v.dnd","Stavi botov status na \"Do Not Disturb\"","v.botstatus","Stavi botov status na ono sto vi ukucate!","v.online","Stavi botov status na \"Online\"","v.addrole","Ova komanda je samo za admine. Ona dodaje \"roles\". primer kako trebate koristitu komandu : \"v.addrole test(Ime) 20(pozcicija)\"","v.tvojbroj","Da vam potpuno random broj koj morate da sacuvate!","v.poke","Ovo vam daje informacije pokemona! Koristi se tako sto ukucate : \"v.poke Grookey\" (Grookey oznacava ime pokemona(ime je case-sensitive(mora biti pocetno slovo veliko!))). Ova komanda je dostupna samo za pokemon igrace! link spreadsheeta : https://bit.ly/2XFZqfk","v.botstatus-auto","Stavi botov status na \"Automating VikkiVuk | v.help\"","v.clear","Obrise 11 poruka u trenutnom kanalu *nece izbrisati poruke starije od 2 nedelje*","v.kick","Izbaci korisnika! Komanda se koristi ovako : \"v.kick @VikkiVuk test\" (@VikkiVuk oznacava osobu koju zelite da izbacite, a test oznacava razlog za izbacivanje!).","v.ban","Zabrani pristup nekom korisniku serveru! Ova komanda se koristi ovako : \"v.ban @VikkiVuk 1 test\" (@VikkiVuk oznacava osobu koju zelite da banujete, 1 oznacava koliko dana zelite da banujete osobu, test oznacava razlog zasto zelite da banujete osobu!)","v.xp","Ovako proveravate vas xp!",{
+  "$os": "363",
+  "$browser": "364",
+  "$device": "364",
   "$referrer": "8",
   "$referring_domain": "8"
 },{
-  "restManager": "150",
-  "queue": "396",
-  "client": "70",
-  "endpoint": "381",
-  "timeDifference": -2414,
+  "restManager": "148",
+  "queue": "381",
+  "client": "69",
+  "endpoint": "366",
+  "timeDifference": -1372,
   "busy": false,
   "requestLimit": null,
   "requestResetTime": null,
   "requestRemaining": null
 },{
-  "restManager": "150",
-  "queue": "397",
-  "client": "70",
-  "endpoint": "398",
-  "timeDifference": -2737,
+  "restManager": "148",
+  "queue": "382",
+  "client": "69",
+  "endpoint": "383",
+  "timeDifference": -1602,
   "busy": false,
   "requestLimit": null,
   "requestResetTime": null,
   "requestRemaining": null
 },{
-  "restManager": "150",
-  "queue": "399",
-  "client": "70",
-  "endpoint": "400",
-  "timeDifference": -2523,
+  "restManager": "148",
+  "queue": "384",
+  "client": "69",
+  "endpoint": "385",
+  "timeDifference": -1309,
   "busy": false,
   "requestLimit": 5,
-  "requestResetTime": 1599486898000,
+  "requestResetTime": 1597743350000,
   "requestRemaining": 4
 },{
-  "restManager": "150",
-  "queue": "401",
-  "client": "70",
-  "endpoint": "402",
-  "timeDifference": -2509,
+  "restManager": "148",
+  "queue": "386",
+  "client": "69",
+  "endpoint": "387",
+  "timeDifference": -1672,
   "busy": false,
   "requestLimit": 5,
-  "requestResetTime": 1599486929000,
-  "requestRemaining": 4
-},{
-  "restManager": "150",
-  "queue": "403",
-  "client": "70",
-  "endpoint": "404",
-  "timeDifference": -2275,
-  "busy": false,
-  "requestLimit": 5,
-  "requestResetTime": 1599486929000,
-  "requestRemaining": 4
-},{
-  "restManager": "150",
-  "queue": "405",
-  "client": "70",
-  "endpoint": "406",
-  "timeDifference": 0,
-  "busy": true
-},{
-  "restManager": "150",
-  "queue": "407",
-  "client": "70",
-  "endpoint": "408",
-  "timeDifference": 0,
-  "busy": true
+  "requestResetTime": 1597743452000,
+  "requestRemaining": 2
 },{},{
-  "_events": "409",
+  "_events": "388",
   "_eventsCount": 4,
   "readyState": 1,
   "protocol": "8",
-  "_binaryType": "385",
+  "_binaryType": "370",
   "_closeFrameReceived": false,
   "_closeFrameSent": false,
   "_closeMessage": "8",
   "_closeTimer": null,
   "_closeCode": 1006,
-  "_extensions": "410",
-  "_receiver": "411",
-  "_sender": "412",
-  "_socket": "413",
+  "_extensions": "389",
+  "_receiver": "390",
+  "_sender": "391",
+  "_socket": "392",
   "_isServer": false,
   "_redirects": 0,
-  "url": "295",
+  "url": "285",
   "_req": null
 },{
-  "ws": "252",
-  "handlers": "414",
-  "queue": "415"
+  "ws": "242",
+  "handlers": "393",
+  "queue": "394"
 },{
-  "queue": "416",
-  "remaining": 118,
+  "queue": "395",
+  "remaining": 119,
   "total": 120,
   "time": 60000,
-  "resetTimer": "417"
+  "resetTimer": "396"
 },{},{
   "_idleTimeout": 41250,
-  "_idlePrev": "418",
-  "_idleNext": "418",
-  "_idleStart": 956,
+  "_idlePrev": "397",
+  "_idleNext": "397",
+  "_idleStart": 83336,
   "_repeat": 41250,
   "_destroyed": false
-},"96ea6f32e3b826d2ca19419de55c90dc",[
-  "419"
+},"ce94701e4ab009ea0f66b4a3b791efe8",[
+  "398"
 ],{},{},{},{},{},[
-  "420",
-  "421",
-  "422",
-  "423",
-  "424",
-  "425",
-  "426",
-  "427",
-  "428",
-  "429",
-  "430",
-  "431",
-  "432",
-  "433",
-  "434",
-  "435",
-  "436",
-  "437",
-  "438",
-  "439",
-  "440",
-  "441"
+  "399",
+  "400",
+  "401",
+  "402",
+  "403",
+  "404",
+  "405",
+  "406",
+  "407",
+  "408",
+  "409",
+  "410",
+  "411",
+  "412",
+  "413",
+  "414",
+  "415",
+  "416",
+  "417",
+  "418",
+  "419"
 ],{
-  "embed": "282",
+  "embed": "272",
   "name": "34"
 },{
-  "embed": "282",
+  "embed": "272",
   "text": "34"
 },"win32","discord.js",[],"/gateway",[],"/channels/739423678575542353/messages",{},"nodebuffer",{},{
-  "_writableState": "442",
+  "_writableState": "420",
   "writable": true,
-  "_events": "443",
+  "_events": "421",
   "_eventsCount": 6,
-  "_binaryType": "385",
-  "_extensions": "386",
+  "_binaryType": "370",
+  "_extensions": "371",
   "_maxPayload": 104857600,
   "_bufferedBytes": 0,
-  "_buffers": "444",
+  "_buffers": "422",
   "_compressed": false,
   "_payloadLength": 1576,
   "_fragmented": 0,
@@ -1154,329 +1106,324 @@
   "_opcode": 1,
   "_totalPayloadLength": 0,
   "_messageLength": 0,
-  "_fragments": "445",
+  "_fragments": "423",
   "_state": 0,
   "_loop": false
 },{
-  "_extensions": "386",
-  "_socket": "389",
+  "_extensions": "371",
+  "_socket": "374",
   "_firstFragment": true,
   "_compress": false,
   "_bufferedBytes": 0,
   "_deflating": false,
-  "_queue": "446"
+  "_queue": "424"
 },{
-  "_tlsOptions": "447",
+  "_tlsOptions": "425",
   "_secureEstablished": true,
   "_securePending": false,
   "_newSessionPending": false,
   "_controlReleased": true,
   "_SNICallback": null,
-  "servername": "448",
+  "servername": "426",
   "alpnProtocol": false,
   "authorized": true,
   "authorizationError": null,
   "encrypted": true,
-  "_events": "449",
+  "_events": "427",
   "_eventsCount": 6,
   "connecting": false,
   "_hadError": false,
   "_parent": null,
-  "_host": "448",
-  "_readableState": "450",
+  "_host": "426",
+  "_readableState": "428",
   "readable": true,
-  "_writableState": "451",
+  "_writableState": "429",
   "writable": true,
   "allowHalfOpen": false,
   "_sockname": null,
   "_pendingData": null,
   "_pendingEncoding": "8",
   "_server": null,
-  "ssl": "452",
+  "ssl": "430",
   "_requestCert": true,
   "_rejectUnauthorized": true,
   "parser": null,
   "_httpMessage": null,
   "timeout": 0
 },{
-  "READY": "453",
-  "RESUMED": "454",
-  "GUILD_CREATE": "455",
-  "GUILD_DELETE": "456",
-  "GUILD_UPDATE": "457",
-  "GUILD_BAN_ADD": "458",
-  "GUILD_BAN_REMOVE": "459",
-  "GUILD_MEMBER_ADD": "460",
-  "GUILD_MEMBER_REMOVE": "461",
-  "GUILD_MEMBER_UPDATE": "462",
-  "GUILD_ROLE_CREATE": "463",
-  "GUILD_ROLE_DELETE": "464",
-  "GUILD_ROLE_UPDATE": "465",
-  "GUILD_EMOJIS_UPDATE": "466",
-  "GUILD_MEMBERS_CHUNK": "467",
-  "GUILD_INTEGRATIONS_UPDATE": "468",
-  "CHANNEL_CREATE": "469",
-  "CHANNEL_DELETE": "470",
-  "CHANNEL_UPDATE": "471",
-  "CHANNEL_PINS_UPDATE": "472",
-  "PRESENCE_UPDATE": "473",
-  "USER_UPDATE": "474",
-  "USER_NOTE_UPDATE": "475",
-  "USER_SETTINGS_UPDATE": "476",
-  "USER_GUILD_SETTINGS_UPDATE": "477",
-  "VOICE_STATE_UPDATE": "478",
-  "TYPING_START": "479",
-  "MESSAGE_CREATE": "480",
-  "MESSAGE_DELETE": "481",
-  "MESSAGE_UPDATE": "482",
-  "MESSAGE_DELETE_BULK": "483",
-  "VOICE_SERVER_UPDATE": "484",
-  "GUILD_SYNC": "485",
-  "RELATIONSHIP_ADD": "486",
-  "RELATIONSHIP_REMOVE": "487",
-  "MESSAGE_REACTION_ADD": "488",
-  "MESSAGE_REACTION_REMOVE": "489",
-  "MESSAGE_REACTION_REMOVE_ALL": "490",
-  "WEBHOOKS_UPDATE": "491"
+  "READY": "431",
+  "RESUMED": "432",
+  "GUILD_CREATE": "433",
+  "GUILD_DELETE": "434",
+  "GUILD_UPDATE": "435",
+  "GUILD_BAN_ADD": "436",
+  "GUILD_BAN_REMOVE": "437",
+  "GUILD_MEMBER_ADD": "438",
+  "GUILD_MEMBER_REMOVE": "439",
+  "GUILD_MEMBER_UPDATE": "440",
+  "GUILD_ROLE_CREATE": "441",
+  "GUILD_ROLE_DELETE": "442",
+  "GUILD_ROLE_UPDATE": "443",
+  "GUILD_EMOJIS_UPDATE": "444",
+  "GUILD_MEMBERS_CHUNK": "445",
+  "GUILD_INTEGRATIONS_UPDATE": "446",
+  "CHANNEL_CREATE": "447",
+  "CHANNEL_DELETE": "448",
+  "CHANNEL_UPDATE": "449",
+  "CHANNEL_PINS_UPDATE": "450",
+  "PRESENCE_UPDATE": "451",
+  "USER_UPDATE": "452",
+  "USER_NOTE_UPDATE": "453",
+  "USER_SETTINGS_UPDATE": "454",
+  "USER_GUILD_SETTINGS_UPDATE": "455",
+  "VOICE_STATE_UPDATE": "456",
+  "TYPING_START": "457",
+  "MESSAGE_CREATE": "458",
+  "MESSAGE_DELETE": "459",
+  "MESSAGE_UPDATE": "460",
+  "MESSAGE_DELETE_BULK": "461",
+  "VOICE_SERVER_UPDATE": "462",
+  "GUILD_SYNC": "463",
+  "RELATIONSHIP_ADD": "464",
+  "RELATIONSHIP_REMOVE": "465",
+  "MESSAGE_REACTION_ADD": "466",
+  "MESSAGE_REACTION_REMOVE": "467",
+  "MESSAGE_REACTION_REMOVE_ALL": "468",
+  "WEBHOOKS_UPDATE": "469"
 },[],[],{
   "_idleTimeout": 60000,
-  "_idlePrev": "492",
-  "_idleNext": "492",
+  "_idlePrev": "470",
+  "_idleNext": "470",
   "_idleStart": 808,
   "_repeat": null,
   "_destroyed": false
 },{
-  "_idleNext": "297",
-  "_idlePrev": "297",
+  "_idleNext": "287",
+  "_idlePrev": "287",
   "expiry": 42060,
   "id": -9007199254740989,
   "msecs": 41250,
   "priorityQueuePosition": 3
-},"[\"gateway-prd-main-h2t1\",{\"micros\":57848,\"calls\":[\"discord-sessions-prd-1-10\",{\"micros\":54143,\"calls\":[\"start_session\",{\"micros\":52054,\"calls\":[\"api-prd-main-0gc1\",{\"micros\":49102,\"calls\":[\"get_user\",{\"micros\":4370},\"add_authorized_ip\",{\"micros\":2307},\"get_guilds\",{\"micros\":5199},\"coros_wait\",{\"micros\":1}]}]},\"guilds_connect\",{\"micros\":2,\"calls\":[]},\"presence_connect\",{\"micros\":773,\"calls\":[]}]}]}]",[],[],"/users/741005462891397401/channels",[],"/channels/741762039919280139/messages",[],"/channels/690855771826552832/messages",[],"/channels/719162341991645184/messages",[],"/channels/719162341991645184/messages/:id/reactions/%E2%9C%85/@me",[],"/channels/719162341991645184/messages/:id/reactions/%E2%9D%8C/@me",{},{},{
-  "_writableState": "493",
+},"[\"gateway-prd-main-h2t1\",{\"micros\":57848,\"calls\":[\"discord-sessions-prd-1-10\",{\"micros\":54143,\"calls\":[\"start_session\",{\"micros\":52054,\"calls\":[\"api-prd-main-0gc1\",{\"micros\":49102,\"calls\":[\"get_user\",{\"micros\":4370},\"add_authorized_ip\",{\"micros\":2307},\"get_guilds\",{\"micros\":5199},\"coros_wait\",{\"micros\":1}]}]},\"guilds_connect\",{\"micros\":2,\"calls\":[]},\"presence_connect\",{\"micros\":773,\"calls\":[]}]}]}]",[],[],"/users/741005462891397401/channels",[],"/channels/741762039919280139/messages",[],"/channels/690855771826552832/messages",{},{},{
+  "_writableState": "471",
   "writable": true,
-  "_events": "494",
+  "_events": "472",
   "_eventsCount": 6,
-  "_binaryType": "385",
-  "_extensions": "410",
+  "_binaryType": "370",
+  "_extensions": "389",
   "_maxPayload": 104857600,
   "_bufferedBytes": 0,
-  "_buffers": "495",
+  "_buffers": "473",
   "_compressed": false,
-  "_payloadLength": 1267,
+  "_payloadLength": 1217,
   "_fragmented": 0,
   "_masked": false,
   "_fin": true,
   "_opcode": 1,
   "_totalPayloadLength": 0,
   "_messageLength": 0,
-  "_fragments": "496",
+  "_fragments": "474",
   "_state": 0,
   "_loop": false
 },{
-  "_extensions": "410",
-  "_socket": "413",
+  "_extensions": "389",
+  "_socket": "392",
   "_firstFragment": true,
   "_compress": false,
   "_bufferedBytes": 0,
   "_deflating": false,
-  "_queue": "497"
+  "_queue": "475"
 },{
-  "_tlsOptions": "498",
+  "_tlsOptions": "476",
   "_secureEstablished": true,
   "_securePending": false,
   "_newSessionPending": false,
   "_controlReleased": true,
   "_SNICallback": null,
-  "servername": "448",
+  "servername": "426",
   "alpnProtocol": false,
   "authorized": true,
   "authorizationError": null,
   "encrypted": true,
-  "_events": "499",
+  "_events": "477",
   "_eventsCount": 6,
   "connecting": false,
   "_hadError": false,
   "_parent": null,
-  "_host": "448",
-  "_readableState": "500",
+  "_host": "426",
+  "_readableState": "478",
   "readable": true,
-  "_writableState": "501",
+  "_writableState": "479",
   "writable": true,
   "allowHalfOpen": false,
   "_sockname": null,
   "_pendingData": null,
   "_pendingEncoding": "8",
   "_server": null,
-  "ssl": "502",
+  "ssl": "480",
   "_requestCert": true,
   "_rejectUnauthorized": true,
   "parser": null,
   "_httpMessage": null,
   "timeout": 0
 },{
-  "READY": "503",
-  "RESUMED": "504",
-  "GUILD_CREATE": "505",
-  "GUILD_DELETE": "506",
-  "GUILD_UPDATE": "507",
-  "GUILD_BAN_ADD": "508",
-  "GUILD_BAN_REMOVE": "509",
-  "GUILD_MEMBER_ADD": "510",
-  "GUILD_MEMBER_REMOVE": "511",
-  "GUILD_MEMBER_UPDATE": "512",
-  "GUILD_ROLE_CREATE": "513",
-  "GUILD_ROLE_DELETE": "514",
-  "GUILD_ROLE_UPDATE": "515",
-  "GUILD_EMOJIS_UPDATE": "516",
-  "GUILD_MEMBERS_CHUNK": "517",
-  "GUILD_INTEGRATIONS_UPDATE": "518",
-  "CHANNEL_CREATE": "519",
-  "CHANNEL_DELETE": "520",
-  "CHANNEL_UPDATE": "521",
-  "CHANNEL_PINS_UPDATE": "522",
-  "PRESENCE_UPDATE": "523",
-  "USER_UPDATE": "524",
-  "USER_NOTE_UPDATE": "525",
-  "USER_SETTINGS_UPDATE": "526",
-  "USER_GUILD_SETTINGS_UPDATE": "527",
-  "VOICE_STATE_UPDATE": "528",
-  "TYPING_START": "529",
-  "MESSAGE_CREATE": "530",
-  "MESSAGE_DELETE": "531",
-  "MESSAGE_UPDATE": "532",
-  "MESSAGE_DELETE_BULK": "533",
-  "VOICE_SERVER_UPDATE": "534",
-  "GUILD_SYNC": "535",
-  "RELATIONSHIP_ADD": "536",
-  "RELATIONSHIP_REMOVE": "537",
-  "MESSAGE_REACTION_ADD": "538",
-  "MESSAGE_REACTION_REMOVE": "539",
-  "MESSAGE_REACTION_REMOVE_ALL": "540",
-  "WEBHOOKS_UPDATE": "541"
+  "READY": "481",
+  "RESUMED": "482",
+  "GUILD_CREATE": "483",
+  "GUILD_DELETE": "484",
+  "GUILD_UPDATE": "485",
+  "GUILD_BAN_ADD": "486",
+  "GUILD_BAN_REMOVE": "487",
+  "GUILD_MEMBER_ADD": "488",
+  "GUILD_MEMBER_REMOVE": "489",
+  "GUILD_MEMBER_UPDATE": "490",
+  "GUILD_ROLE_CREATE": "491",
+  "GUILD_ROLE_DELETE": "492",
+  "GUILD_ROLE_UPDATE": "493",
+  "GUILD_EMOJIS_UPDATE": "494",
+  "GUILD_MEMBERS_CHUNK": "495",
+  "GUILD_INTEGRATIONS_UPDATE": "496",
+  "CHANNEL_CREATE": "497",
+  "CHANNEL_DELETE": "498",
+  "CHANNEL_UPDATE": "499",
+  "CHANNEL_PINS_UPDATE": "500",
+  "PRESENCE_UPDATE": "501",
+  "USER_UPDATE": "502",
+  "USER_NOTE_UPDATE": "503",
+  "USER_SETTINGS_UPDATE": "504",
+  "USER_GUILD_SETTINGS_UPDATE": "505",
+  "VOICE_STATE_UPDATE": "506",
+  "TYPING_START": "507",
+  "MESSAGE_CREATE": "508",
+  "MESSAGE_DELETE": "509",
+  "MESSAGE_UPDATE": "510",
+  "MESSAGE_DELETE_BULK": "511",
+  "VOICE_SERVER_UPDATE": "512",
+  "GUILD_SYNC": "513",
+  "RELATIONSHIP_ADD": "514",
+  "RELATIONSHIP_REMOVE": "515",
+  "MESSAGE_REACTION_ADD": "516",
+  "MESSAGE_REACTION_REMOVE": "517",
+  "MESSAGE_REACTION_REMOVE_ALL": "518",
+  "WEBHOOKS_UPDATE": "519"
 },[],[],{
   "_idleTimeout": 60000,
-  "_idlePrev": "542",
-  "_idleNext": "542",
-  "_idleStart": 954,
+  "_idlePrev": "520",
+  "_idleNext": "520",
+  "_idleStart": 83336,
   "_repeat": null,
   "_destroyed": false
 },{
-  "_idleNext": "367",
-  "_idlePrev": "367",
-  "expiry": 42206,
-  "id": -9007199254740989,
+  "_idleNext": "352",
+  "_idlePrev": "352",
+  "expiry": 124586,
+  "id": -9007199254740985,
   "msecs": 41250,
-  "priorityQueuePosition": 3
-},"[\"gateway-prd-main-1351\",{\"micros\":52834,\"calls\":[\"discord-sessions-prd-1-7\",{\"micros\":49082,\"calls\":[\"start_session\",{\"micros\":45267,\"calls\":[\"api-prd-main-sqzq\",{\"micros\":41197,\"calls\":[\"get_user\",{\"micros\":4184},\"add_authorized_ip\",{\"micros\":3175},\"get_guilds\",{\"micros\":9071},\"coros_wait\",{\"micros\":1}]}]},\"guilds_connect\",{\"micros\":1,\"calls\":[]},\"presence_connect\",{\"micros\":519,\"calls\":[]}]}]}]",{
-  "embed": "282",
+  "priorityQueuePosition": 1
+},"[\"gateway-prd-main-mp4w\",{\"micros\":53569,\"calls\":[\"discord-sessions-prd-2-77\",{\"micros\":50176,\"calls\":[\"start_session\",{\"micros\":32769,\"calls\":[\"api-prd-main-zqng\",{\"micros\":30172,\"calls\":[\"get_user\",{\"micros\":3113},\"add_authorized_ip\",{\"micros\":2533},\"get_guilds\",{\"micros\":1874},\"coros_wait\",{\"micros\":1}]}]},\"guilds_connect\",{\"micros\":1,\"calls\":[]},\"presence_connect\",{\"micros\":4298,\"calls\":[]}]}]}]",{
+  "embed": "272",
+  "name": "300",
+  "value": "301",
+  "inline": false
+},{
+  "embed": "272",
+  "name": "302",
+  "value": "303",
+  "inline": false
+},{
+  "embed": "272",
+  "name": "304",
+  "value": "305",
+  "inline": false
+},{
+  "embed": "272",
+  "name": "306",
+  "value": "307",
+  "inline": false
+},{
+  "embed": "272",
+  "name": "308",
+  "value": "309",
+  "inline": false
+},{
+  "embed": "272",
   "name": "310",
   "value": "311",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "312",
   "value": "313",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "314",
   "value": "315",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "316",
   "value": "317",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "318",
   "value": "319",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "320",
   "value": "321",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "322",
   "value": "323",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "324",
   "value": "325",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "326",
   "value": "327",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "328",
   "value": "329",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "330",
   "value": "331",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "332",
   "value": "333",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "334",
   "value": "335",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "336",
   "value": "337",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "338",
   "value": "339",
   "inline": false
 },{
-  "embed": "282",
+  "embed": "272",
   "name": "340",
   "value": "341",
-  "inline": false
-},{
-  "embed": "282",
-  "name": "342",
-  "value": "343",
-  "inline": false
-},{
-  "embed": "282",
-  "name": "344",
-  "value": "345",
-  "inline": false
-},{
-  "embed": "282",
-  "name": "346",
-  "value": "347",
-  "inline": false
-},{
-  "embed": "282",
-  "name": "348",
-  "value": "349",
-  "inline": false
-},{
-  "embed": "282",
-  "name": "350",
-  "value": "351",
-  "inline": false
-},{
-  "embed": "282",
-  "name": "352",
-  "value": "353",
   "inline": false
 },{
   "objectMode": false,
@@ -1488,7 +1435,7 @@
   "finished": false,
   "destroyed": false,
   "decodeStrings": true,
-  "defaultEncoding": "543",
+  "defaultEncoding": "521",
   "length": 0,
   "writing": false,
   "corked": 0,
@@ -1504,21 +1451,21 @@
   "emitClose": true,
   "autoDestroy": false,
   "bufferedRequestCount": 0,
-  "corkedRequestsFree": "544"
+  "corkedRequestsFree": "522"
 },{},[],[],[],{
   "pipe": false,
-  "secureContext": "545",
+  "secureContext": "523",
   "isServer": false,
   "requestCert": true,
   "rejectUnauthorized": true
 },"gateway.discord.gg",{
-  "close": "546",
-  "end": "547",
-  "newListener": "548"
+  "close": "524",
+  "end": "525",
+  "newListener": "526"
 },{
   "objectMode": false,
   "highWaterMark": 16384,
-  "buffer": "549",
+  "buffer": "527",
   "length": 0,
   "pipes": null,
   "pipesCount": 0,
@@ -1535,7 +1482,7 @@
   "emitClose": false,
   "autoDestroy": false,
   "destroyed": false,
-  "defaultEncoding": "543",
+  "defaultEncoding": "521",
   "awaitDrain": 0,
   "readingMore": false,
   "decoder": null,
@@ -1550,7 +1497,7 @@
   "finished": false,
   "destroyed": false,
   "decodeStrings": false,
-  "defaultEncoding": "543",
+  "defaultEncoding": "521",
   "length": 0,
   "writing": false,
   "corked": 0,
@@ -1566,92 +1513,92 @@
   "emitClose": false,
   "autoDestroy": false,
   "bufferedRequestCount": 0,
-  "corkedRequestsFree": "550"
+  "corkedRequestsFree": "528"
 },{
-  "_parent": "551",
-  "_secureContext": "545",
+  "_parent": "529",
+  "_secureContext": "523",
   "reading": true
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "packetManager": "293"
+  "packetManager": "283"
 },{
-  "_idleNext": "393",
-  "_idlePrev": "393",
+  "_idleNext": "378",
+  "_idlePrev": "378",
   "expiry": 60808,
   "id": -9007199254740990,
   "msecs": 60000,
@@ -1666,7 +1613,7 @@
   "finished": false,
   "destroyed": false,
   "decodeStrings": true,
-  "defaultEncoding": "543",
+  "defaultEncoding": "521",
   "length": 0,
   "writing": false,
   "corked": 0,
@@ -1682,21 +1629,21 @@
   "emitClose": true,
   "autoDestroy": false,
   "bufferedRequestCount": 0,
-  "corkedRequestsFree": "552"
+  "corkedRequestsFree": "530"
 },{},[],[],[],{
   "pipe": false,
-  "secureContext": "553",
+  "secureContext": "531",
   "isServer": false,
   "requestCert": true,
   "rejectUnauthorized": true
 },{
-  "close": "554",
-  "end": "555",
-  "newListener": "556"
+  "close": "532",
+  "end": "533",
+  "newListener": "534"
 },{
   "objectMode": false,
   "highWaterMark": 16384,
-  "buffer": "557",
+  "buffer": "535",
   "length": 0,
   "pipes": null,
   "pipesCount": 0,
@@ -1713,7 +1660,7 @@
   "emitClose": false,
   "autoDestroy": false,
   "destroyed": false,
-  "defaultEncoding": "543",
+  "defaultEncoding": "521",
   "awaitDrain": 0,
   "readingMore": false,
   "decoder": null,
@@ -1728,7 +1675,7 @@
   "finished": false,
   "destroyed": false,
   "decodeStrings": false,
-  "defaultEncoding": "543",
+  "defaultEncoding": "521",
   "length": 0,
   "writing": false,
   "corked": 0,
@@ -1744,101 +1691,101 @@
   "emitClose": false,
   "autoDestroy": false,
   "bufferedRequestCount": 0,
-  "corkedRequestsFree": "558"
+  "corkedRequestsFree": "536"
 },{
-  "_parent": "559",
-  "_secureContext": "553",
+  "_parent": "537",
+  "_secureContext": "531",
   "reading": true
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "packetManager": "364"
+  "packetManager": "349"
 },{
-  "_idleNext": "417",
-  "_idlePrev": "417",
-  "expiry": 60954,
-  "id": -9007199254740990,
+  "_idleNext": "396",
+  "_idlePrev": "396",
+  "expiry": 143336,
+  "id": -9007199254740986,
   "msecs": 60000,
-  "priorityQueuePosition": 4
+  "priorityQueuePosition": 2
 },"utf8",{
   "next": null,
   "entry": null
 },{
-  "context": "560",
+  "context": "538",
   "singleUse": true
 },[
   null,
@@ -1854,7 +1801,7 @@
   "tail": null,
   "length": 0
 },{
-  "next": "561",
+  "next": "539",
   "entry": null
 },{
   "reading": true,
@@ -1863,7 +1810,7 @@
   "next": null,
   "entry": null
 },{
-  "context": "562",
+  "context": "540",
   "singleUse": true
 },[
   null,
@@ -1879,7 +1826,7 @@
   "tail": null,
   "length": 0
 },{
-  "next": "563",
+  "next": "541",
   "entry": null
 },{
   "reading": true,

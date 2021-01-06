@@ -139,7 +139,7 @@ function saveTypeDef(currentGuild, type, value, key) {
 
 async function SendMessage(client, action) {
     var guild = action.guild;
-    let chan = guild.channels.find(ch => ch.name === action.channelname || ch.id === action.channelname);
+    let chan = guild.channels.cache.find(ch => ch.name === action.channelname || ch.id === action.channelname);
     if (!chan && action.channelname != "") {
         console.log("ERROR: No channel found with name: " + action.channelname + ". Action name: " + action.name);
     } else {
@@ -150,7 +150,7 @@ async function SendMessage(client, action) {
 
 async function SendImage(client, action) {
     var guild = action.guild;
-    const chan = guild.channels.find(ch => ch.name === action.channelname || ch.id === action.channelname);
+    const chan = guild.channels.cache.find(ch => ch.name === action.channelname || ch.id === action.channelname);
     if (!chan && action.channelname != "") {
         console.log("ERROR: No channel found with name: " + action.channelname + ". Action name: " + action.name);
     } else {
@@ -161,7 +161,7 @@ async function SendImage(client, action) {
 
 async function SendEmbed(client, action) {
     var guild = action.guild;
-    const Embed = new Discord.RichEmbed()
+    const Embed = new Discord.MessageEmbed()
         .setColor(action.color)
         .setTitle(action.title)
         .setURL(action.url)
@@ -181,7 +181,7 @@ async function SendEmbed(client, action) {
         });
     }
 
-    const chan = guild.channels.find(ch => ch.name === action.channelname || ch.id === action.channelname);
+    const chan = guild.channels.cache.find(ch => ch.name === action.channelname || ch.id === action.channelname);
     // Validate channel
     if (!chan && action.channelname != "") {
         console.log("ERROR: No channel found with name: " + action.channelname + ". Action name: " + action.name);
@@ -193,7 +193,7 @@ async function SendEmbed(client, action) {
 
 async function SendDirectMessage(client, action) {
     var guild = action.guild;
-    var member = guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    var member = guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
 
     if (!member) {
         console.log("ERROR: No user found for direct message");
@@ -205,15 +205,15 @@ async function SendDirectMessage(client, action) {
 
 function AddRoletoUser(client, action) {
     var guild = action.guild;
-    var member = guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    var member = guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
     if (!member) {
         console.log("ERROR: No user found to give role");
     } else {
-        var rolel = guild.roles.find(role => role.name == action.rolename || role.id == action.rolename);
+        var rolel = guild.roles.cache.find(role => role.name == action.rolename || role.id == action.rolename);
         if (!rolel) {
             console.log("ERROR: No role found to give role");
         } else {
-            member.addRole(rolel);
+            member.roles.add(rolel);
         }
     }
 }
@@ -223,15 +223,15 @@ function RemoveRoleFromUser(client, action) {
     console.log("removing role");
     console.log(typeof action.user);
     let removeUser = GetUserByTagOrId(guild, action.user);
-    let role = guild.roles.find(role => role.name == action.rolename || role.id == action.rolename);
+    let role = guild.roles.cache.find(role => role.name == action.rolename || role.id == action.rolename);
     if (removeUser && role) {
-        removeUser.removeRole(role, action.reason).catch(console.error);
+        removeUser.roles.remove(role, action.reason).catch(console.error);
     }
 }
 
 function SetUserData_Handle(client, action) {
     var guild = action.guild;
-    let mem = guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    let mem = guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
     if (!userCache[mem.id]) {
         userCache[mem.id] = {};
     }
@@ -246,7 +246,7 @@ function SetUserData_Handle(client, action) {
 
 module.exports.CheckUserData = function (client, action) {
     var guild = action.guild;
-    let mem = guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    let mem = guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
     var trueOrFalse = null;
     var valToCheck;
     if (userCache[mem.id]) {
@@ -297,7 +297,7 @@ module.exports.CheckUserData = function (client, action) {
 
 function EditUserData(client, action) {
     var guild = action.guild;
-    let mem = guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    let mem = guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
 
     if (!userCache[mem.id]) {
         userCache[mem.id] = {};
@@ -459,14 +459,13 @@ function StoreValueinVariable_Handle(client, action) {
             let found = msg.author;
             paramValue = found.id;
         } else if (action.type === "Get User Data") {
-            let mem = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+            let mem = guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
             if (userCache[mem.id]) {
                 paramValue = userCache[mem.id][action.field];
             }
         } else if (action.type === "Generate Random Number") {
             if (!isNaN(Number(action.min)) && !isNaN(Number(action.max))) {
                 paramValue = Math.floor(Math.random() * (Number(action.max) - Number(action.min) + 1) + Number(action.min)).toString();
-                console.log("gen random " + paramValue);
 
                 action.vartype = "Number";
             }
@@ -674,7 +673,7 @@ function GetUserByTagOrId(guild, tagorid) {
     if (tagorid.startsWith("<@")) {
         tagorid = tagorid.replace("<", "").replace(">", "").replace("@", "");
     }
-    var mem = guild.members.find(gm => gm.user.tag == tagorid || gm.user.id == tagorid);
+    var mem = guild.members.cache.find(gm => gm.user.tag == tagorid || gm.user.id == tagorid);
     return mem;
 }
 

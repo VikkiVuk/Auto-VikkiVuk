@@ -15,13 +15,13 @@ const logger = winston.createLogger({
         // - Write all logs with level `info` and below to `combined.log`
         new winston.transports.File({
             filename: path.join(__dirname, "/botErrors.log"),
-            level: "error"
+            level: "error",
         }),
-        new winston.transports.File({ filename: "combined.log" })
-    ]
+        new winston.transports.File({ filename: "combined.log" }),
+    ],
 });
 const DBS = {};
-DBS.Bot = new Discord.Client();
+DBS.Bot = new Discord.Client({ ws: { intents: new Discord.Intents(Discord.Intents.ALL) } });
 
 DBS.MsgHandler = require("./Handlers/Message");
 DBS.EventHandler = require("./Handlers/Events");
@@ -41,7 +41,7 @@ DBS.Mods = new Map();
 DBS.loadMods = async function () {
     require("fs")
         .readdirSync(require("path").join(__dirname, "mods"))
-        .forEach(mod => {
+        .forEach((mod) => {
             const fetchedMod = require(require("path").join(__dirname, `mods/${mod}`));
             fetchedMod.init(DBS);
             if (fetchedMod.isEvent) {
@@ -53,7 +53,6 @@ DBS.loadMods = async function () {
 };
 
 DBS.checkMessage = async function (message) {
-    console.log("checking message");
     const prefix = DBS.SettingsFile.prefix;
     if (message.author.bot) return;
 
@@ -72,8 +71,8 @@ DBS.checkMessage = async function (message) {
                     hasPermission = true;
                 } else {
                     // Verify permissions
-                    message.member.roles.forEach(role => {
-                        commandF.perms.forEach(perm => {
+                    message.member.roles.cache.forEach((role) => {
+                        commandF.perms.forEach((perm) => {
                             if (role.name.toLowerCase() === perm.toLowerCase()) {
                                 // Only execute actions if permissions check passes
                                 hasPermission = true;
@@ -89,22 +88,32 @@ DBS.checkMessage = async function (message) {
                 }
             }
 
-            fs.writeFileSync(DBS.UserFile, JSON.stringify(DBS.usercache.memoryCache, null, 2), function (err) {
-                if (err) return console.log(err);
-            });
-            console.log("writing server vars:");
-            console.log(DBS.serverVars);
-            fs.writeFileSync(__dirname + "/BotData/variables/servervars.json", flatted.stringify(DBS.serverVars, null, 2), function (err) {
-                if (err) return console.log(err);
-            });
-            fs.writeFileSync(__dirname + "/BotData/variables/globalvars.json", flatted.stringify(DBS.globalVars, null, 2), function (err) {
-                if (err) return console.log(err);
-            });
+            fs.writeFileSync(
+                DBS.UserFile,
+                JSON.stringify(DBS.usercache.memoryCache, null, 2),
+                function (err) {
+                    if (err) return console.log(err);
+                }
+            );
+            fs.writeFileSync(
+                __dirname + "/BotData/variables/servervars.json",
+                flatted.stringify(DBS.serverVars, null, 2),
+                function (err) {
+                    if (err) return console.log(err);
+                }
+            );
+            fs.writeFileSync(
+                __dirname + "/BotData/variables/globalvars.json",
+                flatted.stringify(DBS.globalVars, null, 2),
+                function (err) {
+                    if (err) return console.log(err);
+                }
+            );
         }
     } catch (error) {
         logger.log({
             level: "error",
-            message: "Check Message: " + "[" + message.content + "] " + error.stack
+            message: "Check Message: " + "[" + message.content + "] " + error.stack,
         });
     }
 };
@@ -131,7 +140,7 @@ DBS.callNextAction = async function (command, message, args, index) {
     } catch (error) {
         logger.log({
             level: "error",
-            message: "Call next action: " + "[" + message.content + "] " + error.stack
+            message: "Call next action: " + "[" + message.content + "] " + error.stack,
         });
     }
 };
@@ -144,48 +153,62 @@ DBS.callNextEventAction = async function (type, varsE, index) {
 };
 
 DBS.startBot = async function () {
-    await DBS.Bot.login(process.env.token).catch(e => {
+    await DBS.Bot.login(process.env.token).catch((e) => {
         logger.log({
             level: "error",
-            message: "Bot login: " + e
+            message: "Bot login: " + e,
         });
     });
     console.log("Bot logged in");
-    DBS.Bot.guilds.forEach(guild => {
-        var serverObj = {};
-        serverObj.guild = guild;
-        DBS.callNextEventAction("Bot Initialization", serverObj, 0);
+
+    DBS.CheckIfLoaded();
+};
+
+DBS.LoadedGuilds = [];
+
+DBS.CheckIfLoaded = async function () {
+    DBS.Bot.guilds.cache.forEach((guild) => {
+        if (guild.available) {
+            if (!DBS.LoadedGuilds.includes(guild.name)) {
+                DBS.LoadedGuilds.push(guild.name);
+                var serverObj = {};
+                serverObj.guild = guild;
+                DBS.callNextEventAction("Bot Initialization", serverObj, 0);
+            }
+        } else {
+            setTimeout(DBS.CheckIfLoaded, 500);
+        }
     });
 };
 
 DBS.loadBot = async function () {
-    await DBS.loadMods().catch(e => {
+    await DBS.loadMods().catch((e) => {
         logger.log({
             level: "error",
-            message: "Loading mods: " + e
+            message: "Loading mods: " + e,
         });
     });
     await DBS.startBot();
 };
 
-DBS.Bot.on("message", message => DBS.checkMessage(message));
-DBS.Bot.on("guildMemberAdd", member => {
+DBS.Bot.on("message", (message) => DBS.checkMessage(message));
+DBS.Bot.on("guildMemberAdd", (member) => {
     try {
         DBS.EventHandler.Event_Handle(DBS, DBS.EventsFile, 0, "User Joins Server", member);
     } catch (error) {
         logger.log({
             level: "error",
-            message: "Guild member add: " + error.stack
+            message: "Guild member add: " + error.stack,
         });
     }
 });
-DBS.Bot.on("guildMemberRemove", member => {
+DBS.Bot.on("guildMemberRemove", (member) => {
     try {
         DBS.EventHandler.Event_Handle(DBS, DBS.EventsFile, 0, "User Kicked", member);
     } catch (error) {
         logger.log({
             level: "error",
-            message: "Guild member remove: " + error.stack
+            message: "Guild member remove: " + error.stack,
         });
     }
 });
@@ -198,7 +221,7 @@ DBS.Bot.on("guildBanAdd", (guild, user) => {
     } catch (error) {
         logger.log({
             level: "error",
-            message: "Guild ban add: " + error.stack
+            message: "Guild ban add: " + error.stack,
         });
     }
 });
@@ -241,7 +264,7 @@ function cleanExit() {
 //process.on("SIGINT", cleanExit()); // catch ctrl-c
 //process.on("SIGTERM", cleanExit());
 
-process.on("message", msg => {
+process.on("message", (msg) => {
     if (msg.action === "STOP") {
         // Execute Graceful Termination code
         cleanExit();

@@ -23,8 +23,6 @@ module.exports.Message_Handle = async function (dbs, msg, command, index, args) 
     var action = command.actions[index];
     await this.RunAction(dbs.Bot, msg, action, dbs);
 
-    console.log("writing server vars:");
-    console.log(DBS.serverVars);
     fs.writeFileSync(path.join(__dirname, "../BotData/variables/servervars.json"), flatted.stringify(DBS.serverVars, null, 2), function (err) {
         if (err) return console.log(err);
     });
@@ -131,6 +129,12 @@ module.exports.RunAction = async function (client, msg, action) {
         case "Add Reaction Listener":
             this.CreateReactionCollector(msg, client, parsedAction);
             break;
+        case "Set Bot Activity":
+            this.SetBotActivity_Handle(msg, client, parsedAction);
+            break;
+        case "Set Bot Status":
+            this.SetBotStatus_Handle(msg, client, parsedAction);
+            break;
     }
 };
 
@@ -171,8 +175,7 @@ function ParseActionVariables(action, msg) {
     // Get the array of current variables
     Object.keys(newaction).forEach(e => {
         try {
-            if (e !== "trueActions" && e !== "falseActions" && e !== "fields" && e !== "permissions" && e !== "reactionActions") {
-                console.log("replcaing field values");
+            if (e !== "trueActions" && e !== "falseActions" && e !== "fields" && e !== "permissions" && e !== "reactionActions" && e !== "authorimageurl") {
                 var newVal = newaction[e];
                 newVal = newVal.replace("$$CommandChannel$$", msg.channel.name);
                 newVal = newVal.replace("$$CommandAuthor$$", msg.author.id);
@@ -211,6 +214,11 @@ function ParseActionVariables(action, msg) {
                     //newVal = eval("`" + newVal + "`");
                     child.value = newVal;
                 });
+            } else if (e == "authorimageurl") {
+                var newVal = newaction[e];
+                let aurl = msg.member.user.displayAvatarURL();
+                newVal = newVal.replace("${dbsVars.CommandAuthor.user.avatarURL}", aurl);
+                newaction[e] = newVal;
             }
         } catch (err) {
             console.log(err);
@@ -274,7 +282,6 @@ function ParseActionVariables(action, msg) {
 }
 
 function saveTypeDef(guild, type, value, key) {
-    console.log("saving type def");
     if (guild && type && value && key) {
         if (!serverVars[guild.id]) serverVars[guild.id] = {};
         if (!cache[guild.id]) cache[guild.id] = {};
@@ -324,6 +331,7 @@ function sleep(ms) {
 }
 
 module.exports.SendImage_Handle = async function (msg, client, action) {
+    let guild = msg.guild;
     if (action.channelname === "@@MSG_AUTHOR@@") {
         var sent = await msg.author.send({ files: [action.url] });
         saveTypeDef(msg.guild, action.savetovariabletype, sent, action.savetovariable);
@@ -342,7 +350,7 @@ module.exports.SendImage_Handle = async function (msg, client, action) {
 };
 
 module.exports.SendEmbed_Handle = async function (msg, client, action) {
-    const Embed = new Discord.RichEmbed()
+    const Embed = new Discord.MessageEmbed()
         .setColor(action.color)
         .setTitle(action.title)
         .setURL(action.url)
@@ -382,12 +390,12 @@ module.exports.SendEmbed_Handle = async function (msg, client, action) {
 module.exports.AddRoleToUser_Handle = function (msg, client, action) {
     var bot;
     var roleImport = [];
-    msg.guild.members.forEach(mem => {
+    msg.guild.members.cache.forEach(mem => {
         if (mem.user.tag == client.user.tag) {
             bot = mem;
         }
     });
-    bot.roles.forEach(element => {
+    bot.roles.cache.forEach(element => {
         roleImport.push(element.position);
     });
 
@@ -395,7 +403,7 @@ module.exports.AddRoleToUser_Handle = function (msg, client, action) {
     var botRole = Math.max.apply(Math, roleImport);
 
     //Make sure user who sent command has high enough role
-    var rolel = msg.guild.roles.find(role => role.name == action.rolename || role.id == action.rolename);
+    var rolel = msg.guild.roles.cache.find(role => role.name == action.rolename || role.id == action.rolename);
     if (rolel.position >= botRole) {
         console.log("ERROR: The bot must have a role higher than the one it is assigning");
     } else {
@@ -403,12 +411,12 @@ module.exports.AddRoleToUser_Handle = function (msg, client, action) {
             console.log("ERROR: The Role: " + action.rolename + " does not exist");
         } else {
             if (action.user === "" || action.user == "undefined") {
-                msg.member.addRole(rolel);
+                msg.member.roles.add(rolel);
             } else {
-                let mem = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+                let mem = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
 
                 if (mem) {
-                    mem.addRole(rolel);
+                    mem.roles.add(rolel);
                 } else {
                     console.log("ERROR: Could not find user with tag: " + action.user);
                 }
@@ -419,10 +427,9 @@ module.exports.AddRoleToUser_Handle = function (msg, client, action) {
 
 module.exports.RemoveRoleFromUser_Handle = function (msg, client, action) {
     let removeUser = GetUserByTagOrId(msg.guild, action.user);
-    let role = msg.guild.roles.find(role => role.name == action.rolename || role.id == action.rolename);
-    console.log(removeUser);
+    let role = msg.guild.roles.cache.find(role => role.name == action.rolename || role.id == action.rolename);
     if (removeUser && role) {
-        removeUser.removeRole(role, action.reason).catch(console.error);
+        removeUser.roles.remove(role, action.reason).catch(console.error);
     }
 };
 
@@ -441,7 +448,7 @@ module.exports.SendRandomImage_Handle = function (msg, client, action) {
 };
 
 module.exports.KickUser_Handle = function (msg, client, action) {
-    var member = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    var member = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
 
     // Get the reason string
     var reason = action.reason;
@@ -452,8 +459,8 @@ module.exports.KickUser_Handle = function (msg, client, action) {
             .then(member => {
                 console.log("Kicked member");
             })
-            .catch(() => {
-                console.log("ERROR: Failed to kick user. Invalid message format or lack of permissions.");
+            .catch((e) => {
+                console.log(e);
             });
     } else {
         console.log("ERROR: Member to be kicked not found");
@@ -461,7 +468,7 @@ module.exports.KickUser_Handle = function (msg, client, action) {
 };
 
 module.exports.BanUser_Handle = function (msg, client, action) {
-    var member = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    var member = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
 
     var options = {};
     options.reason = action.reason;
@@ -473,8 +480,8 @@ module.exports.BanUser_Handle = function (msg, client, action) {
             .then(member => {
                 console.log("Banned member");
             })
-            .catch(() => {
-                console.log("ERROR: Failed to ban user. Invalid message format or lack of permissions.");
+            .catch((e) => {
+                console.log(e);
             });
     } else {
         console.log("ERROR: Member to be banned not found");
@@ -525,7 +532,7 @@ function setCollector(msg, action) {
     collector.on("collect", (reaction, reactionCollector) => {
         var role = action.roles.find(rl => rl.emoji == reaction.emoji.name);
         if (role) {
-            reaction.users.forEach(user => {
+            reaction.users.cache.forEach(user => {
                 if (!user.bot) {
                     var ReactedMember = msg.guild.members.find(mem => mem.user.id == user.id);
                     var RoleToGive = msg.guild.roles.find(rl => rl.name == role.role);
@@ -552,6 +559,7 @@ function StoreValeinVariable_Handle(msg, client, action) {
     var paramValue;
     var guild = msg.guild;
     console.log("storing value in variable");
+    console.log(globalVars);
     // Save variable to temp/server/global vars.
     if (!action.savevartype) action.savevartype = "temp";
     if (action.savevartype) {
@@ -573,7 +581,7 @@ function StoreValeinVariable_Handle(msg, client, action) {
             let found = msg.author;
             paramValue = found.id;
         } else if (action.type === "Get User Data") {
-            let mem = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+            let mem = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
             if (userCache[mem.id]) {
                 paramValue = userCache[mem.id][action.field];
             }
@@ -607,7 +615,7 @@ function StoreValeinVariable_Handle(msg, client, action) {
 
 module.exports.CreateChannel_Handle = async function (msg, client, action) {
     var server = msg.guild;
-    var chan = await server.createChannel(action.channelname, action.channeltype.toLowerCase(), null, action.reason);
+    var chan = await server.channels.create(action.channelname, { type: action.channeltype.toLowerCase(), reason: action.reason});
     saveTypeDef(msg.guild, action.savetovariabletype, chan, action.savetovariable);
 };
 
@@ -634,11 +642,10 @@ module.exports.AddRoletoServer_Handle = async function (msg, client, action) {
     let roleData = {};
     roleData.name = action.rolename;
     roleData.color = action.color;
-    if (action.hoist == "true") roleData.hoist = true;
-    if (action.mentionable == "true") roleData.mentionable = true;
+    if (action.hoist == "BOOL_TRUE@@") roleData.hoist = true;
+    if (action.mentionable == "BOOL_TRUE@@") roleData.mentionable = true;
     roleData.position = action.position;
-
-    var role = await msg.guild.createRole(roleData);
+    var role = await msg.guild.roles.create({data: roleData});
     saveTypeDef(msg.guild, action.savetovariabletype, role, action.savetovariable);
 };
 
@@ -654,9 +661,7 @@ module.exports.DeleteAllMessages_Handle = async function (msg, client, action) {
 };
 
 module.exports.SetUserData_Handle = function (msg, client, action) {
-    console.log("SETTING USER DATA");
-    console.log(action);
-    let mem = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    let mem = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
     if (!userCache[mem.id]) {
         userCache[mem.id] = {};
     }
@@ -670,19 +675,16 @@ module.exports.SetUserData_Handle = function (msg, client, action) {
 };
 
 module.exports.GetUserData_Handle = function (msg, client, action) {
-    let mem = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    let mem = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
     if (userCache[mem.id]) {
     }
 };
 
 module.exports.CheckUserData = function (msg, client, action) {
-    console.log("CHECKING USER DATA");
-    console.log(action);
-    let mem = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    let mem = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
     var trueOrFalse = null;
     var valToCheck;
     if (userCache[mem.id]) {
-        console.log(userCache[mem.id]);
         if (userCache[mem.id][action.field] !== null) {
             if (action.compare === "greater than") {
                 if (!isNaN(action.value)) {
@@ -734,7 +736,7 @@ module.exports.CheckUserData = function (msg, client, action) {
 };
 
 function EditUserData(msg, client, action) {
-    let mem = msg.guild.members.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
+    let mem = msg.guild.members.cache.find(gm => gm.user.tag == action.user || gm.user.id == action.user);
 
     if (!userCache[mem.id]) {
         userCache[mem.id] = {};
@@ -779,8 +781,6 @@ module.exports.GetRow_Handle = async function (msg, client, action) {
             //console.log(results.data);
             var foundValue = results.data.filter(obj => obj[action.colheader] === action.colval);
             if (foundValue.length > 0) {
-                console.log("found");
-                console.log(foundValue);
 
                 if (!action.savevartype) action.savevartype = "temp";
                 var variableObject;
@@ -939,12 +939,25 @@ module.exports.CheckUserPermissions_Handle = function (msg, client, action) {
     }
 };
 
+module.exports.SetBotActivity_Handle = async function (msg, client, action) {
+    let presenceData = {};
+    presenceData.activity = {};
+    if (action.streamurl) presenceData.activity.url = action.streamurl;
+    presenceData.activity.name = action.activityname;
+    presenceData.activity.type = action.activitytype;
+    client.user.setPresence(presenceData)
+}
+
+module.exports.SetBotStatus_Handle = async function (msg, client, action) {
+    client.user.setStatus(action.presencestatus);
+}
+
 module.exports.CreateReactionCollector = async function (msg, client, action) {
     var guild = msg.guild;
     // Find the message by ID
-    msg.guild.channels.some(channel => {
+    msg.guild.channels.cache.some(channel => {
         if (channel.type === "text") {
-            let message = channel.messages.find(msg => msg.id === action.message);
+            let message = channel.messages.cache.find(msg => msg.id === action.message);
             if (message) {
                 var passActions = {};
 
@@ -961,8 +974,8 @@ module.exports.CreateReactionCollector = async function (msg, client, action) {
                 const collector = message.createReactionCollector(filter, { time: action.duration * 1000 });
 
                 collector.on("collect", reaction => {
-                    console.log(`Collected ${reaction.emoji.name} from ${reaction.users.last().tag}`);
-                    let member = reaction.message.guild.members.get(reaction.users.last().id);
+                    console.log(`Collected ${reaction.emoji.name} from ${reaction.users.cache.last().tag}`);
+                    let member = reaction.message.guild.members.cache.get(reaction.users.cache.last().id);
                     if (!cache[guild.id]) cache[guild.id] = {};
                     if (!cache[guild.id].variables) cache[guild.id].variables = {};
                     // set emoji and user variables
@@ -972,7 +985,6 @@ module.exports.CreateReactionCollector = async function (msg, client, action) {
                     if (action.reactionuser) {
                         cache[guild.id].variables[action.reactionuser] = member;
                     }
-                    console.log(cache[guild.id].variables);
 
                     passActions.actions = action.reactionActions[reaction.emoji.name];
                     DBS.callNextAction(passActions, msg, msg.args, 0);
@@ -987,7 +999,7 @@ function GetUserByTagOrId(guild, tagorid) {
     if (tagorid.startsWith("<@")) {
         tagorid = tagorid.replace("<", "").replace(">", "").replace("@", "");
     }
-    var mem = guild.members.find(gm => gm.user.tag == tagorid || gm.user.id == tagorid);
+    var mem = guild.members.cache.find(gm => gm.user.tag == tagorid || gm.user.id == tagorid);
     return mem;
 }
 
@@ -1001,7 +1013,7 @@ function getEmoji(client, emojifield) {
 }
 
 function FindChannel(msg, action) {
-    const chan = msg.guild.channels.find(ch => ch.name === action.channelname || ch.id === action.channelname);
+    const chan = msg.guild.channels.cache.find(ch => ch.name === action.channelname.toLowerCase() || ch.id === action.channelname.toLowerCase());
     // Validate channel name
     if (!chan && action.channelname != "") {
         console.log("ERROR: No channel found with name: " + action.channelname + ". Action name: " + action.name);
@@ -1024,6 +1036,12 @@ function getDescendantProp(obj, desc) {
     var arr = desc.split(".");
 
     while (arr.length) {
+        if (arr[0] == 'avatarURL') {
+            console.log(arr);
+            console.log(obj);
+            return obj.displayAvatarURL();
+
+        }
         obj = obj[arr.shift()];
     }
     return obj;
