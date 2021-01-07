@@ -188,7 +188,15 @@ DBS.loadBot = async function () {
         });
     });
     await DBS.startBot();
+
 };
+
+DBS.Bot.on("ready", () => {
+  DBS.bot.user.setStatus("Online")
+  DBS.bot.user.setGame("Automating VikkiVuk | v.help", 'https://www.twitch.tv/TotallyNotVikki')
+});
+
+
 
 DBS.Bot.on("message", (message) => DBS.checkMessage(message));
 DBS.Bot.on("guildMemberAdd", (member) => {
