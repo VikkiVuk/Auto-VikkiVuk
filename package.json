@@ -1,12 +1,12 @@
 {
-  "name": "bot",
-  "version": "1.0.0",
-  "description": "",
+  "name": "Auto VikkiVuk",
+  "version": "2.0.0",
+  "description": "This bot is made for only vikkivuk!",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Test\" && exit 1"
   },
-  "author": "",
+  "author": "VikkiVuk",
   "license": "ISC",
   "dependencies": {
     "better-discord-antispam": "^1.0.6",

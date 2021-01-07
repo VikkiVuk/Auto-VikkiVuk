@@ -30,7 +30,6 @@ DBS.Cache = require("./BotData/varcache");
 DBS.Discord = Discord;
 
 DBS.SettingsFile = require("./BotData/Settings/Settings.json");
-DBS.RulesFile = require("./BotData/Settings/Rules.json");
 DBS.EventsFile = require("./BotData/commands/events");
 DBS.CommandsFile = require("./BotData/commands/commands");
 DBS.UserFile = __dirname + "/BotData/user/user.json";
