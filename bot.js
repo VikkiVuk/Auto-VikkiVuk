@@ -162,7 +162,13 @@ DBS.startBot = async function () {
     console.log("Bot logged in");
 
     DBS.CheckIfLoaded();
-    DBS.Bot.user.setGame("Automating VikkiVuk | v.help")
+    DBS.Bot.user.setPresence({
+        status: "online",  //You can show online, idle....
+        game: {
+            name: "Automating VikkiVuk | v.help",  //The message shown
+            type: "PLAYING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
 };
 
 DBS.LoadedGuilds = [];
