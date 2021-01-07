@@ -4955,8 +4955,6 @@
         "❌"
       ],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "✅",
@@ -5002,8 +5000,6 @@
       "guid": "7c2f1374-8ab4-431b-aa69-45a116caa118",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -5035,8 +5031,6 @@
       "guid": "5d60cd42-5bd3-4fad-bc65-3157e2ca06d2",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",

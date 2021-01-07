@@ -30,6 +30,7 @@ DBS.Cache = require("./BotData/varcache");
 DBS.Discord = Discord;
 
 DBS.SettingsFile = require("./BotData/Settings/Settings.json");
+DBS.RulesFile = require("./BotData/Settings/Rules.json");
 DBS.EventsFile = require("./BotData/commands/events");
 DBS.CommandsFile = require("./BotData/commands/commands");
 DBS.UserFile = __dirname + "/BotData/user/user.json";
@@ -152,7 +153,7 @@ DBS.callNextEventAction = async function (type, varsE, index) {
 };
 
 DBS.startBot = async function () {
-    await DBS.Bot.login(process.env.token).catch((e) => {
+    await DBS.Bot.login(DBS.SettingsFile.token).catch((e) => {
         logger.log({
             level: "error",
             message: "Bot login: " + e,
@@ -188,15 +189,7 @@ DBS.loadBot = async function () {
         });
     });
     await DBS.startBot();
-
 };
-
-DBS.Bot.on("ready", () => {
-  DBS.bot.user.setStatus("Online")
-  DBS.bot.user.setGame("Automating VikkiVuk | v.help", 'https://www.twitch.tv/TotallyNotVikki')
-});
-
-
 
 DBS.Bot.on("message", (message) => DBS.checkMessage(message));
 DBS.Bot.on("guildMemberAdd", (member) => {
