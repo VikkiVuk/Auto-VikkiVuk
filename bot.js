@@ -162,7 +162,7 @@ DBS.startBot = async function () {
     console.log("Bot logged in");
 
     DBS.CheckIfLoaded();
-    client.user.setPresence({
+    Client.user.setPresence({
         status: "online",  //You can show online, idle....
         game: {
             name: "Automating VikkiVuk | v.help",  //The message shown
