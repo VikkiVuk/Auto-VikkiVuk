@@ -191,15 +191,6 @@ DBS.loadBot = async function () {
     await DBS.startBot();
 };
 
-DBS.Bot.on("ready", () =>{
-    DBS.Bot.user.setPresence({
-        status: "online",  // You can show online, idle... Do not disturb is dnd
-        game: {
-            name: "Automating VikkiVuk | v.help",  // The message shown
-            type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
-        }
-    });
- });
 DBS.Bot.on("message", (message) => DBS.checkMessage(message));
 DBS.Bot.on("guildMemberAdd", (member) => {
     try {
