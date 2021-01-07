@@ -191,8 +191,8 @@ DBS.loadBot = async function () {
     await DBS.startBot();
 };
 
-client.on("ready", () =>{
-    client.user.setPresence({
+DBS.Bot.on("ready", () =>{
+    DBS.Bot.user.setPresence({
         status: "online",  // You can show online, idle... Do not disturb is dnd
         game: {
             name: "Automating VikkiVuk | v.help",  // The message shown
