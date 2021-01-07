@@ -153,7 +153,7 @@ DBS.callNextEventAction = async function (type, varsE, index) {
 };
 
 DBS.startBot = async function () {
-    await DBS.Bot.login(DBS.SettingsFile.token).catch((e) => {
+    await DBS.Bot.login(process.env.token).catch((e) => {
         logger.log({
             level: "error",
             message: "Bot login: " + e,
@@ -162,6 +162,7 @@ DBS.startBot = async function () {
     console.log("Bot logged in");
 
     DBS.CheckIfLoaded();
+    DBS.Bot.user.setGame("Automating VikkiVuk | v.help")
 };
 
 DBS.LoadedGuilds = [];
