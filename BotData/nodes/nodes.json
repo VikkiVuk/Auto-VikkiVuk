@@ -6555,6 +6555,680 @@
         "saveToVariable",
         "saveToVariableType"
       ]
+    },
+    {
+      "type": "command",
+      "name": "spamping",
+      "guid": "7d30e576-7d34-45d6-bf4c-e6aa879b4182",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "df0aee67-4f24-4934-8396-20b820d7d04f"
+          ]
+        }
+      ],
+      "x": 89,
+      "y": 4066,
+      "perms": [
+        "admin"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "fgteherhe",
+      "guid": "df0aee67-4f24-4934-8396-20b820d7d04f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "285dd729-904c-4fba-9521-62720aee916c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7d30e576-7d34-45d6-bf4c-e6aa879b4182"
+        }
+      ],
+      "x": 285,
+      "y": 4051,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "spamping",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg",
+      "guid": "48e034f7-f721-45bd-ad43-a38fba51868b",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "eecb8645-e9f0-4b4c-b6a3-bbcef8a697e5"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "285dd729-904c-4fba-9521-62720aee916c"
+        }
+      ],
+      "x": 718,
+      "y": 4011,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ewfweff",
+      "guid": "285dd729-904c-4fba-9521-62720aee916c",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "48e034f7-f721-45bd-ad43-a38fba51868b"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "df0aee67-4f24-4934-8396-20b820d7d04f"
+        }
+      ],
+      "x": 534,
+      "y": 4017,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}a",
+        "SPAM PING ACTIVATED",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1",
+      "guid": "eecb8645-e9f0-4b4c-b6a3-bbcef8a697e5",
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "e7dd885f-4645-4efb-b451-22d09de346ae"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "48e034f7-f721-45bd-ad43-a38fba51868b"
+        }
+      ],
+      "x": 920,
+      "y": 4000,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_1",
+      "guid": "58d7b2f1-bf23-4d1c-894c-502d92a98ff9",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "804bdd5e-ea3b-4650-951f-a8629f228162"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d5972c8e-dbfd-4688-b644-3574d30da75a"
+        }
+      ],
+      "x": 1317,
+      "y": 4353,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_2",
+      "guid": "d5972c8e-dbfd-4688-b644-3574d30da75a",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "58d7b2f1-bf23-4d1c-894c-502d92a98ff9"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "25024e9d-e8d3-4b93-9798-0728a7a1a869"
+        }
+      ],
+      "x": 1089,
+      "y": 4368,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_3",
+      "guid": "25024e9d-e8d3-4b93-9798-0728a7a1a869",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d5972c8e-dbfd-4688-b644-3574d30da75a"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "9951e1e8-7d35-4ca2-8d9b-6252950d5816"
+        }
+      ],
+      "x": 845,
+      "y": 4377,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_4",
+      "guid": "9951e1e8-7d35-4ca2-8d9b-6252950d5816",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "25024e9d-e8d3-4b93-9798-0728a7a1a869"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d86f458c-1f19-45c8-ae38-487001bf55a1"
+        }
+      ],
+      "x": 607,
+      "y": 4391,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_5",
+      "guid": "d86f458c-1f19-45c8-ae38-487001bf55a1",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "9951e1e8-7d35-4ca2-8d9b-6252950d5816"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "19838ccc-f184-4fba-98a9-53dfad20ce19"
+        }
+      ],
+      "x": 346,
+      "y": 4394,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_6",
+      "guid": "19838ccc-f184-4fba-98a9-53dfad20ce19",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d86f458c-1f19-45c8-ae38-487001bf55a1"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "cb20cee3-fa21-491e-b9a4-20f215c0cdcc"
+        }
+      ],
+      "x": 106,
+      "y": 4387,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_7",
+      "guid": "cb20cee3-fa21-491e-b9a4-20f215c0cdcc",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "19838ccc-f184-4fba-98a9-53dfad20ce19"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b9cb1078-ad14-4af8-b283-4e069947de00"
+        }
+      ],
+      "x": 1497,
+      "y": 4155,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_8",
+      "guid": "b9cb1078-ad14-4af8-b283-4e069947de00",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cb20cee3-fa21-491e-b9a4-20f215c0cdcc"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b3b0b15c-399e-4d7a-b357-72ec170d0b42"
+        }
+      ],
+      "x": 1251,
+      "y": 4146,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_9",
+      "guid": "b3b0b15c-399e-4d7a-b357-72ec170d0b42",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b9cb1078-ad14-4af8-b283-4e069947de00"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "22af8976-5109-4201-9bab-d885aaf18fbf"
+        }
+      ],
+      "x": 996,
+      "y": 4180,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_10",
+      "guid": "22af8976-5109-4201-9bab-d885aaf18fbf",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b3b0b15c-399e-4d7a-b357-72ec170d0b42"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f0c6a6e8-4215-4e46-9db5-2987a3f9eea3"
+        }
+      ],
+      "x": 767,
+      "y": 4192,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_11",
+      "guid": "f0c6a6e8-4215-4e46-9db5-2987a3f9eea3",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "22af8976-5109-4201-9bab-d885aaf18fbf"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "77d140f6-e9a9-4a89-818b-8010267c8595"
+        }
+      ],
+      "x": 544,
+      "y": 4199,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_12",
+      "guid": "77d140f6-e9a9-4a89-818b-8010267c8595",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f0c6a6e8-4215-4e46-9db5-2987a3f9eea3"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e7dd885f-4645-4efb-b451-22d09de346ae"
+        }
+      ],
+      "x": 298,
+      "y": 4223,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "vfdbeg_1_13",
+      "guid": "e7dd885f-4645-4efb-b451-22d09de346ae",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "77d140f6-e9a9-4a89-818b-8010267c8595"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "eecb8645-e9f0-4b4c-b6a3-bbcef8a697e5"
+        }
+      ],
+      "x": 86,
+      "y": 4216,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.spamping.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "sdf",
+      "guid": "804bdd5e-ea3b-4650-951f-a8629f228162",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "58d7b2f1-bf23-4d1c-894c-502d92a98ff9"
+        }
+      ],
+      "x": 1542,
+      "y": 4355,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "SPAM PING DISABLED",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
     }
   ]
 }

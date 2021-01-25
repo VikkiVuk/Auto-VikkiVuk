@@ -2097,6 +2097,175 @@
           "value": "1"
         }
       ]
+    },
+    {
+      "name": "spamping",
+      "perms": [
+        "admin"
+      ],
+      "actions": [
+        {
+          "name": "fgteherhe",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "spamping",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "ewfweff",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}a",
+          "messagetext": "SPAM PING ACTIVATED",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_13",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_12",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_11",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_10",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_9",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_8",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_7",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_6",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_5",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_4",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_3",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_2",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "vfdbeg_1_1",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@${tempVars.spamping.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "sdf",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "SPAM PING DISABLED",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
     }
   ]
 }
