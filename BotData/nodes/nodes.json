@@ -6615,8 +6615,6 @@
       "guid": "48e034f7-f721-45bd-ad43-a38fba51868b",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -6654,8 +6652,6 @@
       "guid": "285dd729-904c-4fba-9521-62720aee916c",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -6692,8 +6688,6 @@
       "name": "vfdbeg_1",
       "guid": "eecb8645-e9f0-4b4c-b6a3-bbcef8a697e5",
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7199,8 +7193,6 @@
       "guid": "804bdd5e-ea3b-4650-951f-a8629f228162",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7220,6 +7212,414 @@
       "formdata": [
         "${dbsVars.CommandChannel.id}",
         "SPAM PING DISABLED",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "set-server-mom",
+      "guid": "daf9674c-22ab-4dec-96e2-8238430a4c80",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "57f1e75c-38c5-446c-ac7b-d014aa866f59"
+          ]
+        }
+      ],
+      "x": 111,
+      "y": 4669,
+      "perms": [
+        "admin"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get mantioned youaser",
+      "guid": "57f1e75c-38c5-446c-ac7b-d014aa866f59",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1a7b51aa-10fe-428d-8c09-499ba4d55386"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "daf9674c-22ab-4dec-96e2-8238430a4c80"
+        }
+      ],
+      "x": 316,
+      "y": 4623,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "momMentionedUser",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "save as dad",
+      "guid": "1a7b51aa-10fe-428d-8c09-499ba4d55386",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "serverMom",
+      "saveToVariableType": "server",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "c9ae9de0-a5bf-4138-8186-926139684a21"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "57f1e75c-38c5-446c-ac7b-d014aa866f59"
+        }
+      ],
+      "x": 514,
+      "y": 4626,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "serverMom",
+        "Text",
+        "server",
+        "${tempVars.momMentionedUser.displayName}"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "send message",
+      "guid": "c9ae9de0-a5bf-4138-8186-926139684a21",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1a7b51aa-10fe-428d-8c09-499ba4d55386"
+        }
+      ],
+      "x": 711,
+      "y": 4614,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "C054FF",
+        "SERVER FAMILY",
+        "",
+        "",
+        "",
+        "",
+        "👨‍👩‍👧| **Server's Mom** has been set to <@${tempVars.momMentionedUser.id}>",
+        "",
+        "",
+        "Family Bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "set-server-dad",
+      "guid": "ecdefb87-6d9e-4e64-89d0-961a3a270b78",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "835a2142-6501-4f00-9aa7-9e11be9892ae"
+          ]
+        }
+      ],
+      "x": 109,
+      "y": 4820,
+      "perms": [
+        "admin"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "gettaaway",
+      "guid": "835a2142-6501-4f00-9aa7-9e11be9892ae",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "09b3107f-d7c5-461b-b1a8-89af6b09cedd"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ecdefb87-6d9e-4e64-89d0-961a3a270b78"
+        }
+      ],
+      "x": 316,
+      "y": 4788,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "mentionedDad",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "savenzi",
+      "guid": "09b3107f-d7c5-461b-b1a8-89af6b09cedd",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "serverDad",
+      "saveToVariableType": "server",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "8dc427df-f95c-4434-8c01-c21e0a2163d5"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "835a2142-6501-4f00-9aa7-9e11be9892ae"
+        }
+      ],
+      "x": 516,
+      "y": 4772,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "serverDad",
+        "Text",
+        "server",
+        "${tempVars.mentionedDad.displayName}"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "send messiah",
+      "guid": "8dc427df-f95c-4434-8c01-c21e0a2163d5",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "09b3107f-d7c5-461b-b1a8-89af6b09cedd"
+        }
+      ],
+      "x": 705,
+      "y": 4768,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF1FE9",
+        "SERVER FAMILY",
+        "",
+        "",
+        "",
+        "",
+        "👨‍👩‍👧| **Server's Dad** has been set to <@${tempVars.mentionedDad.id}>",
+        "",
+        "",
+        "Family Bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "my.mom",
+      "guid": "b2eb35b5-09b6-4766-a91f-a6779db2a865",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "9a991d1c-4509-4a58-9578-3e419a6043e4"
+          ]
+        }
+      ],
+      "x": 105,
+      "y": 4979,
+      "perms": [
+        "verifikovan"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "senedd",
+      "guid": "9a991d1c-4509-4a58-9578-3e419a6043e4",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b2eb35b5-09b6-4766-a91f-a6779db2a865"
+        }
+      ],
+      "x": 301,
+      "y": 4946,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Im your mom 😎",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "your-mom",
+      "guid": "aa414ba1-4c15-4b05-a281-0fc5238c6a90",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "55a20bfc-e03b-403a-a09f-e7c7773cb006"
+          ]
+        }
+      ],
+      "x": 106,
+      "y": 5117,
+      "perms": [
+        "verifikovan"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "sdgfegeg",
+      "guid": "55a20bfc-e03b-403a-a09f-e7c7773cb006",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "aa414ba1-4c15-4b05-a281-0fc5238c6a90"
+        }
+      ],
+      "x": 311,
+      "y": 5080,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@533692905387196429> is my mom.",
         "",
         "temp"
       ],

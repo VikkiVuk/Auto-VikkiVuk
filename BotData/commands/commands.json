@@ -2266,6 +2266,128 @@
           "savetovariabletype": "temp"
         }
       ]
+    },
+    {
+      "name": "set-server-mom",
+      "perms": [
+        "admin"
+      ],
+      "actions": [
+        {
+          "name": "get mantioned youaser",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "momMentionedUser",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "save as dad",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "serverMom",
+          "vartype": "Text",
+          "savevartype": "server",
+          "param": "${tempVars.momMentionedUser.displayName}"
+        },
+        {
+          "name": "send message",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "C054FF",
+          "title": "SERVER FAMILY",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "👨‍👩‍👧| **Server's Mom** has been set to <@${tempVars.momMentionedUser.id}>",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Family Bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "set-server-dad",
+      "perms": [
+        "admin"
+      ],
+      "actions": [
+        {
+          "name": "gettaaway",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "mentionedDad",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "savenzi",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "serverDad",
+          "vartype": "Text",
+          "savevartype": "server",
+          "param": "${tempVars.mentionedDad.displayName}"
+        },
+        {
+          "name": "send messiah",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF1FE9",
+          "title": "SERVER FAMILY",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "👨‍👩‍👧| **Server's Dad** has been set to <@${tempVars.mentionedDad.id}>",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Family Bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "my.mom",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "senedd",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Im your mom 😎",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "your-mom",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "sdgfegeg",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "<@533692905387196429> is my mom.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
     }
   ]
 }
