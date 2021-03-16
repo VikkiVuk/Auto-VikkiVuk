@@ -1301,7 +1301,7 @@
           "authorname": "",
           "authorimageurl": "",
           "authorlink": "",
-          "description": "Uspesno je obrisano 11 poruka!",
+          "description": "Uspesno je obrisano ${tempVars.howMuchToClear} poruka!",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",

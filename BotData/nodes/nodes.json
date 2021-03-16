@@ -3064,6 +3064,8 @@
       "guid": "7aba42b9-dd48-4d3e-a760-dac817e2c787",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -3097,6 +3099,8 @@
       "guid": "a5882a7a-f8fa-47e0-9fc2-ff4ed388d3f3",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -3121,7 +3125,7 @@
         "",
         "",
         "",
-        "Uspesno je obrisano 11 poruka!",
+        "Uspesno je obrisano ${tempVars.howMuchToClear} poruka!",
         "",
         "",
         "Auto VikkiVuk",
@@ -8021,6 +8025,8 @@
       "guid": "7689a885-4529-4e1d-b888-cc8e158b62b6",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
