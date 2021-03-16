@@ -205,8 +205,8 @@
           ]
         }
       ],
-      "x": 45,
-      "y": 239
+      "x": 46,
+      "y": 108
     },
     {
       "type": "response",
@@ -228,8 +228,8 @@
           "id": "ff37ac86-0a85-470b-9da3-310da86fab21"
         }
       ],
-      "x": 227,
-      "y": 218,
+      "x": 231,
+      "y": 109,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -259,8 +259,8 @@
           "id": "3b242e39-db0c-423c-967c-61e304d5778e"
         }
       ],
-      "x": 410,
-      "y": 216,
+      "x": 405,
+      "y": 96,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -288,8 +288,8 @@
           ]
         }
       ],
-      "x": 46,
-      "y": 380,
+      "x": 63,
+      "y": 266,
       "perms": [
         "verifikovan"
       ]
@@ -312,8 +312,8 @@
           "id": "66d39027-c191-4a31-b140-81113c69026e"
         }
       ],
-      "x": 237,
-      "y": 376,
+      "x": 257,
+      "y": 264,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -540,7 +540,7 @@
           ]
         }
       ],
-      "x": 559,
+      "x": 570,
       "y": 92,
       "perms": [
         "verifikovan"
@@ -593,8 +593,8 @@
           ]
         }
       ],
-      "x": 589,
-      "y": 243,
+      "x": 476,
+      "y": 266,
       "perms": [
         "verifikovan"
       ]
@@ -617,8 +617,8 @@
           "id": "f6b089f9-e2c3-4d33-a745-2f821410133f"
         }
       ],
-      "x": 763,
-      "y": 247,
+      "x": 679,
+      "y": 235,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -646,8 +646,8 @@
           ]
         }
       ],
-      "x": 424,
-      "y": 405,
+      "x": 436,
+      "y": 392,
       "perms": [
         "verifikovan"
       ]
@@ -3047,7 +3047,7 @@
         {
           "label": "responses",
           "connections": [
-            "7aba42b9-dd48-4d3e-a760-dac817e2c787"
+            "e2e039ae-582a-4041-bd5d-25efa3b77d37"
           ]
         }
       ],
@@ -3075,16 +3075,16 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "d28373fa-5a50-4bd2-b04e-20cb6b250706"
+          "id": "e2e039ae-582a-4041-bd5d-25efa3b77d37"
         }
       ],
-      "x": 1410,
-      "y": 625,
+      "x": 1538,
+      "y": 612,
       "rtype": "Channel Action",
       "rsubtype": "Delete All Messages",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "11"
+        "${tempVars.howMuchToClear}"
       ],
       "formnames": [
         "channelname",
@@ -3109,8 +3109,8 @@
           "id": "7aba42b9-dd48-4d3e-a760-dac817e2c787"
         }
       ],
-      "x": 1599,
-      "y": 664,
+      "x": 1738,
+      "y": 654,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5448,6 +5448,8 @@
       "guid": "5ea73280-76c7-4191-b470-8c8051ec60ea",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "has perms",
@@ -6048,6 +6050,8 @@
         "❌"
       ],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "✅",
@@ -7807,8 +7811,20 @@
           "name": "v.hack",
           "value": "Ovako hakujete nekog (sve informacije idu vikkivuku u dm), koristi se: v.hack @VikkiVuk (vikkivuk oznacava koga)",
           "inline": "false"
+        },
+        {
+          "name": "v.isreal",
+          "value": "Ovako mozete da proverite da li je neko stvaran ili nije (totalno je random)! Koristi se: v.isreal @VikkiVuk (vikkivuk oznacava koga)",
+          "inline": "false"
+        },
+        {
+          "name": "v.amireal",
+          "value": "Kaze vam da li ste stvarni ili ne! Koristi se: v.amireal",
+          "inline": "false"
         }
       ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7904,6 +7920,11 @@
         {
           "name": "v.your-dad",
           "value": "Kazem vam mog oca.",
+          "inline": "false"
+        },
+        {
+          "name": "v.smas",
+          "value": "Ovako mozete da stavite sebe kao nekome oca ili majku. Ovu komandu samo prijatelji vlasnika mogu da koriste! Koristi se: v.smas mom, dad @VikkiVuk (vikkivuk oznacava koga)",
           "inline": "false"
         }
       ],
@@ -8330,6 +8351,931 @@
         "varname",
         "saveVarType",
         "vartype"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "fdgtrhg",
+      "guid": "e2e039ae-582a-4041-bd5d-25efa3b77d37",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "howMuchToClear",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "7aba42b9-dd48-4d3e-a760-dac817e2c787"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d28373fa-5a50-4bd2-b04e-20cb6b250706"
+        }
+      ],
+      "x": 1368,
+      "y": 637,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "howMuchToClear",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "smas",
+      "guid": "66e6c844-18d5-4c63-a9ab-b86bafe7f743",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "58b854f4-08e2-49a4-bd86-c2edb9980356"
+          ]
+        }
+      ],
+      "x": 107,
+      "y": 5240,
+      "perms": [
+        "prijatelj"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get mom or dad",
+      "guid": "10e80b7f-574b-49c0-8204-9e760233e8ac",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "mmooom",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "6f029810-6082-4419-9cb1-b9c2c67b6984"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "58b854f4-08e2-49a4-bd86-c2edb9980356"
+        }
+      ],
+      "x": 489,
+      "y": 5208,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "mmooom",
+        "Text",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "check if mom",
+      "guid": "6f029810-6082-4419-9cb1-b9c2c67b6984",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "8848ed63-fa39-4eb0-99aa-22d7cf4c2c17"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "260de0a6-754a-4f58-8b12-6d51cc7d8083"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "10e80b7f-574b-49c0-8204-9e760233e8ac"
+        }
+      ],
+      "x": 703,
+      "y": 5211,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "mmooom",
+        "temp",
+        "equal to",
+        "mom"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "check if dad",
+      "guid": "260de0a6-754a-4f58-8b12-6d51cc7d8083",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "8aa95cdd-a3e7-4bef-aa69-5e819d2f682c"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "9b4fb305-390f-4048-98e4-2d8f428f2e3b"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6f029810-6082-4419-9cb1-b9c2c67b6984"
+        }
+      ],
+      "x": 712,
+      "y": 5412,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "mmooom",
+        "temp",
+        "equal to",
+        "dad"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get mnet",
+      "guid": "58b854f4-08e2-49a4-bd86-c2edb9980356",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "10e80b7f-574b-49c0-8204-9e760233e8ac"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "66e6c844-18d5-4c63-a9ab-b86bafe7f743"
+        }
+      ],
+      "x": 296,
+      "y": 5223,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "whotosetforMOD",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "set person as mom",
+      "guid": "8848ed63-fa39-4eb0-99aa-22d7cf4c2c17",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "c8cebd1a-8d16-44cf-8625-855b124237b0"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6f029810-6082-4419-9cb1-b9c2c67b6984"
+        }
+      ],
+      "x": 931,
+      "y": 5210,
+      "rtype": "User Data",
+      "rsubtype": "Set User Data",
+      "formdata": [
+        "${tempVars.whotosetforMOD.id}",
+        "mom",
+        "${dbsVars.CommandAuthor.id}"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "fieldvalue"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "set person as dad",
+      "guid": "8aa95cdd-a3e7-4bef-aa69-5e819d2f682c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "86830598-9b31-445e-a915-05cdda7fa253"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "260de0a6-754a-4f58-8b12-6d51cc7d8083"
+        }
+      ],
+      "x": 933,
+      "y": 5421,
+      "rtype": "User Data",
+      "rsubtype": "Set User Data",
+      "formdata": [
+        "${tempVars.whotosetforMOD.id}",
+        "dad",
+        "${dbsVars.CommandAuthor.id}"
+      ],
+      "formnames": [
+        "user",
+        "field",
+        "fieldvalue"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "successssss",
+      "guid": "c8cebd1a-8d16-44cf-8625-855b124237b0",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "8848ed63-fa39-4eb0-99aa-22d7cf4c2c17"
+        }
+      ],
+      "x": 1151,
+      "y": 5219,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF1CFF",
+        "FAMILY",
+        "",
+        "",
+        "",
+        "",
+        "👨‍👩‍👧 | <@${dbsVars.CommandAuthor.id> is now <@${tempVars.whotosetforMOD.id}>'s **mom!**",
+        "",
+        "",
+        "Family Bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "woooooooo",
+      "guid": "86830598-9b31-445e-a915-05cdda7fa253",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "8aa95cdd-a3e7-4bef-aa69-5e819d2f682c"
+        }
+      ],
+      "x": 1155,
+      "y": 5431,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "F019FF",
+        "FAMILY",
+        "",
+        "",
+        "",
+        "",
+        "👨‍👩‍👧 | <@${dbsVars.CommandAuthor.id> is now <@${tempVars.whotosetforMOD.id}>'s **dad!**",
+        "",
+        "",
+        "Family Bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "failll",
+      "guid": "9b4fb305-390f-4048-98e4-2d8f428f2e3b",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "260de0a6-754a-4f58-8b12-6d51cc7d8083"
+        }
+      ],
+      "x": 717,
+      "y": 5610,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF0000",
+        "ERROR",
+        "",
+        "",
+        "",
+        "",
+        "Sorry but you didnt specify either if you'd want to be <@${tempVars.whotosetforMOD.id}>'s mom or dad!",
+        "",
+        "",
+        "Family Arranger",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "isreal",
+      "guid": "11109450-1b54-4b3e-84ea-9c655afe23e3",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "32d61e40-aa6a-4a4a-bb75-4ca45476838f"
+          ]
+        }
+      ],
+      "x": 1878,
+      "y": 253,
+      "perms": [
+        "verifikovan"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "amireal",
+      "guid": "348e0455-1c39-4209-9e0a-600228557399",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "9ec60f07-88f6-43c3-b12d-000d2d958728"
+          ]
+        }
+      ],
+      "x": 2737,
+      "y": 265,
+      "perms": [
+        "verifikovan"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "randomizerrr",
+      "guid": "a43d3eb5-dbc3-46a4-8882-41bd8bc51458",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "34f4e900-c5c6-454e-bb40-89cc1cc7780d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "32d61e40-aa6a-4a4a-bb75-4ca45476838f"
+        }
+      ],
+      "x": 2077,
+      "y": 235,
+      "rtype": "Variable",
+      "rsubtype": "Generate Random Number",
+      "formdata": [
+        "isrealRandomNum",
+        "1",
+        "2",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "min",
+        "max",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "rundom",
+      "guid": "9ec60f07-88f6-43c3-b12d-000d2d958728",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "ed6e18fb-4b77-43c8-93e8-255bc97c9279"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "348e0455-1c39-4209-9e0a-600228557399"
+        }
+      ],
+      "x": 2966,
+      "y": 253,
+      "rtype": "Variable",
+      "rsubtype": "Generate Random Number",
+      "formdata": [
+        "amirealRandomNum",
+        "1",
+        "2",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "min",
+        "max",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "if 1",
+      "guid": "34f4e900-c5c6-454e-bb40-89cc1cc7780d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "e163b879-2b0f-41e1-afec-cd324d42b7f4"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "6aaaf006-dc47-4d1d-b384-573183ae258d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a43d3eb5-dbc3-46a4-8882-41bd8bc51458"
+        }
+      ],
+      "x": 2278,
+      "y": 232,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "isrealRandomNum",
+        "temp",
+        "equal to",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "if 2",
+      "guid": "6aaaf006-dc47-4d1d-b384-573183ae258d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "2a8a4d02-54af-4fcd-8f37-2b4a094234dc"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "34f4e900-c5c6-454e-bb40-89cc1cc7780d"
+        }
+      ],
+      "x": 2292,
+      "y": 428,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "isrealRandomNum",
+        "temp",
+        "equal to",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "treal",
+      "guid": "e163b879-2b0f-41e1-afec-cd324d42b7f4",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "34f4e900-c5c6-454e-bb40-89cc1cc7780d"
+        }
+      ],
+      "x": 2490,
+      "y": 252,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.isrealPerson.id}> is **REAL**!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "tnoreal",
+      "guid": "2a8a4d02-54af-4fcd-8f37-2b4a094234dc",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6aaaf006-dc47-4d1d-b384-573183ae258d"
+        }
+      ],
+      "x": 2509,
+      "y": 455,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "<@${tempVars.isrealPerson.id}> is **NOT REAL**!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "if 1_1",
+      "guid": "ed6e18fb-4b77-43c8-93e8-255bc97c9279",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "7bf8685b-cc0a-40c4-a0e1-1115a0e88746"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": [
+            "99db57d9-3887-4e3b-92d2-e969b2942350"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "9ec60f07-88f6-43c3-b12d-000d2d958728"
+        }
+      ],
+      "x": 3175,
+      "y": 272,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "amirealRandomNum",
+        "temp",
+        "equal to",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "if 2_1",
+      "guid": "99db57d9-3887-4e3b-92d2-e969b2942350",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "true",
+          "connections": [
+            "ea2eaeb4-bfe4-414b-bfe1-bade010ea3b0"
+          ]
+        },
+        {
+          "label": "false",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ed6e18fb-4b77-43c8-93e8-255bc97c9279"
+        }
+      ],
+      "x": 3186,
+      "y": 462,
+      "rtype": "Variable",
+      "rsubtype": "Check Variable Value",
+      "formdata": [
+        "amirealRandomNum",
+        "temp",
+        "equal to",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "saveVarType",
+        "compare",
+        "value"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "treal_1",
+      "guid": "7bf8685b-cc0a-40c4-a0e1-1115a0e88746",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ed6e18fb-4b77-43c8-93e8-255bc97c9279"
+        }
+      ],
+      "x": 3373,
+      "y": 279,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "You are **REAL**!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "tnoreal_1",
+      "guid": "ea2eaeb4-bfe4-414b-bfe1-bade010ea3b0",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "99db57d9-3887-4e3b-92d2-e969b2942350"
+        }
+      ],
+      "x": 3387,
+      "y": 484,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "You are **NOT REAL**!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "gnhygjn",
+      "guid": "32d61e40-aa6a-4a4a-bb75-4ca45476838f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "a43d3eb5-dbc3-46a4-8882-41bd8bc51458"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "11109450-1b54-4b3e-84ea-9c655afe23e3"
+        }
+      ],
+      "x": 1887,
+      "y": 369,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "isrealPerson",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
       ]
     }
   ]

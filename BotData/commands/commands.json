@@ -258,6 +258,16 @@
               "name": "v.hack",
               "value": "Ovako hakujete nekog (sve informacije idu vikkivuku u dm), koristi se: v.hack @VikkiVuk (vikkivuk oznacava koga)",
               "inline": "false"
+            },
+            {
+              "name": "v.isreal",
+              "value": "Ovako mozete da proverite da li je neko stvaran ili nije (totalno je random)! Koristi se: v.isreal @VikkiVuk (vikkivuk oznacava koga)",
+              "inline": "false"
+            },
+            {
+              "name": "v.amireal",
+              "value": "Kaze vam da li ste stvarni ili ne! Koristi se: v.amireal",
+              "inline": "false"
             }
           ],
           "channelname": "${dbsVars.CommandChannel.id}",
@@ -318,6 +328,11 @@
             {
               "name": "v.your-dad",
               "value": "Kazem vam mog oca.",
+              "inline": "false"
+            },
+            {
+              "name": "v.smas",
+              "value": "Ovako mozete da stavite sebe kao nekome oca ili majku. Ovu komandu samo prijatelji vlasnika mogu da koriste! Koristi se: v.smas mom, dad @VikkiVuk (vikkivuk oznacava koga)",
               "inline": "false"
             }
           ],
@@ -1260,11 +1275,20 @@
       ],
       "actions": [
         {
+          "name": "fdgtrhg",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "howMuchToClear",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
           "name": "del all messages channle",
           "category": "Channel Action",
           "type": "Delete All Messages",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "msgcount": "11"
+          "msgcount": "${tempVars.howMuchToClear}"
         },
         {
           "name": "uspehj",
@@ -2648,6 +2672,258 @@
           "timestamp": "BOOL_TRUE@@",
           "savetovariable": "",
           "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "smas",
+      "perms": [
+        "prijatelj"
+      ],
+      "actions": [
+        {
+          "name": "get mnet",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "whotosetforMOD",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "get mom or dad",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "mmooom",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "check if mom",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "set person as mom",
+              "category": "User Data",
+              "type": "Set User Data",
+              "user": "${tempVars.whotosetforMOD.id}",
+              "field": "mom",
+              "fieldvalue": "${dbsVars.CommandAuthor.id}"
+            },
+            {
+              "name": "successssss",
+              "category": "Message",
+              "type": "Send Embed",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "color": "FF1CFF",
+              "title": "FAMILY",
+              "url": "",
+              "authorname": "",
+              "authorimageurl": "",
+              "authorlink": "",
+              "description": "👨‍👩‍👧 | <@${dbsVars.CommandAuthor.id> is now <@${tempVars.whotosetforMOD.id}>'s **mom!**",
+              "thumbnail": "",
+              "image": "",
+              "footer": "Family Bot",
+              "timestamp": "BOOL_TRUE@@",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "check if dad",
+              "category": "Variable",
+              "type": "Check Variable Value",
+              "trueActions": [
+                {
+                  "name": "set person as dad",
+                  "category": "User Data",
+                  "type": "Set User Data",
+                  "user": "${tempVars.whotosetforMOD.id}",
+                  "field": "dad",
+                  "fieldvalue": "${dbsVars.CommandAuthor.id}"
+                },
+                {
+                  "name": "woooooooo",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "color": "F019FF",
+                  "title": "FAMILY",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": "👨‍👩‍👧 | <@${dbsVars.CommandAuthor.id> is now <@${tempVars.whotosetforMOD.id}>'s **dad!**",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "Family Bot",
+                  "timestamp": "BOOL_TRUE@@",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "falseActions": [
+                {
+                  "name": "failll",
+                  "category": "Message",
+                  "type": "Send Embed",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "color": "FF0000",
+                  "title": "ERROR",
+                  "url": "",
+                  "authorname": "",
+                  "authorimageurl": "",
+                  "authorlink": "",
+                  "description": "Sorry but you didnt specify either if you'd want to be <@${tempVars.whotosetforMOD.id}>'s mom or dad!",
+                  "thumbnail": "",
+                  "image": "",
+                  "footer": "Family Arranger",
+                  "timestamp": "BOOL_TRUE@@",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "varname": "mmooom",
+              "savevartype": "temp",
+              "compare": "equal to",
+              "value": "dad"
+            }
+          ],
+          "varname": "mmooom",
+          "savevartype": "temp",
+          "compare": "equal to",
+          "value": "mom"
+        }
+      ]
+    },
+    {
+      "name": "isreal",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "gnhygjn",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "isrealPerson",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "randomizerrr",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "varname": "isrealRandomNum",
+          "min": "1",
+          "max": "2",
+          "savevartype": "temp"
+        },
+        {
+          "name": "if 1",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "treal",
+              "category": "Message",
+              "type": "Send Message",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "messagetext": "<@${tempVars.isrealPerson.id}> is **REAL**!",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "if 2",
+              "category": "Variable",
+              "type": "Check Variable Value",
+              "trueActions": [
+                {
+                  "name": "tnoreal",
+                  "category": "Message",
+                  "type": "Send Message",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "messagetext": "<@${tempVars.isrealPerson.id}> is **NOT REAL**!",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "falseActions": [],
+              "varname": "isrealRandomNum",
+              "savevartype": "temp",
+              "compare": "equal to",
+              "value": "2"
+            }
+          ],
+          "varname": "isrealRandomNum",
+          "savevartype": "temp",
+          "compare": "equal to",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "amireal",
+      "perms": [
+        "verifikovan"
+      ],
+      "actions": [
+        {
+          "name": "rundom",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "varname": "amirealRandomNum",
+          "min": "1",
+          "max": "2",
+          "savevartype": "temp"
+        },
+        {
+          "name": "if 1_1",
+          "category": "Variable",
+          "type": "Check Variable Value",
+          "trueActions": [
+            {
+              "name": "treal_1",
+              "category": "Message",
+              "type": "Send Message",
+              "channelname": "${dbsVars.CommandChannel.id}",
+              "messagetext": "You are **REAL**!",
+              "savetovariable": "",
+              "savetovariabletype": "temp"
+            }
+          ],
+          "falseActions": [
+            {
+              "name": "if 2_1",
+              "category": "Variable",
+              "type": "Check Variable Value",
+              "trueActions": [
+                {
+                  "name": "tnoreal_1",
+                  "category": "Message",
+                  "type": "Send Message",
+                  "channelname": "${dbsVars.CommandChannel.id}",
+                  "messagetext": "You are **NOT REAL**!",
+                  "savetovariable": "",
+                  "savetovariabletype": "temp"
+                }
+              ],
+              "falseActions": [],
+              "varname": "amirealRandomNum",
+              "savevartype": "temp",
+              "compare": "equal to",
+              "value": "2"
+            }
+          ],
+          "varname": "amirealRandomNum",
+          "savevartype": "temp",
+          "compare": "equal to",
+          "value": "1"
         }
       ]
     }
