@@ -219,17 +219,17 @@
           "type": "Send Embed",
           "fields": [
             {
-              "name": "v.react sub",
+              "name": "v.react-sub",
               "value": "Ovako vikkivuk proverava ko je suban a ko nije!",
               "inline": "false"
             },
             {
-              "name": "v.react pokemon",
+              "name": "v.react-pokemon",
               "value": "Ovako proveravamo ko igra pokemon.",
               "inline": "false"
             },
             {
-              "name": "v.react mc",
+              "name": "v.react-mc",
               "value": "Ovako proveravamo ko igra minecraft!",
               "inline": "false"
             }
@@ -439,7 +439,7 @@
           "varname": "imodopis",
           "vartype": "Text",
           "savevartype": "temp",
-          "param": "3"
+          "param": "3+"
         },
         {
           "name": "posalje da se imod updateovao",
@@ -452,7 +452,7 @@
           "authorname": "",
           "authorimageurl": "",
           "authorlink": "",
-          "description": "Verzija: ${tempVars.imodverzija}\nMinecraft Verzija: ${tempVars.mcverzija}\nStvari koje su se promenile:\n${tempVars.imodopis}",
+          "description": "Verzija: ${tempVars.imodverzija}\nMinecraft Verzija: ${tempVars.mcverzija}\nStvari koje su se promenile:\n${tempVars.imodopis}\n\nSKINITE MOD OVDE: https://www.curseforge.com/minecraft/mc-mods/imod",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",
@@ -1301,7 +1301,7 @@
           "authorname": "",
           "authorimageurl": "",
           "authorlink": "",
-          "description": "Uspesno je obrisano ${tempVars.howMuchToClear} poruka!",
+          "description": "Uspesno je obrisano **${tempVars.howMuchToClear}** poruka!",
           "thumbnail": "",
           "image": "",
           "footer": "Auto VikkiVuk",
@@ -1846,224 +1846,78 @@
       ]
     },
     {
-      "name": "react",
+      "name": "react-sub",
       "perms": [
         "admin"
       ],
       "actions": [
         {
-          "name": "wfg",
-          "category": "Variable",
-          "type": "Store Value in Variable",
-          "varname": "koj-react",
-          "vartype": "Number",
-          "savevartype": "temp",
-          "param": ""
+          "name": "uspesno je poruka dodata",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "43FF0A",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Poruka je uspesno dodata, i sad mogu svi da glasaju, da li su subani ili ne!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
         },
         {
-          "name": "ako je sub",
-          "category": "Variable",
-          "type": "Check Variable Value",
-          "trueActions": [
-            {
-              "name": "uspesno je poruka dodata",
-              "category": "Message",
-              "type": "Send Embed",
-              "channelname": "${dbsVars.CommandChannel.id}",
-              "color": "43FF0A",
-              "title": "USPEH!",
-              "url": "",
-              "authorname": "",
-              "authorimageurl": "",
-              "authorlink": "",
-              "description": "Poruka je uspesno dodata, i sad mogu svi da glasaju, da li su subani ili ne!",
-              "thumbnail": "",
-              "image": "",
-              "footer": "Auto VikkiVuk",
-              "timestamp": "BOOL_TRUE@@",
-              "savetovariable": "",
-              "savetovariabletype": "temp"
-            },
-            {
-              "name": "hahahahahaha",
-              "category": "Message",
-              "type": "Send Embed",
-              "channelname": "glasanje",
-              "color": "FF0000",
-              "title": "SUB TEST!",
-              "url": "",
-              "authorname": "",
-              "authorimageurl": "",
-              "authorlink": "",
-              "description": "Da li ste subani na **VikkiVuk-a** na youtube-u???\n\n:white_check_mark: - Da\n:x: - Ne\n\n_Ovo glasanje traje samo 12 sati_",
-              "thumbnail": "",
-              "image": "",
-              "footer": "Auto VikkiVuk",
-              "timestamp": "BOOL_TRUE@@",
-              "savetovariable": "subtestporuka",
-              "savetovariabletype": "temp"
-            },
-            {
-              "name": "xbdgshvfsefs",
-              "category": "Reaction",
-              "type": "Add Reaction Listener",
-              "reactionActions": [],
-              "message": "${tempVars.subtestporuka.id}",
-              "duration": "43200",
-              "reactionemoji": "subtestreactemoji",
-              "reactionuser": "subtestreactuser",
-              "react": "BOOL_TRUE@@"
-            }
-          ],
-          "falseActions": [
-            {
-              "name": "ako je pokemon",
-              "category": "Variable",
-              "type": "Check Variable Value",
-              "trueActions": [
-                {
-                  "name": "alouz",
-                  "category": "Message",
-                  "type": "Send Embed",
-                  "channelname": "${dbsVars.CommandChannel.id}",
-                  "color": "4AFF26",
-                  "title": "USPEH!",
-                  "url": "",
-                  "authorname": "",
-                  "authorimageurl": "",
-                  "authorlink": "",
-                  "description": "USPEH | Sada ljudi mogu da glasaju da li igraju pokemon ili ne!",
-                  "thumbnail": "",
-                  "image": "",
-                  "footer": "Auto VikkiVuk",
-                  "timestamp": "BOOL_TRUE@@",
-                  "savetovariable": "",
-                  "savetovariabletype": "temp"
-                },
-                {
-                  "name": "dad ad",
-                  "category": "Message",
-                  "type": "Send Embed",
-                  "channelname": "glasanje",
-                  "color": "FF0000",
-                  "title": "ANKETA!",
-                  "url": "",
-                  "authorname": "",
-                  "authorimageurl": "",
-                  "authorlink": "",
-                  "description": "Da li igrate **POKEMON**?\n\n:white_check_mark: - Da\n:x: - Ne\n\n_Ovo glasanje traje samo 12 sati_",
-                  "thumbnail": "",
-                  "image": "",
-                  "footer": "Auto VikkiVuk",
-                  "timestamp": "BOOL_TRUE@@",
-                  "savetovariable": "malomalopali",
-                  "savetovariabletype": "temp"
-                },
-                {
-                  "name": "erh45h4h",
-                  "category": "Reaction",
-                  "type": "Add Reaction Listener",
-                  "reactionActions": [],
-                  "message": "${tempVars.malomalopali.id}",
-                  "duration": "43200",
-                  "reactionemoji": "rjnrjhnrthbrthrthrt",
-                  "reactionuser": "pokemoner",
-                  "react": "BOOL_TRUE@@"
-                }
-              ],
-              "falseActions": [
-                {
-                  "name": "ako je mc",
-                  "category": "Variable",
-                  "type": "Check Variable Value",
-                  "trueActions": [
-                    {
-                      "name": "alou",
-                      "category": "Message",
-                      "type": "Send Embed",
-                      "channelname": "${dbsVars.CommandChannel.id}",
-                      "color": "0AFF2B",
-                      "title": "USPEH!",
-                      "url": "",
-                      "authorname": "",
-                      "authorimageurl": "",
-                      "authorlink": "",
-                      "description": "USPEH | Uspesno je postavljena anketa, ko igra mc!",
-                      "thumbnail": "",
-                      "image": "",
-                      "footer": "Auto VikkiVuk",
-                      "timestamp": "BOOL_TRUE@@",
-                      "savetovariable": "",
-                      "savetovariabletype": "temp"
-                    },
-                    {
-                      "name": "poasdajipfc",
-                      "category": "Message",
-                      "type": "Send Embed",
-                      "channelname": "glasanje",
-                      "color": "FF0000",
-                      "title": "ANKETA!",
-                      "url": "",
-                      "authorname": "",
-                      "authorimageurl": "",
-                      "authorlink": "",
-                      "description": "Da li igrate **MINECRAFT**?\n\n:white_check_mark: - Da\n:x: - Ne\n\n_Ovo glasanje traje samo 12 sati!_",
-                      "thumbnail": "",
-                      "image": "",
-                      "footer": "Auto VikkiVuk",
-                      "timestamp": "BOOL_TRUE@@",
-                      "savetovariable": "kalialipoal",
-                      "savetovariabletype": "temp"
-                    },
-                    {
-                      "name": "sdgvsbg",
-                      "category": "Reaction",
-                      "type": "Add Reaction Listener",
-                      "reactionActions": [],
-                      "message": "${tempVars.kalialipoal.id}",
-                      "duration": "43200",
-                      "reactionemoji": "sajfvnnesjvnesasv",
-                      "reactionuser": "minecrafter",
-                      "react": "BOOL_TRUE@@"
-                    }
-                  ],
-                  "falseActions": [
-                    {
-                      "name": "greska",
-                      "category": "Message",
-                      "type": "Send Embed",
-                      "channelname": "${dbsVars.CommandChannel.id}",
-                      "color": "FF0000",
-                      "title": "GRESKA!",
-                      "url": "",
-                      "authorname": "",
-                      "authorimageurl": "",
-                      "authorlink": "",
-                      "description": "GRESKA | Izvini, ali izgleda da nisi ukucao koju anketu zelis da postavis! Ili ta anketa ne postoji!",
-                      "thumbnail": "",
-                      "image": "",
-                      "footer": "Auto VikkiVuk",
-                      "timestamp": "BOOL_TRUE@@",
-                      "savetovariable": "",
-                      "savetovariabletype": "temp"
-                    }
-                  ],
-                  "varname": "koj-react",
-                  "savevartype": "temp",
-                  "compare": "equal to",
-                  "value": "mc"
-                }
-              ],
-              "varname": "koj-react",
-              "savevartype": "temp",
-              "compare": "equal to",
-              "value": "pokemon"
-            }
-          ],
-          "varname": "koj-react",
-          "savevartype": "temp",
-          "compare": "equal to",
-          "value": "sub"
+          "name": "hahahahahaha",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "glasanje",
+          "color": "FF0000",
+          "title": "SUB TEST!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Da li ste subani na **VikkiVuk-a** na youtube-u???\n\n:white_check_mark: - Da\n:x: - Ne\n\n_Ovo glasanje traje samo 12 sati_",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "subtestporuka",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "xbdgshvfsefs",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "✅": [
+              {
+                "name": "add role suban",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.subtestreactuser.id}",
+                "rolename": "bruh-gang"
+              }
+            ],
+            "❌": [
+              {
+                "name": "add role nije suban",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.subtestreactuser.id}",
+                "rolename": "raspala-zica"
+              }
+            ]
+          },
+          "message": "${tempVars.subtestporuka.id}",
+          "duration": "43200",
+          "reactionemoji": "subtestreactemoji",
+          "reactionuser": "subtestreactuser",
+          "react": "BOOL_TRUE@@"
         }
       ]
     },
@@ -2924,6 +2778,136 @@
           "savevartype": "temp",
           "compare": "equal to",
           "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "react-pokemon",
+      "actions": [
+        {
+          "name": "alouz",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "4AFF26",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "USPEH | Sada ljudi mogu da glasaju da li igraju pokemon ili ne!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "dad ad",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "glasanje",
+          "color": "FF0000",
+          "title": "ANKETA!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Da li igrate **POKEMON**?\n\n:white_check_mark: - Da\n:x: - Ne\n\n_Ovo glasanje traje samo 12 sati_",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "malomalopali",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "erh45h4h",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "✅": [
+              {
+                "name": "sdgwegerg",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.pokemoner.id}",
+                "rolename": "pokemoner"
+              }
+            ],
+            "❌": []
+          },
+          "message": "${tempVars.malomalopali.id}",
+          "duration": "43200",
+          "reactionemoji": "rjnrjhnrthbrthrthrt",
+          "reactionuser": "pokemoner",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "react-mc",
+      "actions": [
+        {
+          "name": "alou",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "0AFF2B",
+          "title": "USPEH!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "USPEH | Uspesno je postavljena anketa, ko igra mc!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "poasdajipfc",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "glasanje",
+          "color": "FF0000",
+          "title": "ANKETA!",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Da li igrate **MINECRAFT**?\n\n:white_check_mark: - Da\n:x: - Ne\n\n_Ovo glasanje traje samo 12 sati!_",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Auto VikkiVuk",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "kalialipoal",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "sdgvsbg",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "✅": [
+              {
+                "name": "svwsbebv",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.minecrafter.id}",
+                "rolename": "Minecrafter"
+              }
+            ],
+            "❌": []
+          },
+          "message": "${tempVars.kalialipoal.id}",
+          "duration": "43200",
+          "reactionemoji": "sajfvnnesjvnesasv",
+          "reactionuser": "minecrafter",
+          "react": "BOOL_TRUE@@"
         }
       ]
     }

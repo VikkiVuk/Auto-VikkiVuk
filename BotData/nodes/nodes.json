@@ -288,8 +288,8 @@
           ]
         }
       ],
-      "x": 63,
-      "y": 266,
+      "x": 48,
+      "y": 260,
       "perms": [
         "verifikovan"
       ]
@@ -312,7 +312,7 @@
           "id": "66d39027-c191-4a31-b140-81113c69026e"
         }
       ],
-      "x": 257,
+      "x": 229,
       "y": 264,
       "rtype": "Message",
       "rsubtype": "Send Message",
@@ -341,8 +341,8 @@
           ]
         }
       ],
-      "x": 46,
-      "y": 508,
+      "x": 52,
+      "y": 392,
       "perms": [
         "verifikovan"
       ]
@@ -365,8 +365,8 @@
           "id": "a34c0ace-3080-4435-9821-f333639ccb34"
         }
       ],
-      "x": 232,
-      "y": 497,
+      "x": 229,
+      "y": 408,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -418,8 +418,8 @@
           "id": "8dbf7e2f-f2f3-47ae-a72b-a6586872f84a"
         }
       ],
-      "x": 1063,
-      "y": 2492,
+      "x": 1055,
+      "y": 2545,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -430,7 +430,7 @@
         "",
         "",
         "",
-        "Verzija: ${tempVars.imodverzija}\nMinecraft Verzija: ${tempVars.mcverzija}\nStvari koje su se promenile:\n${tempVars.imodopis}",
+        "Verzija: ${tempVars.imodverzija}\nMinecraft Verzija: ${tempVars.mcverzija}\nStvari koje su se promenile:\n${tempVars.imodopis}\n\nSKINITE MOD OVDE: https://www.curseforge.com/minecraft/mc-mods/imod",
         "",
         "",
         "Auto VikkiVuk",
@@ -467,8 +467,8 @@
           ]
         }
       ],
-      "x": 54,
-      "y": 801,
+      "x": 58,
+      "y": 568,
       "perms": [
         "verifikovan"
       ]
@@ -491,8 +491,8 @@
           "id": "1aa70446-e189-4369-9da1-7475139d8eb1"
         }
       ],
-      "x": 237,
-      "y": 812,
+      "x": 245,
+      "y": 568,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -593,8 +593,8 @@
           ]
         }
       ],
-      "x": 476,
-      "y": 266,
+      "x": 435,
+      "y": 267,
       "perms": [
         "verifikovan"
       ]
@@ -617,8 +617,8 @@
           "id": "f6b089f9-e2c3-4d33-a745-2f821410133f"
         }
       ],
-      "x": 679,
-      "y": 235,
+      "x": 610,
+      "y": 213,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -646,7 +646,7 @@
           ]
         }
       ],
-      "x": 436,
+      "x": 434,
       "y": 392,
       "perms": [
         "verifikovan"
@@ -670,8 +670,8 @@
           "id": "ec864964-3970-40ab-bbaa-a5899ae4a191"
         }
       ],
-      "x": 623,
-      "y": 378,
+      "x": 611,
+      "y": 359,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -868,8 +868,8 @@
           ]
         }
       ],
-      "x": 940,
-      "y": 100,
+      "x": 929,
+      "y": 76,
       "perms": [
         "vikkivuk"
       ]
@@ -892,8 +892,8 @@
           "id": "a9202d7a-6304-4e4d-a14e-3e2c8002c10c"
         }
       ],
-      "x": 1122,
-      "y": 96,
+      "x": 1102,
+      "y": 70,
       "rtype": "Bot Action",
       "rsubtype": "Set Status",
       "formdata": [
@@ -915,8 +915,8 @@
           ]
         }
       ],
-      "x": 807,
-      "y": 406,
+      "x": 818,
+      "y": 361,
       "perms": [
         "admin"
       ]
@@ -943,8 +943,8 @@
           "id": "2289c320-be31-4b85-9ca8-df009657080e"
         }
       ],
-      "x": 1400,
-      "y": 472,
+      "x": 1431,
+      "y": 454,
       "rtype": "Server Action",
       "rsubtype": "Add Role to Server",
       "formdata": [
@@ -986,8 +986,8 @@
           "id": "79b2e575-3c65-4665-8054-fdc6059e1e4b"
         }
       ],
-      "x": 1021,
-      "y": 394,
+      "x": 1025,
+      "y": 356,
       "rtype": "Variable",
       "rsubtype": "Store Value in Variable",
       "formdata": [
@@ -1023,8 +1023,8 @@
           "id": "401629a9-a7d8-49f4-9d6d-a7fc7348ac57"
         }
       ],
-      "x": 1216,
-      "y": 397,
+      "x": 1212,
+      "y": 396,
       "rtype": "Variable",
       "rsubtype": "Store Value in Variable",
       "formdata": [
@@ -1058,8 +1058,8 @@
           "id": "400ce74d-0419-4d05-ace0-f1aa6561421c"
         }
       ],
-      "x": 1650,
-      "y": 513,
+      "x": 1634,
+      "y": 455,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -1346,8 +1346,8 @@
           ]
         }
       ],
-      "x": 1286,
-      "y": 98
+      "x": 1273,
+      "y": 80
     },
     {
       "type": "response",
@@ -1369,8 +1369,8 @@
           "id": "5a77c88a-87bd-4fd7-b949-b0cf404000d4"
         }
       ],
-      "x": 1456,
-      "y": 86,
+      "x": 1457,
+      "y": 72,
       "rtype": "Variable",
       "rsubtype": "Generate Random Number",
       "formdata": [
@@ -1406,8 +1406,8 @@
           "id": "70e6039c-4968-4bea-8a10-ea6aebe30c24"
         }
       ],
-      "x": 1664,
-      "y": 70,
+      "x": 1642,
+      "y": 53,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -2673,8 +2673,8 @@
           ]
         }
       ],
-      "x": 952,
-      "y": 261,
+      "x": 817,
+      "y": 226,
       "perms": [
         "pokemoner"
       ]
@@ -2699,8 +2699,8 @@
           "id": "5b75ab16-a063-43b6-95c5-1f4cc3c26d98"
         }
       ],
-      "x": 1179,
-      "y": 244,
+      "x": 1030,
+      "y": 216,
       "rtype": "Variable",
       "rsubtype": "Store Value in Variable",
       "formdata": [
@@ -2742,8 +2742,8 @@
           "id": "7d19a6ee-2f00-4c24-bbff-cb24cd310ffb"
         }
       ],
-      "x": 1390,
-      "y": 235,
+      "x": 1264,
+      "y": 184,
       "rtype": "Spreadsheet",
       "rsubtype": "Get Row",
       "formdata": [
@@ -2779,8 +2779,8 @@
           "id": "e7fc4bc5-2919-4814-b4b1-70c8e416cb32"
         }
       ],
-      "x": 1660,
-      "y": 375,
+      "x": 1454,
+      "y": 317,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -2855,8 +2855,8 @@
           "id": "e7fc4bc5-2919-4814-b4b1-70c8e416cb32"
         }
       ],
-      "x": 1661,
-      "y": 226,
+      "x": 1449,
+      "y": 198,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -2947,8 +2947,8 @@
           "id": "27971b96-d40f-4f05-b29f-a3c6f026b679"
         }
       ],
-      "x": 1014,
-      "y": 666,
+      "x": 1020,
+      "y": 636,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -3002,8 +3002,8 @@
           "id": "9effb7f0-cca1-4122-9c51-0f8c878ecd47"
         }
       ],
-      "x": 1210,
-      "y": 532,
+      "x": 1202,
+      "y": 527,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -3051,8 +3051,8 @@
           ]
         }
       ],
-      "x": 1197,
-      "y": 687,
+      "x": 1193,
+      "y": 670,
       "perms": [
         "admin",
         "moderator"
@@ -3064,8 +3064,6 @@
       "guid": "7aba42b9-dd48-4d3e-a760-dac817e2c787",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -3099,8 +3097,6 @@
       "guid": "a5882a7a-f8fa-47e0-9fc2-ff4ed388d3f3",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -3125,7 +3121,7 @@
         "",
         "",
         "",
-        "Uspesno je obrisano ${tempVars.howMuchToClear} poruka!",
+        "Uspesno je obrisano **${tempVars.howMuchToClear}** poruka!",
         "",
         "",
         "Auto VikkiVuk",
@@ -3177,8 +3173,8 @@
           ]
         }
       ],
-      "x": 834,
-      "y": 915
+      "x": 68,
+      "y": 955
     },
     {
       "type": "response",
@@ -3200,8 +3196,8 @@
           "id": "836c9244-3b0c-47e1-bcf2-027828d56d2c"
         }
       ],
-      "x": 1001,
-      "y": 920,
+      "x": 283,
+      "y": 943,
       "rtype": "Variable",
       "rsubtype": "Get Mentioned User",
       "formdata": [
@@ -3395,8 +3391,8 @@
           "id": "ae701fb7-5e73-47b9-a258-43b989745a56"
         }
       ],
-      "x": 1167,
-      "y": 920,
+      "x": 484,
+      "y": 953,
       "rtype": "Variable",
       "rsubtype": "Store Value in Variable",
       "formdata": [
@@ -3432,8 +3428,8 @@
           "id": "e5b47aa8-4fdf-4e6c-92f9-775b5f941291"
         }
       ],
-      "x": 1499,
-      "y": 910,
+      "x": 877,
+      "y": 966,
       "rtype": "User Action",
       "rsubtype": "Ban User",
       "formdata": [
@@ -3467,8 +3463,8 @@
           "id": "81f544d2-7cf6-4fda-a577-52232a5771d9"
         }
       ],
-      "x": 1333,
-      "y": 916,
+      "x": 674,
+      "y": 975,
       "rtype": "Variable",
       "rsubtype": "Store Value in Variable",
       "formdata": [
@@ -3502,8 +3498,8 @@
           "id": "77168d7e-58a4-4997-bb5f-f356e89815b0"
         }
       ],
-      "x": 1667,
-      "y": 911,
+      "x": 1086,
+      "y": 965,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -3559,8 +3555,8 @@
           "id": "ad592433-0923-4f66-bac8-8a15e47b84f8"
         }
       ],
-      "x": 998,
-      "y": 516,
+      "x": 996,
+      "y": 501,
       "rtype": "Bot Action",
       "rsubtype": "More Status",
       "formdata": [
@@ -3585,7 +3581,7 @@
         }
       ],
       "x": 811,
-      "y": 519
+      "y": 500
     },
     {
       "type": "response",
@@ -4391,8 +4387,8 @@
           "id": "922146ae-78d3-4528-b490-1e6751da0a89"
         }
       ],
-      "x": 1350,
-      "y": 1057,
+      "x": 1334,
+      "y": 1040,
       "rtype": "User Data",
       "rsubtype": "Edit User Data",
       "formdata": [
@@ -4880,13 +4876,13 @@
     },
     {
       "type": "command",
-      "name": "react",
+      "name": "react-sub",
       "guid": "36feef05-fe57-4010-9ae4-93c6c54b0f58",
       "outputs": [
         {
           "label": "responses",
           "connections": [
-            "04d2adbb-9e35-4cc1-96ae-30a59f203571"
+            "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
           ]
         }
       ],
@@ -4918,8 +4914,8 @@
           "id": "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
         }
       ],
-      "x": 1093,
-      "y": 2815,
+      "x": 517,
+      "y": 2740,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -4984,8 +4980,8 @@
           "id": "d1fd9fd3-7647-4466-bf14-972658410686"
         }
       ],
-      "x": 1369,
-      "y": 2806,
+      "x": 723,
+      "y": 2730,
       "rtype": "Reaction",
       "rsubtype": "Add Reaction Listener",
       "formdata": [
@@ -5021,8 +5017,8 @@
           "id": "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d"
         }
       ],
-      "x": 1644,
-      "y": 2737,
+      "x": 950,
+      "y": 2715,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -5052,8 +5048,8 @@
           "id": "3b0b2b32-0e8d-4e8b-affb-4cb0176c0d8d"
         }
       ],
-      "x": 1642,
-      "y": 2879,
+      "x": 948,
+      "y": 2844,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -5082,11 +5078,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "946accfd-d63f-4e0b-9200-bbef3f1c9db0"
+          "id": "36feef05-fe57-4010-9ae4-93c6c54b0f58"
         }
       ],
-      "x": 839,
-      "y": 2813,
+      "x": 328,
+      "y": 2734,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5129,17 +5125,17 @@
       "reactionFields": [],
       "embedfields": [
         {
-          "name": "v.react sub",
+          "name": "v.react-sub",
           "value": "Ovako vikkivuk proverava ko je suban a ko nije!",
           "inline": "false"
         },
         {
-          "name": "v.react pokemon",
+          "name": "v.react-pokemon",
           "value": "Ovako proveravamo ko igra pokemon.",
           "inline": "false"
         },
         {
-          "name": "v.react mc",
+          "name": "v.react-mc",
           "value": "Ovako proveravamo ko igra minecraft!",
           "inline": "false"
         }
@@ -5207,8 +5203,8 @@
           ]
         }
       ],
-      "x": 242,
-      "y": 1014,
+      "x": 57,
+      "y": 727,
       "perms": [
         "admin"
       ]
@@ -5231,8 +5227,8 @@
           "id": "053683f3-b3ec-4cab-afd6-a45c98566ca3"
         }
       ],
-      "x": 440,
-      "y": 964,
+      "x": 248,
+      "y": 788,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5376,7 +5372,7 @@
         "imodopis",
         "Text",
         "temp",
-        "3"
+        "3+"
       ],
       "formnames": [
         "varname",
@@ -5409,8 +5405,8 @@
           "id": "bb05841f-508c-4dab-a46a-30d52c3fe5f6"
         }
       ],
-      "x": 1873,
-      "y": 76,
+      "x": 1857,
+      "y": 57,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5452,8 +5448,6 @@
       "guid": "5ea73280-76c7-4191-b470-8c8051ec60ea",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "has perms",
@@ -5546,131 +5540,6 @@
     },
     {
       "type": "response",
-      "name": "wfg",
-      "guid": "04d2adbb-9e35-4cc1-96ae-30a59f203571",
-      "reactionFields": [],
-      "embedfields": [],
-      "saveToVariable": "koj-react",
-      "saveToVariableType": "temp",
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "946accfd-d63f-4e0b-9200-bbef3f1c9db0"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "36feef05-fe57-4010-9ae4-93c6c54b0f58"
-        }
-      ],
-      "x": 383,
-      "y": 2871,
-      "rtype": "Variable",
-      "rsubtype": "Store Value in Variable",
-      "formdata": [
-        "koj-react",
-        "Number",
-        "temp",
-        ""
-      ],
-      "formnames": [
-        "varname",
-        "vartype",
-        "saveVarType",
-        "param"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "ako je sub",
-      "guid": "946accfd-d63f-4e0b-9200-bbef3f1c9db0",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "true",
-          "connections": [
-            "a3cb0b30-f16b-4cee-a2eb-771c2d35001b"
-          ]
-        },
-        {
-          "label": "false",
-          "connections": [
-            "253c5ccd-2177-4ea5-a1ba-3a254349a6ea"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "04d2adbb-9e35-4cc1-96ae-30a59f203571"
-        }
-      ],
-      "x": 578,
-      "y": 2860,
-      "rtype": "Variable",
-      "rsubtype": "Check Variable Value",
-      "formdata": [
-        "koj-react",
-        "temp",
-        "equal to",
-        "sub"
-      ],
-      "formnames": [
-        "varname",
-        "saveVarType",
-        "compare",
-        "value"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "ako je pokemon",
-      "guid": "253c5ccd-2177-4ea5-a1ba-3a254349a6ea",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "true",
-          "connections": [
-            "2f4f4aed-7379-4ceb-820a-73a4769f385d"
-          ]
-        },
-        {
-          "label": "false",
-          "connections": [
-            "ad9c5fc9-662b-4645-8e13-4c7670790b88"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "946accfd-d63f-4e0b-9200-bbef3f1c9db0"
-        }
-      ],
-      "x": 584,
-      "y": 3050,
-      "rtype": "Variable",
-      "rsubtype": "Check Variable Value",
-      "formdata": [
-        "koj-react",
-        "temp",
-        "equal to",
-        "pokemon"
-      ],
-      "formnames": [
-        "varname",
-        "saveVarType",
-        "compare",
-        "value"
-      ]
-    },
-    {
-      "type": "response",
       "name": "alouz",
       "guid": "2f4f4aed-7379-4ceb-820a-73a4769f385d",
       "reactionFields": [],
@@ -5686,11 +5555,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "253c5ccd-2177-4ea5-a1ba-3a254349a6ea"
+          "id": "53c4cb96-d517-438d-b3b9-406ef2d0b48b"
         }
       ],
-      "x": 835,
-      "y": 3029,
+      "x": 347,
+      "y": 2911,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5702,104 +5571,6 @@
         "",
         "",
         "USPEH | Sada ljudi mogu da glasaju da li igraju pokemon ili ne!",
-        "",
-        "",
-        "Auto VikkiVuk",
-        "BOOL_TRUE@@",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelname",
-        "color",
-        "title",
-        "url",
-        "authorname",
-        "authorimageurl",
-        "authorlink",
-        "description",
-        "thumbnail",
-        "image",
-        "footer",
-        "timestamp",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "ako je mc",
-      "guid": "ad9c5fc9-662b-4645-8e13-4c7670790b88",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "true",
-          "connections": [
-            "ecabbed5-46f4-4237-a4c6-799a02fb500e"
-          ]
-        },
-        {
-          "label": "false",
-          "connections": [
-            "d69f00ba-c08b-4979-9294-1db5bab6d492"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "253c5ccd-2177-4ea5-a1ba-3a254349a6ea"
-        }
-      ],
-      "x": 586,
-      "y": 3273,
-      "rtype": "Variable",
-      "rsubtype": "Check Variable Value",
-      "formdata": [
-        "koj-react",
-        "temp",
-        "equal to",
-        "mc"
-      ],
-      "formnames": [
-        "varname",
-        "saveVarType",
-        "compare",
-        "value"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "greska",
-      "guid": "d69f00ba-c08b-4979-9294-1db5bab6d492",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "ad9c5fc9-662b-4645-8e13-4c7670790b88"
-        }
-      ],
-      "x": 813,
-      "y": 3382,
-      "rtype": "Message",
-      "rsubtype": "Send Embed",
-      "formdata": [
-        "${dbsVars.CommandChannel.id}",
-        "FF0000",
-        "GRESKA!",
-        "",
-        "",
-        "",
-        "",
-        "GRESKA | Izvini, ali izgleda da nisi ukucao koju anketu zelis da postavis! Ili ta anketa ne postoji!",
         "",
         "",
         "Auto VikkiVuk",
@@ -5841,11 +5612,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "ad9c5fc9-662b-4645-8e13-4c7670790b88"
+          "id": "db48dbca-d90f-4283-8c25-c4c93d31c733"
         }
       ],
-      "x": 815,
-      "y": 3222,
+      "x": 339,
+      "y": 3052,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5903,8 +5674,8 @@
           "id": "2f4f4aed-7379-4ceb-820a-73a4769f385d"
         }
       ],
-      "x": 1087,
-      "y": 3009,
+      "x": 548,
+      "y": 2897,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -5962,8 +5733,8 @@
           "id": "ecabbed5-46f4-4237-a4c6-799a02fb500e"
         }
       ],
-      "x": 1072,
-      "y": 3214,
+      "x": 550,
+      "y": 3049,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -6026,8 +5797,8 @@
           "id": "a416c724-8e9b-47bf-bf36-da29799d6b3a"
         }
       ],
-      "x": 1359,
-      "y": 3221,
+      "x": 750,
+      "y": 3093,
       "rtype": "Reaction",
       "rsubtype": "Add Reaction Listener",
       "formdata": [
@@ -6054,8 +5825,6 @@
         "❌"
       ],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "✅",
@@ -6074,8 +5843,8 @@
           "id": "7e503842-3298-42aa-b9a6-24f5b023ea53"
         }
       ],
-      "x": 1370,
-      "y": 3013,
+      "x": 737,
+      "y": 2901,
       "rtype": "Reaction",
       "rsubtype": "Add Reaction Listener",
       "formdata": [
@@ -6111,8 +5880,8 @@
           "id": "717f74c1-442d-43a4-bd24-96e90b325ea2"
         }
       ],
-      "x": 1619,
-      "y": 3053,
+      "x": 943,
+      "y": 3002,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -6142,8 +5911,8 @@
           "id": "3a50e968-9da2-46de-b081-08ecf9259f0e"
         }
       ],
-      "x": 1616,
-      "y": 3242,
+      "x": 947,
+      "y": 3129,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -6391,8 +6160,6 @@
       "guid": "19af81e8-15ad-40ea-97c5-1eddf1b65c8d",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "true",
@@ -6436,8 +6203,6 @@
       "guid": "6439f442-f3d0-4eb9-b02e-c1b0ca50614f",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "true",
@@ -6481,8 +6246,6 @@
       "guid": "465bd3a5-fcc2-4d10-8698-4804b4443c9a",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7589,8 +7352,6 @@
       "guid": "81479428-221f-4c88-9094-85fd1f734c76",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7717,8 +7478,6 @@
       "guid": "8ba8802e-4316-42be-834e-35469f5fd651",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7774,8 +7533,6 @@
       "guid": "ade1da7f-f5cc-4c9e-a154-d80627a2494c",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7827,8 +7584,6 @@
           "inline": "false"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -7932,8 +7687,6 @@
           "inline": "false"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8025,8 +7778,6 @@
       "guid": "7689a885-4529-4e1d-b888-cc8e158b62b6",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8097,8 +7848,6 @@
       "guid": "1f01cd5d-e608-4986-a944-203c3ab61a02",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8154,8 +7903,6 @@
       "guid": "b0433330-1580-43fb-b26f-0c7a0c32d43d",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8211,8 +7958,6 @@
       "guid": "ed1abcdd-265e-438a-91e7-3893d69a1a7b",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8547,8 +8292,6 @@
       "guid": "58b854f4-08e2-49a4-bd86-c2edb9980356",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8584,8 +8327,6 @@
       "guid": "8848ed63-fa39-4eb0-99aa-22d7cf4c2c17",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8656,8 +8397,6 @@
       "guid": "c8cebd1a-8d16-44cf-8625-855b124237b0",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8713,8 +8452,6 @@
       "guid": "86830598-9b31-445e-a915-05cdda7fa253",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8770,8 +8507,6 @@
       "guid": "9b4fb305-390f-4048-98e4-2d8f428f2e3b",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8833,8 +8568,8 @@
           ]
         }
       ],
-      "x": 1878,
-      "y": 253,
+      "x": 1676,
+      "y": 224,
       "perms": [
         "verifikovan"
       ]
@@ -8851,8 +8586,8 @@
           ]
         }
       ],
-      "x": 2737,
-      "y": 265,
+      "x": 2120,
+      "y": 230,
       "perms": [
         "verifikovan"
       ]
@@ -8863,8 +8598,6 @@
       "guid": "a43d3eb5-dbc3-46a4-8882-41bd8bc51458",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -8879,8 +8612,8 @@
           "id": "32d61e40-aa6a-4a4a-bb75-4ca45476838f"
         }
       ],
-      "x": 2077,
-      "y": 235,
+      "x": 1891,
+      "y": 210,
       "rtype": "Variable",
       "rsubtype": "Generate Random Number",
       "formdata": [
@@ -8916,8 +8649,8 @@
           "id": "348e0455-1c39-4209-9e0a-600228557399"
         }
       ],
-      "x": 2966,
-      "y": 253,
+      "x": 2385,
+      "y": 247,
       "rtype": "Variable",
       "rsubtype": "Generate Random Number",
       "formdata": [
@@ -8959,8 +8692,8 @@
           "id": "a43d3eb5-dbc3-46a4-8882-41bd8bc51458"
         }
       ],
-      "x": 2278,
-      "y": 232,
+      "x": 1908,
+      "y": 363,
       "rtype": "Variable",
       "rsubtype": "Check Variable Value",
       "formdata": [
@@ -9000,8 +8733,8 @@
           "id": "34f4e900-c5c6-454e-bb40-89cc1cc7780d"
         }
       ],
-      "x": 2292,
-      "y": 428,
+      "x": 1912,
+      "y": 543,
       "rtype": "Variable",
       "rsubtype": "Check Variable Value",
       "formdata": [
@@ -9023,8 +8756,6 @@
       "guid": "e163b879-2b0f-41e1-afec-cd324d42b7f4",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -9037,8 +8768,8 @@
           "id": "34f4e900-c5c6-454e-bb40-89cc1cc7780d"
         }
       ],
-      "x": 2490,
-      "y": 252,
+      "x": 2122,
+      "y": 365,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -9060,8 +8791,6 @@
       "guid": "2a8a4d02-54af-4fcd-8f37-2b4a094234dc",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -9074,8 +8803,8 @@
           "id": "6aaaf006-dc47-4d1d-b384-573183ae258d"
         }
       ],
-      "x": 2509,
-      "y": 455,
+      "x": 2108,
+      "y": 557,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -9117,8 +8846,8 @@
           "id": "9ec60f07-88f6-43c3-b12d-000d2d958728"
         }
       ],
-      "x": 3175,
-      "y": 272,
+      "x": 2621,
+      "y": 251,
       "rtype": "Variable",
       "rsubtype": "Check Variable Value",
       "formdata": [
@@ -9158,8 +8887,8 @@
           "id": "ed6e18fb-4b77-43c8-93e8-255bc97c9279"
         }
       ],
-      "x": 3186,
-      "y": 462,
+      "x": 2649,
+      "y": 486,
       "rtype": "Variable",
       "rsubtype": "Check Variable Value",
       "formdata": [
@@ -9181,8 +8910,6 @@
       "guid": "7bf8685b-cc0a-40c4-a0e1-1115a0e88746",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -9195,8 +8922,8 @@
           "id": "ed6e18fb-4b77-43c8-93e8-255bc97c9279"
         }
       ],
-      "x": 3373,
-      "y": 279,
+      "x": 2804,
+      "y": 269,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -9218,8 +8945,6 @@
       "guid": "ea2eaeb4-bfe4-414b-bfe1-bade010ea3b0",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -9232,8 +8957,8 @@
           "id": "99db57d9-3887-4e3b-92d2-e969b2942350"
         }
       ],
-      "x": 3387,
-      "y": 484,
+      "x": 2858,
+      "y": 503,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -9269,8 +8994,8 @@
           "id": "11109450-1b54-4b3e-84ea-9c655afe23e3"
         }
       ],
-      "x": 1887,
-      "y": 369,
+      "x": 1702,
+      "y": 331,
       "rtype": "Variable",
       "rsubtype": "Get Mentioned User",
       "formdata": [
@@ -9283,6 +9008,36 @@
         "vartype",
         "saveVarType"
       ]
+    },
+    {
+      "type": "command",
+      "name": "react-pokemon",
+      "guid": "53c4cb96-d517-438d-b3b9-406ef2d0b48b",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "2f4f4aed-7379-4ceb-820a-73a4769f385d"
+          ]
+        }
+      ],
+      "x": 104,
+      "y": 2905
+    },
+    {
+      "type": "command",
+      "name": "react-mc",
+      "guid": "db48dbca-d90f-4283-8c25-c4c93d31c733",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "ecabbed5-46f4-4237-a4c6-799a02fb500e"
+          ]
+        }
+      ],
+      "x": 113,
+      "y": 3064
     }
   ]
 }
