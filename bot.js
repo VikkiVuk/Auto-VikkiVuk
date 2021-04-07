@@ -153,7 +153,6 @@ DBS.callNextEventAction = async function (type, varsE, index) {
 };
 
 DBS.startBot = async function () {
-    Bot.user.setActivity("Automating VikkiVuk | v.help"); 
     await DBS.Bot.login(process.env.token).catch((e) => {
         logger.log({
             level: "error",
